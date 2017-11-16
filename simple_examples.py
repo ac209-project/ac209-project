@@ -37,6 +37,12 @@ def user_playlist ():
         print('Name: {}'.format(track['track']['name']))
         print('Spotify ID: {}'.format(track['track']['id']))
         print('Album: {}'.format(track['track']['album']['name']))
+        first_artist_info = track['track']['album']['artists'][0]
+        print('First Artist Info:'.format())
+        artist = sp.artist(first_artist_info['id'])
+        print('\tName: {}'.format(artist['name']))
+        print('\tTotal followers: {}'.format(artist['followers']['total']))
+        print('\tGenres: {}'.format(artist['genres']))
 
         # Example of getting track information with the id provided.
         # track_id = track['track']['id']
