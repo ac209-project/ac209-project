@@ -1,6 +1,7 @@
 import spotipy
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
 from spotipy.oauth2 import SpotifyClientCredentials
 
@@ -9,21 +10,15 @@ client_credentials_manager = SpotifyClientCredentials(client_id = '99fd6b637f194
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 user = 'spotify'
-limit = 20
-playlists = sp.user_playlists(user, limit=limit)
-followers = []
-names = []
-for i, playlist in enumerate(playlists['items']):
-    fols = sp.user_playlist(user=user, playlist_id=playlist['id'])
-    followers.append(fols['followers']['total'])
-    names.append(fols['name'])
-    print(fols['name'], fols['followers']['total'])
+limit = 10
 
-    if i >= limit:
-        break
+search_results = sp.search('R*', limit = limit, offset = 0, type = 'playlist')
 
-x = np.arange(len(followers))
-plt.bar(x, followers)
-plt.xticks(x, names)
-plt.legend()
-plt.show()
+#print(search_results['playlists']['items'])
+playlists = pd.DataFrame.from_dict(search_results['playlists']['items'])
+
+
+37i9dQZF1DWY7IeIP1cdjF
+
+playlists.to_csv('playlists.csv')
+print("Done")
