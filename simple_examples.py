@@ -2,7 +2,7 @@
 Examples of basic spotipy functionality.
 """
 
-import pprint
+from pprint import pprint
 
 from utils import get_auth_spotipy
 
@@ -15,11 +15,18 @@ def muse_search_results ():
     """The results of searching for Muse in Spotify."""
     search_str = 'Muse'
     result = sp.search(search_str)
-    pprint.pprint(result)
+    pprint(result)
+
+
+def display_album_info ():
+    print('Example album info:\n')
+    album_id = 'spotify:album:25BOg6qaiMPRhQwBTWTx9m'
+    album_info = sp.album(album_id)
+    pprint(album_info)
 
 
 def user_playlists ():
-    """Getting playlists for particular user."""
+    """Getting spotify_playlists for particular user."""
     user = 'spotify'
     playlists = sp.user_playlists(user)
     for playlist in playlists['items']:
@@ -36,8 +43,8 @@ def user_playlist ():
         print(section_break('Track {}'.format(i + 1)))
         print('Name: {}'.format(track['track']['name']))
         print('Spotify ID: {}'.format(track['track']['id']))
-        print('Album: {}'.format(track['track']['album']['name']))
-        first_artist_info = track['track']['album']['artists'][0]
+        print('Album: {}'.format(track['track']['album_info']['name']))
+        first_artist_info = track['track']['album_info']['artists'][0]
         print('First Artist Info:'.format())
         artist = sp.artist(first_artist_info['id'])
         print('\tName: {}'.format(artist['name']))
@@ -47,7 +54,8 @@ def user_playlist ():
         # Example of getting track information with the id provided.
         # track_id = track['track']['id']
         # track_info = sp.track(track_id)
-        # print(track_info['album']['name'])
+        # print(track_info['album_info']['name'])
 
 
-user_playlist()
+if __name__ == '__main__':
+    display_album_info()
