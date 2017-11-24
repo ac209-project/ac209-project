@@ -19,9 +19,9 @@ def predominant_genre (albums):
 
     Returns:
         (str): The genre encountered most frequently in the album genre
-        lists. If none of the albums contain genre info, returns NaN. If
-        Counter().most_common(1) returns more than one element (i.e.,
-        there were genres with equal counts), then returns 'mixed'.
+            lists. If none of the albums contain genre info, returns NaN. If
+            Counter().most_common(1) returns more than one element (i.e.,
+            there were genres with equal counts), then returns 'mixed'.
     """
     genre_counts = Counter()  # to count instances of each genre
     for album in albums:
@@ -105,7 +105,7 @@ def build_row (plist, user_name, f_track_qual):
         user_name (str): User this playlist was retrieved from.
         f_track_qual (Callable[List[track_info]]): Callable to compute some
             measure of track quality. This function should accept a list of
-            track details and return a scalar.
+            tracks and return a scalar.
     """
     # Extract useful track info dicts (this strips out 'added_at', 'added_by',
     # and 'is_local' items for each track).
@@ -117,7 +117,7 @@ def build_row (plist, user_name, f_track_qual):
     return {'id':plist['id'],
             'user':user_name,
             'followers':int(plist['followers']['total']),
-            'track_count':plist['tracks']['total'],
+            'track_count':int(plist['tracks']['total']),
             'track_qual':track_qual,
             'genre':genre,
             'album_pop':album_popularity(albums)}
