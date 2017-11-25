@@ -5,11 +5,14 @@ Compiling the DataFrame used for EDA / modeling.
 from ast import literal_eval
 import sqlite3
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import seaborn as sns
 
 from utils import flatten
-
+sns.set_style('white')
+sns.set_context('paper')
 CONN = sqlite3.connect('spotify_db.sqlite')
 
 
@@ -77,27 +80,36 @@ def album_popularity (playlist_row):
 
 def artist_popularity (playlist_row):
     """Computes average artist popularity for playlist."""
-    track_ids = playlist_row['track_ids']
-    track_rows = track.loc[track_ids]
-    artist_ids = set(flatten(track_rows['artist_ids'].tolist()))
-    artist_rows = artist.loc[artist_ids]
-    return artist_rows['popularity'].mean()
+    try:
+        track_ids = playlist_row['track_ids']
+        track_rows = track.loc[track_ids]
+        artist_ids = set(flatten(track_rows['artist_ids'].tolist()))
+        artist_rows = artist.loc[artist_ids]
+        return artist_rows['popularity'].mean()
+    except:
+        return np.NaN
 
 
 def artist_followers (playlist_row):
     """Computes average artist followers for playlist."""
-    track_ids = playlist_row['track_ids']
-    track_rows = track.loc[track_ids]
-    artist_ids = set(flatten(track_rows['artist_ids'].tolist()))
-    artist_rows = artist.loc[artist_ids]
-    return artist_rows['followers'].mean()
+    try:
+        track_ids = playlist_row['track_ids']
+        track_rows = track.loc[track_ids]
+        artist_ids = set(flatten(track_rows['artist_ids'].tolist()))
+        artist_rows = artist.loc[artist_ids]
+        return artist_rows['followers'].mean()
+    except:
+        return np.NaN
 
 
 def track_popularity (playlist_row):
     """Computes average track popularity for playlist."""
-    track_ids = playlist_row['track_ids']
-    track_rows = track.loc[track_ids]
-    return track_rows['popularity'].mean()
+    try:
+        track_ids = playlist_row['track_ids']
+        track_rows = track.loc[track_ids]
+        return track_rows['popularity'].mean()
+    except:
+        return np.NaN
 
 
 def build_analysis_df ():
@@ -110,7 +122,31 @@ def build_analysis_df ():
     return df
 
 
-if __name__ == '__main__':
+def demo_analysis_df ():
     df = build_analysis_df()
-    print(df.head())
+    print('Rows in analysis DF: {}\n'.format(len(df)))
+    # Plot 1
+    sns.regplot('track_pop', 'followers', data=df)
+    plt.xlabel('Average Track Popularity')
+    plt.ylabel('Playlist Followers')
+    plt.title('Playlist Followers vs. Track Popularity')
+    plt.show()
 
+    # Plot 2
+    sns.regplot('artist_followers', 'followers', data=df)
+    plt.xlabel('Average Followers for Artist')
+    plt.ylabel('Playlist Followers')
+    plt.title('Playlist Followers vs. Artist Followers')
+    plt.show()
+
+    # Plot 3
+    sns.regplot('album_pop', 'followers', data=df)
+    plt.xlabel('Average Album Popularity')
+    plt.ylabel('Playlist Followers')
+    plt.title('Playlist Followers vs. Album Popularity')
+    plt.show()
+
+
+
+if __name__ == '__main__':
+    demo_analysis_df()

@@ -4,7 +4,6 @@ General utils for streamlining use of spotipy API, saving data, etc.
 from itertools import chain
 import os
 from time import clock
-
 from pandas import DataFrame
 import spotipy
 from spotipy.client import Spotify
@@ -13,12 +12,9 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 def get_auth_spotipy () -> Spotify:
     """Returns authorized Spotify client."""
-    # client_credentials_manager = SpotifyClientCredentials(
-    #       client_id='f7cddb18358749f79c1a12b4a66f61bb',
-    #       client_secret='2caf6e49bb55457f9925c6e8874a38c4')
     client_credentials_manager = SpotifyClientCredentials(
-          client_id='99fd6b637f19418996f726efd4f57aa3',
-          client_secret='00331cf90a064cafa7223fd9b6c6b8c5')
+          client_id='f7cddb18358749f79c1a12b4a66f61bb',
+          client_secret='2caf6e49bb55457f9925c6e8874a38c4')
 
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
     return sp
@@ -205,7 +201,7 @@ class ProgramTimer:
     def __event_count (self):
         return len(self._events)
 
-    def print_summary (self, header: str = None):
+    def print_summary (self, header: str = None, show_err=True):
         """
         Prints two sections:
         (a) summary of events with spaces to indicate hierarchy and
@@ -225,7 +221,7 @@ class ProgramTimer:
             summary = summary + event_details + '\n'
 
         # Add separate Exceptions section only if errors were encountered.
-        if self.errors_were_logged:
+        if self.errors_were_logged and show_err:
             summary += '{0}{1}'.format(SECTION_DIVIDE, '\n')
             summary += 'Exceptions\n\n'
             summary += self.errors.to_string(index=False)

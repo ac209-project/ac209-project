@@ -9,7 +9,7 @@ import pandas as pd
 from utils import ProgramTimer, chunks, clean_csv_path, flatten, \
     get_auth_spotipy
 
-log = ProgramTimer(ud_start=True, ud_end=False)
+log = ProgramTimer(ud_start=False, ud_end=False)
 sp = get_auth_spotipy()  # same client used throughout module to query
 
 CONN = sqlite3.connect('spotify_db.sqlite')
@@ -203,8 +203,8 @@ def build_data (users):
 #####################################################################
 
 if __name__ == '__main__':
-    BLOCK_SIZE = 1  # number of usernames to process per CSV-save round
-    MAX_BLOCKS = 2
+    BLOCK_SIZE = 2  # number of usernames to process per DB commit() round
+    MAX_BLOCKS = 50
 
     # Load usernames from file.
     with open('..\getplaylist\offset_0_1050.txt', 'r',
@@ -214,21 +214,21 @@ if __name__ == '__main__':
     # Build data in chunks.
     block_count = 0
     for user_chunk in chunks(users, BLOCK_SIZE):
-        log.start('Building data block {}'.format(block_count))
+        log.start('Building data block {}'.format(block_count), False)
         try:
             build_data(user_chunk)
             CONN.commit()
         except:
             CONN.rollback()
         finally:
-            log.end()
+            log.end(True)
             block_count += 1
             if block_count >= MAX_BLOCKS:
                 break
 
     CONN.close()
 
-    log.print_summary('Finished building data')
+    log.print_summary('Finished building data', show_err=False)
     # Save error log.
     errlog_path = clean_csv_path('Error Log')
     log.errors.to_csv(errlog_path)
