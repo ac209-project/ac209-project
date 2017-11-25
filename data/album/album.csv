@@ -1,0 +1,686 @@
+,id,artist_ids,name,genres,popularity,release_date
+0,1iFgAXxgvXayxLVEwTbayy,['5pVRwX5ZQR7hfJ18w8ZYkl'],Ich bin 3 Berliner,[],70,2017-04-28
+1,4uwui9nVxgR7jrREw32UNW,['5pVRwX5ZQR7hfJ18w8ZYkl'],Nice Girl 2.0,[],66,2017-06-16
+2,7rf2WFoJrzt191IKdIAr7m,['6FKvDHLWOm3kYey5V1uJTT'],Munchies,[],38,2017-02-17
+3,2tk6giPMAwalw1S56jUDh9,"['6QzzeKV0VcnT2vJMYDPuL4', '5eioJDe26lOqkAMbuhzZYs']",Knöcheltief,[],66,2017-08-02
+4,3mGsvwzWyad9lRd1hhR89w,['3ZuBEj9ppJe8GSdKaMTfMN'],K¡K¡,[],74,2017-06-16
+5,0f6Jz0uKNw6bZkaoVQAm4V,['3GBBxBdoolb0B5YizZq9bF'],Massari,[],53,2017-07-21
+6,15C8AnwlgAzkP2i7qdtWDF,['18ISxWwWjV6rPLoVCXf1dz'],Bros,[],62,2017-05-06
+7,6WyLNdpT04tF3sPbe3S0cF,['18ISxWwWjV6rPLoVCXf1dz'],Monica Bellucci,[],65,2017-08-15
+8,2l9a2HxBNMAsDCona4Hlt0,['18ISxWwWjV6rPLoVCXf1dz'],Blackout,[],54,2017-01-27
+9,1RRlVVo4xIfjQKBwKsa9oV,['18ISxWwWjV6rPLoVCXf1dz'],Genesis EP,[],58,2016-03-03
+10,27p4Q0E7iuASGcvwu0yiuo,['5Gi9FP1m5OCW7sYwetsUBd'],20:14,[],55,2017-04-14
+11,5jmdPyNTzjEzYXdeWnhEup,['1XKjtpH5P81gpOXDB91IEB'],Kokaina,[],7,2016-09-08
+12,2K0rdTSFXtUbtFXRfJUYt1,['1XKjtpH5P81gpOXDB91IEB'],Bon Voyage,[],67,2017-07-14
+13,1Nb0fCCqjYQSUyQWTvL9Pe,['6QzzeKV0VcnT2vJMYDPuL4'],#DIY,[],75,2017-09-29
+14,7L6pVkZfG7VsS4InE6b7JP,['2PzqiEyRzlQW0ZAVr1cuQM'],Contenance,[],62,2016-09-30
+15,3GFtNDpTMjFmmPNVGI202h,['0tMFcqLXhtm1Gep20iuIR3'],Leben am Limit,[],72,2017-06-02
+16,5PW7azibrZwyp1zMIPm8zK,['2qMezKrAKRh2Z2uR3fCqHt'],Verloren im Paradies,[],64,2017-06-23
+17,0gKTtgekVYkUOubWymANFF,"['6QzzeKV0VcnT2vJMYDPuL4', '1aS5tqEs9ci5P9KD9tZWa6', '0Dvx6p8JDyzeOPGmaCIH1L']",GottSeiDank,[],65,2017-09-13
+18,4oPE87qmY8S4X69HiZJvpI,"['6gto7HVNhu4ARE3P3g8Y5Y', '2JwyRtuXf2l6sTnSnGVIa1']",Zieh' den Rucksack aus,[],72,2017-09-28
+19,6LcbhFnEpPsY1JkyA8Sgv8,"['6cHU6QSNCvoyfFfI52w070', '2GH5uRMxmuAWn90B8DEZU3']",Movements - Single,[],60,2015-03-18
+20,1lCczeVbLAPh3nJzp7qGgu,['67qogtRNI0GjUr8PlaG6Zh'],Northern Lights,[],54,2016-10-14
+21,56Bti0icDO1UzOy7I1ueoq,['0u18Cq5stIQLUoIaULzDmA'],In Time (feat. Belle Doron),[],54,2017-01-11
+22,5fffaeeOmkUPC1dgu3sX7V,['45eNHdiiabvmbp4erw26rg'],Ashes (Remixes),[],72,2016-12-16
+23,18vw5DWqGnkpJABgaNjkXs,['3I9YOkavspWk1aHQTpiVxv'],Ass Clap,[],1,2015-05-19
+24,5yg8Il3DG8UKCRh0AjRqKA,['3I9YOkavspWk1aHQTpiVxv'],FRL,[],7,2016-07-15
+25,1aadwcYpfo3Emuh6LHnc78,['47z7ZrgFoBvVpCnElCE3Zh'],Los Amsterdam,[],67,2017-03-31
+26,4mJ9gujMxpESUUfIIGs2DR,['0Olr5bDiMEkn5Z9eQwUIAq'],Teenage Craze (SACHI Remix),[],39,2016-03-11
+27,6qwPUxQvnyUsVuvu8WsSNJ,['540vIaP2JwjQb9dm3aArA4'],4 Life (Habstrakt Remix),[],46,2017-03-22
+28,6A1vN5UpAKJmMpHmjOeyhU,['64KEffDW9EtZ1y2vBYgq8T'],Keep It Mello (Sikdope Remix) [feat. Omar Linx],[],53,2016-09-22
+29,2171Xej1ilxs504JS6eayi,['11gWrKZMBsGQWmobv3oNfW'],Run,[],58,2015-03-17
+30,1ryx7dR65CbJgeJys4gFiL,['0jNDKefhfSbLR9sFvcPLHo'],Light (Remixes) - EP,[],67,2017-06-23
+31,28CWFNpsvi5RNab1rk3KiB,"['5ttgIeUVka6FLyi00Uu5h8', '5TgQ66WuWkoQ2xYxaSTnVP']",Higher,[],38,2016-03-25
+32,4OzNNlB0YbT16uWQgT6cux,['76YIoWHp3Ri3q1ocOPtFzp'],Spaceships,[],57,2016-04-08
+33,0G2OqfIr5krjJunSMQ8cVm,['5fMUXHkw8R8eOP2RNVYEZX'],Revolution (Remixes Pt. 2),[],44,2015-05-25
+34,6ZOXiVL8rmk2ATHJiFJhiD,['137W8MRPWKqSmrBGDBFSop'],Rolling Papers,[],75,2011-03-29
+35,5b2ABzur4C2JLjDn5qqmWB,['1HQGhla3VNj1dBmKTtVT2t'],Thief,[],3,2016-03-25
+36,3zXR5GOXPq0Uc7tWC9fO3X,['6nxWCVXbOlEVRexSbLsTer'],Skin,[],66,2016-05-27
+37,2Ohkfv22XmncNwWZwn0InX,"['4AA8eXtzqh5ykxtafLaPOi', '6PRTUJAFSFJnQBFJlTt3KZ']",Lone (feat. JOY.),[],32,2016-04-08
+38,6b54hMdQpHW6pxqbKhhdYc,"['5fMUXHkw8R8eOP2RNVYEZX', '6vD1IllGayoB4YexYeazpH']",Be Right There (Remixes),[],38,2015-12-04
+39,66bTiBTbAGfHkcjj7HxBx5,['7MlotYZhHjOlXcvmwrITj8'],It's Alright (NGHTMRE Remix) [feat. Lizz Kellerman],[],40,2015-06-24
+40,2v4Crisjd4sT782Jvn7ISC,['64KEffDW9EtZ1y2vBYgq8T'],Alone,[],72,2016-05-13
+41,5LRpg4dBNSeqUAaiUB0ArL,['6GpHhOPYcMVyiMtZyeWsfw'],The Vibe (Remix) [feat. Yung Fusion],[],49,2015-03-08
+42,2LQHSnhq9Da9qOVG4tAFQA,['7bKJsFgjE6XoO5fDhTCCqX'],Love Me,[],52,2016-03-14
+43,4v9JvtFiqI4Ij9IQWsLzvk,['47z7ZrgFoBvVpCnElCE3Zh'],Invitation,[],26,2016-07-15
+44,5rJLO3VGCdRF16Cbnh8Ovu,"['5ttgIeUVka6FLyi00Uu5h8', '64KEffDW9EtZ1y2vBYgq8T']",Magic,[],56,2016-07-08
+45,3zS1pcFShFDqOKmXNtGrvr,"['2wo3eLY26t8AMyYuYi1pZQ', '5WuoHUDzojO8oto22ahnwN']",Wheels in Motion,[],25,2016-06-14
+46,16eqHlK4s0vP7wa9w1TuBw,"['4vbHmQSdfhXxGj65zEDlWS', '0M3cZtjQZ8fz3Hbw1A4CwF']",Feel It in the Air,[],36,2016-06-10
+47,6zftzvYsLS6aIEB4ZUIO8n,"['3n7KOlGKfaR8KKKSkC4tA3', '4EukMPjtYsdi87lkU1hIxN', '2tfyKNBwTB41ArvliXX1zA']",Helix 2.0 (feat. Blaise Railey),[],31,2015-07-29
+48,4NwnxwjiQyfuidnWEicBgj,"['2FwJwEswyIUAljqgjNSHgP', '0bdfiayQAKewqEvaU6rXCv']",Don't Leave (Oshi Remix),[],0,2017
+49,61xDY4G9qmoeoRdLPVfwJo,['1EAFXic0Cfiwpe7nSuTrGL'],"Eauxmygod, Vol. 3 - EP",[],40,2016-07-22
+50,54XVh1RZP4w1SqQ1ynhKZb,"['2o5jDhtHVPhrJdv3cEQ99Z', '2wX6xSig4Rig5kZU6ePlWe']",Secrets (Radio Edit),[],60,2015-04-03
+51,5l0jX2G4qAtBM6bw22iVDn,['6cEuCEZu7PAE9ZSzLLc2oQ'],Trouble,[],67,2017-01-27
+52,1eEetOt7B5PrbDlgaGQ4P8,['7bKJsFgjE6XoO5fDhTCCqX'],Ready,[],55,2016-08-18
+53,2qczZTZpha2aJyvZuXAoRT,['69GGBxA162lTqCwzJG5jLp'],Don't Let Me Down (Remixes),[],6,2016-04-15
+54,249m77A2N0B2Oek97L3oyI,"['5oREZfPeedk4nyo1GpqKfU', '4SVHe2tiwV0nWbR3zjrl4j']",Follow Your Heart [Remixes],[],47,2017-06-14
+55,4rLVK3Q1dNicPFcoHOmsYf,"['4JznCAfxUluG6YAdAiM0YE', '1bqxdqvUtPWZri43cKHac8']",Indestructible (feat. MAX),[],52,2017-08-31
+56,3JrAyXxQKjyHi78A9hsJSr,"['2yT7X3Gg2S51DHz67FAYL6', '76M2Ekj8bG8W7X2nbx2CpF']",Only Want U feat. Akylla,[],50,2017-09-19
+57,5dQU0fKWQiAug7KBahk3Gj,"['0Cd6nHYwecCNM1sVEXKlYr', '47z7ZrgFoBvVpCnElCE3Zh']",New World,[],64,2017-09-18
+58,6vgCiwWRVtekonE1URxwAR,['521qvhdobR0GzhvU6TFw76'],Getaway,[],63,2016-05-27
+59,6KsRfwqrwWjV3GpqX019k2,"['7yPPzu5UdAK7yagQqjEZQm', '3zOUpziwcfY2bCh4VyJ4Am']",Caskets (feat. FKi 1st),[],60,2017-06-09
+60,4TrCML38KR7l75dxzbAddv,"['1HQGhla3VNj1dBmKTtVT2t', '2BQWHuvxG4kMYnfghdaCIy']",Lighthouse,[],50,2017-09-01
+61,16mwPSx4sSpgDSuZWWKQzI,['23ostNBoB9z6GMXLtHdg7y'],Smile,[],45,2017-07-24
+62,4ti85EcS5ojKAXem12GQQK,['7ymczLNmjz6AVMGApVNWbB'],Her,[],40,2016-02-26
+63,655pLryQgftmCtT503dAa4,['0u18Cq5stIQLUoIaULzDmA'],A Moment In Time,[],60,2017-08-22
+64,2RO70JiZZwoUkPIOKeugFq,['2FmzVitXZjIkFolH8HXd4j'],How You Gon' Do That (feat. Cara),[],48,2017-06-23
+65,6rgXiWDRdtq1OGUS54Mpp4,['11chB4Th19iMA7j65oGMk1'],From the Ashes,[],33,2017-03-31
+66,06MJmcZO2BtoQQEnDjHNOS,['0nNnD1oc02hebmFdcJkyXw'],Oceans (Duskus Remix),[],33,2017-07-21
+67,4BaGCHafIlXCo0xRE4HfBm,['4kJOCkbW8SOmBlAhN7AQ0C'],Vice City,[],9,2017-09-12
+68,1BBiLBbU2iBo9Ha0f7Xmhu,['4kJOCkbW8SOmBlAhN7AQ0C'],Rap for Legrand,[],9,2017-09-07
+69,33FUwxQpXA1yjOknTxmaj1,['4kJOCkbW8SOmBlAhN7AQ0C'],Olacusare,[],6,2017-06-23
+70,0xIkeBtArDlUVL3fabriJi,['4kJOCkbW8SOmBlAhN7AQ0C'],Stan,[],5,2017-09-07
+71,2MR1xLN0H3YpsBig0t1vZ8,['4kJOCkbW8SOmBlAhN7AQ0C'],Stand by Me,[],4,2017-07-27
+72,6kH0qSgRVHgK1ySjchorWe,['4kJOCkbW8SOmBlAhN7AQ0C'],Eiyo,[],4,2017-09-06
+73,1v2cVnmOcTf7046KMj5HPY,['0mUKZR7k8cOSewS6faryVf'],Veethology,[],0,2017-11-22
+74,3Kt7vJoioglQ9HBqIZyd0m,['1cZEbXN17EmWhSiqbmtnkB'],Serie A - Instrumental,[],10,2017-03-15
+75,3F1y1ZqpZboKykIv1fTJCP,['1M6rXjguUqsqaV0cYsytdY'],"Instrumentals, Vol. 2",[],43,2016-05-15
+76,0nq1ysbRgZkTEYYzoHEVcK,['1M6rXjguUqsqaV0cYsytdY'],"Instrumentals, Vol. 1",[],34,2014-10-29
+77,33wf5Y2Ne4wHZHbNgmFjiG,['6DPYiyq5kWVQS4RGwxzPC7'],2001 Instrumental,[],54,1999-01-01
+78,3N5X4M4a6zgW2rfJoiwPIu,['4emSoWHfiYCIvnbvUi6wyD'],BELLY OF THE BEAST,[],13,2017-05-28
+79,5NpRpDIPJh4X8dWmqsK6my,['0LyfQWJT6nXafLPZqxe9Of'],Karaoke Official: Originals (Volume 2),[],28,2011-01-01
+80,6MZVLtqA8bh1CfbMs0DHvy,['0mUKZR7k8cOSewS6faryVf'],Fuck This Rap Shit,[],14,2017-08-29
+81,6yMSXq5g5RcWyCfFiD4cKG,['0LyfQWJT6nXafLPZqxe9Of'],Chillhop Raw Cuts,[],64,2017-02-13
+82,5qkK1yRfXz2JBpVZdKQHEv,['2B4ZHz4QDWJTXPFPgO5peE'],Regulate… G Funk Era (Special Edition),[],63,1994-06-07
+83,3HHVB1ID4BHKDUYt6pvsuj,['4lzjG0axF5czngCUGxehbB'],You Better Lose Yourself (Originally Performed By Eminem) [Instrumental Version] - Single,[],45,2015-09-04
+84,3t3Ar2cJUVLY6yTRmrezI8,['6DPYiyq5kWVQS4RGwxzPC7'],2001 Instrumental,[],52,1999-11-16
+85,2fK82UKrNrE4JLT4Y3BphR,['3BeQqzKdlARoOd6y30kCO2'],Petestrumentals - 10th Anniversary Expanded & Limited Edition,[],58,2001
+86,7bHVsrkovllikho3XxN2RX,['3BeQqzKdlARoOd6y30kCO2'],NY's Finest (Instrumentals),[],50,2016-05-23
+87,0Iio7GeHs2efmJqbShki0H,['77zgRkcehIGCAtROXkXkb3'],Synth Or Soul,[],46,2013-04-20
+88,4qKDGFz5pQH9NJtRx7qPdb,['0IVcLMMbm05VIjnzPkGCyp'],The Shining,[],52,2006-08-21
+89,1536BxzvdZsG7TqxwBNLeU,['3nmiIgeri4vEY7y0VpbsCn'],The Return Of The Magnificent (instrumental),[],51,2007-05-07
+90,6hqjMJdkaT9WWyQf5K57it,['0bWOVEEzzkEIqsSZoXt8KW'],Black Helicopters,[],37,2000-03-07
+91,433E9ZkBccrS3BwE9HQTCp,['0IVcLMMbm05VIjnzPkGCyp'],Rebirth of Detroit Instrumentals,[],50,2014-05-06
+92,72gJutbbAwEcOuUFqItJGn,['6XhXfXQZNqlcxxo4VN5ZyV'],Instrumentales De Rap Hip Hop Beats,[],0,2017-02-28
+93,3Z6W2Vzln3OIdhIWIsS05b,['78D8GHzW7QisjfTwhk9PM2'],Christmas Trap,[],56,2016-11-20
+94,1hONsS6fsrPje04cmdHD5e,"['3PU8Ju4WBYNY5xvJE3DMfV', '6btyHpatzBArK2mOeca2W0']",Day & Night EP,[],50,2010-10-26
+95,06Ee6dveq170ls1t52Cj6s,['1020a42xVklY6c56imNcaa'],"Fantastic, Vol.2: Vinyl Instrumentals",[],38,2011-07-05
+96,3XZYSw8ekbT2KhwHetkwnT,['0Tl8lb8IoR9KU4WXwTjyhH'],Language of Beats,[],18,2014-06-20
+97,4Ykw5BB1YSkAJbxtmUJhLD,['3V35H6xv4eium9zl8CQeG5'],Cool Classic Jazzstrumentals,[],0,2011-05-16
+98,2Gw5dTuAvj474FNK0Fxwnj,['7ntBtETW7gkufH8Hw38gb4'],Spotless Minds,[],57,2017-04-24
+99,2q4RZLYnvC0fYTjfuZ50dG,['46Ii49KGTckWh6cx3wObIo'],"Chart Instrumentals Karaoke 2014, Vol. 10",[],19,2014-04-03
+100,65XE57YHU5IVPDt22ARjPv,"['6ed19FV0MjG0wUNiFeU4j5', '78D8GHzW7QisjfTwhk9PM2']","Trap City, Vol. 2",[],35,2017-01-12
+101,7LQ3R6pzoXZBA1ICbcVnFB,['1M6rXjguUqsqaV0cYsytdY'],"Instrumentals, Vol. 3",[],37,2017-04-30
+102,7DuCTcLRyPeztWNAJ5qW8I,['69gue0dnMe1PUwgHVl7yg0'],Carpet Patrol,[],7,2014-03-28
+103,0Q3E7y6JhymAaBJelyhXTJ,['14uVJsPC4DByeuD0cq36ez'],Sincere - Single,[],56,2015-02-09
+104,2A6tRrnqZI0rSRwAJOWYSh,['0LyfQWJT6nXafLPZqxe9Of'],Mugen Manga Melodies Vol. 1 (Reissue),[],32,2011-09-06
+105,3xYQ7ed0Eng9xnZrwuZ2Vv,['5v0XTlB9FqNvfBfnw8n5b0'],Well Done (Instrumentals),[],35,2011
+106,3DwjLv1eLUmVprhuH0vKMt,['3BeQqzKdlARoOd6y30kCO2'],The Beat Generation 10th Anniversary Presents: Pete Rock - Mind Frame B/w Back On Da Block,[],1,2011-03-22
+107,680tAJ6IEtA8zSvz4bgVAZ,['4cW0Hsz8K4Fnync6zxsfl6'],Hip Hop Rap & Trap Instrumental Beats Vol 4,[],38,2016-02-21
+108,3e5xAED0XgW9wkhbPD81zn,['1GxI1P0kPKgdaXsw1Zs3yi'],New York City Beats Vol.2/99centbeats,[],13,2006-01-01
+109,1RZ7P20N9GXP5VQt5Y7s8o,['3AA28KZvwAUcZuOKwyblJQ'],Feel Good Inc [Instrumental] (Instrumental Version),[],24,2005-05-13
+110,18qrblksNwb591J9zNbl8F,['1XOCg7dTL8xF5Y5KlC3Lb6'],"Instrumental Hip Hop Beats (Rap, Pop, R&b, Dirty South, 2012, West, East, Coast, Dj, Freestyle, Beat, Hiphop, Instrumentals)",[],38,2011-12-19
+111,5PQJKyAYhCYpWgYKwGuDEb,['0XtVN1QaB7vYRpw4qEIRt0'],One Day One Beat,[],40,2014-06-06
+112,5fPkONjaJeTQGqZ4wA7nsB,['0LyfQWJT6nXafLPZqxe9Of'],Chillhop Essentials Summer 2016,[],54,2016-06-13
+113,4YtgBj0WgNtZAmVGSopC2i,['0aoTIxQJvGyH2vLza8yOe5'],Hip-Hop and Rap Instrumental Collection #3,[],28,2017-03-20
+114,4XiW2dDo7luQxiBCW3Wc3c,['4ypEjUTTCcPB0dgjQBQyf5'],PRhyme Instrumentals,[],52,2015-03-10
+115,60mRa3MpZQRnq14RuGlusY,['0mUKZR7k8cOSewS6faryVf'],Comfort y Veetz Para Volar,[],10,2017-09-11
+116,1iNjgHkrolKWSoR2uGxOBh,['7wg1qvie3KqDNQbAkTdbX0'],Love Is Alive EP,[],65,2017-03-24
+117,7oJa8bPFKVbq4c7NswXHw8,['6eUKZXaKkcviH0Ku9w2n3V'],Shape of You,[],80,2017-01-06
+118,6kf46HbnYCZzP6rjvQHYzg,['6LuN9FCkKOj5PcnpouEgny'],American Teen,[],96,2017-04-27
+119,5vaB9ySiFpfeKfzBMa4jjH,['5H6xmHXjsq98NLbEjuE29f'],Sexual,[],60,2016-08-26
+120,1UIlzhqJLiA3f6OVw7QKn6,['7CajNmpbOovFoOoasH2HaY'],Slide,[],76,2017-02-24
+121,5HP0mClbg1U8UqxQ1FkUOF,['26VFTg2z8YR0cCuwLzESi2'],Now Or Never,[],22,2017-04-04
+122,1udLKdsDr7GRmJU6Cxyt7j,['6vXTefBL93Dj5IqAWq6OTv'],Unforgettable,[],49,2017
+123,2mnDyPSNM02LMvniaMWnLl,['5pUo3fmmHT8bhCyHE52hA6'],Strip That Down,[],81,2017-05-18
+124,5YLRVHDVRw3QqWbeTGpC5B,['1Xylc3o4UrD53lo9CvFvVg'],So Good,[],85,2017-03-17
+125,0OK35duHpTPnvqya2d4pnn,"['60d24wfXkVzDSfLS6hyCjZ', '3WGpXCj9YhhfX11TToZcXP']",There for You,[],81,2017-05-26
+126,2dpr40NgqfQR7iuw6ZIfPY,['6jfmpYXOrvtUzjcP53kYSA'],Rebel Just For Kicks,[],53,2017-07-14
+127,20NoLM2SnwJBPwBG6cUAld,['2bA6fzP0lMAQ4kz6CF61w8'],20th Century Masters : The Millennium Collection : Best Of Toby Keith,[],21,2003-01-01
+128,4SOpJPkpAO8FT9n4sbmnoT,['2bA6fzP0lMAQ4kz6CF61w8'],Honkytonk University,[],57,2005-01-01
+129,31e5FbyXFDSR8MtktB9GRU,['2bA6fzP0lMAQ4kz6CF61w8'],Call a Marine,[],35,2017-08-25
+130,6fDc100UHbUvS6IuxBrKRn,['2bA6fzP0lMAQ4kz6CF61w8'],Clancy's Tavern (Deluxe Edition),[],57,2011-01-01
+131,5GbASKPwYwyJrNP9PqeXEE,['2bA6fzP0lMAQ4kz6CF61w8'],Greatest Hits 2,[],55,2004-01-01
+132,4bTpO7buGrpu5Vx6K8cKDc,['2bA6fzP0lMAQ4kz6CF61w8'],American Ride,[],53,2009-01-01
+133,3UBjWaGRf6ppcvnJd9M9UC,['2bA6fzP0lMAQ4kz6CF61w8'],Toby Keith 35 Biggest Hits,[],63,2008-01-01
+134,2MtysHKcNUMuYEQreE6pzu,['2bA6fzP0lMAQ4kz6CF61w8'],Drinks After Work,[],10,2013-01-01
+135,79eHDbyQCmBL1H44R4riog,['2bA6fzP0lMAQ4kz6CF61w8'],Wacky Tobaccy,[],42,2017-06-23
+136,29pwejcqjXjK2KAeJsgm4R,['2bA6fzP0lMAQ4kz6CF61w8'],Made In America,[],49,2011-01-01
+137,2Tdnfm5r67axCG3FPhkZFL,['2bA6fzP0lMAQ4kz6CF61w8'],Shock 'N Y'all,[],57,2003-01-01
+138,5DiY55vMlAZPlV3n9Q66s7,['2bA6fzP0lMAQ4kz6CF61w8'],Shitty Golfer,[],34,2017-07-21
+139,1hTrPei0GklnRTDtPZqcOu,['2bA6fzP0lMAQ4kz6CF61w8'],Drinks After Work (Deluxe Edition),[],45,2013-01-01
+140,6uM7mPDOjA9ApazHeBCwUm,['2bA6fzP0lMAQ4kz6CF61w8'],That Don't Make Me A Bad Guy (Standard Version),[],46,2008-01-01
+141,1kbdGiJrgWAEarduT2V6lj,['2bA6fzP0lMAQ4kz6CF61w8'],Greatest Hits (Volume 1),[],51,2014-01-01
+142,4f0baiYULN2U3IKMt8HhAg,['2bA6fzP0lMAQ4kz6CF61w8'],Runnin' Block,[],33,2017-08-11
+143,7qIN7253jP13hyF0kJmli3,['2bA6fzP0lMAQ4kz6CF61w8'],Boomtown,[],40,1995
+144,4iWbxbStpDbMoMJMkILb24,['2bA6fzP0lMAQ4kz6CF61w8'],Toby Keith,[],56,1993-01-01
+145,60MJhCGRycALVB5qXHHYf1,['2bA6fzP0lMAQ4kz6CF61w8'],Blue Moon,[],31,1996-01-01
+146,1QVULMyp5S6nVittP55z2V,['2bA6fzP0lMAQ4kz6CF61w8'],Hope On The Rocks (Deluxe Edition),[],41,2012-01-01
+147,2GBWYbIHyVneL0VylPXa6Y,['2bA6fzP0lMAQ4kz6CF61w8'],How Do You Like Me Now?!,[],47,1999-01-01
+148,4uFKPtUYCb49y2omi648PS,['2bA6fzP0lMAQ4kz6CF61w8'],Pull My Chain,[],50,2001-01-01
+149,7ANsCR3YSvI5bDriBzbB2p,['2bA6fzP0lMAQ4kz6CF61w8'],Get Drunk And Be Somebody,[],10,2005-01-01
+150,7ExectJocqn8sMKq4Tn4LY,['2bA6fzP0lMAQ4kz6CF61w8'],Unleashed,[],61,2002-01-01
+151,7Ix0FS4f1lK42C3rix5rHg,['3TVXtAsR1Inumwj472S9r4'],More Life,[],86,2017-03-18
+152,3M2sUVD8UNZixh8EzQGt3w,['2UwqpfQtNuhBwviIC0f2ie'],Ipséité,[],79,2017-04-28
+153,4CZVGlURM8vncG4ftZULTS,['4O15NlyKLIASxsJ0PrXPfz'],XO TOUR Llif3,[],83,2017-03-24
+154,2SveSsOCg8nUJRHyqep9nn,['62zLrboqOTPyozwi721CVy'],Fume à fond,[],63,2017-06-16
+155,66HgStY2Bl3zy9lT9zxgUz,['7CUFPNi1TU8RowpnFRSsZV'],Réseaux,[],52,2017-07-07
+156,4I3EcXD4e3KcEoDJfFEZ5b,"['1URnnhqYAYcrqrcwql10ft', '0iEtIxbK0KxaSlF7G42ZOp']",Savage Mode,[],82,2016-07-15
+157,4JBZ0QHveEpESepanNBG8A,['0QHgL1lAIqAw0HtD7YldmP'],Grateful,[],87,2017-06-22
+158,7nn2Iaphg0Vc1NCGULkhVo,['2EMAnMvWE2eb56ToJVfCWs'],True to Self,[],82,2017-05-26
+159,6eZdwrhB97A3EYx9QppGfl,['2EMAnMvWE2eb56ToJVfCWs'],T R A P S O U L,[],85,2015-10-02
+160,2SudjOVqMeUkbO7oc2SYV9,['4IdI1p8OrVpot6dbdCl3wv'],Canción Bonita,[],55,2017-11-03
+161,2R2e9X6qUOS4sq4NHAEXP4,['4IdI1p8OrVpot6dbdCl3wv'],Moral Distraída,[],61,2014-04-12
+162,2pICAjSD6KFCSJVmhek3L6,['4IdI1p8OrVpot6dbdCl3wv'],Probarlo Todo,[],53,2017-05-12
+163,5QOftiUHAjo1DgiwM2GCYI,['4IdI1p8OrVpot6dbdCl3wv'],Hacerlo de Día,[],61,2016-07-27
+164,3cVoxcpHC36i7ZYn9o8aSh,['22QaKKmBIH3QiotuG30W3o'],En el Ojo del Huracán,[],64,2017-09-08
+165,0dLOe1cAV5nvsCHWC7MAy5,['22QaKKmBIH3QiotuG30W3o'],Le Traigo Cumbia,[],54,2010
+166,63k85BTuGISt89mpP7IpGM,['22QaKKmBIH3QiotuG30W3o'],Lo que va a pasar,[],58,2017-01-11
+167,361jV4fxA1QXQ7dywMmIdm,['22QaKKmBIH3QiotuG30W3o'],Si Te Marchas No Hay Manera,[],38,2017-08-05
+168,3ZOe2CfkXU0z93qNewfyiV,['22QaKKmBIH3QiotuG30W3o'],El Gil de Tu Ex,[],47,2017-07-28
+169,0Ue9qza4OSxJXFVooMjhnq,['22QaKKmBIH3QiotuG30W3o'],"10 Años Santaferia (En Vivo Movistar Arena Santiago, Chile)",[],55,2017-06-13
+170,75funXQJj9ZsKzBAoq6gOp,['4PhdYoQGH8s1xee81dqQOO'],Índigo Cristal,[],66,2017-08-04
+171,2NANM7zBb4IIH5DzKqAoMG,['4PhdYoQGH8s1xee81dqQOO'],Natiruts Reggae Brasil (Ao Vivo) [Deluxe],[],68,2016-08-19
+172,6mwUuFnDhorOobuc6GHv1h,['4PhdYoQGH8s1xee81dqQOO'],#NOFILTER (Ao Vivo),[],60,2014-07-22
+173,14iEAaKYHYBx8jMEtzKmSX,['4PhdYoQGH8s1xee81dqQOO'],Natiruts Acústico no Rio de Janeiro,[],72,2012-09-17
+174,6zhjig78tafXcTTZmjO752,['2ST5XwWB4uXGKk2NXP8DUI'],25 Años de Música,[],63,2013-10-22
+175,6YnNbmDNBe4H47DUKka4Hp,['2ST5XwWB4uXGKk2NXP8DUI'],Luna Park,[],48,2006
+176,13UzYROsKbVZF4RZCrMtQF,['16kOCiqZ1auY4sokSeZuKf'],Inalcanzable,[],56,1993-01-01
+177,7fIqsFfeYEEP9RO25KHj8P,['3MHaV05u0io8fQbZ2XPtlC'],FIVE (Deluxe Edition),[],78,2017-02-24
+178,62U7xIHcID94o20Of5ea4D,['0PFtn5NtBbbUNbU9EAmIWF'],Toto IV,[],76,1982-04-08
+179,5Y55ACw2b86EstHX5GBqi1,['6LUIKsUIfKRBmJkjwJSKyC'],Perdoname,[],31,2016-05-03
+180,1aJtUAyPNnyjHAOL8isj0A,['2MgC3Q9jfzlVcRoXO9Oy36'],#Semehizofácil,[],42,2016-10-19
+181,5BNo0V8OzR3rCbPR3Pzmja,['5ayaJ0PyZyqZfxtv0ShJ5i'],Quemando Material,[],39,2017-02-18
+182,79FYreSzK9PXWPePnhZLJ0,['1ZlIROqKXOEvPgEffO8vri'],Ríspida Rapsodia Regia (Teatro Blanquita),[],48,2017-01-09
+183,6RgGXHeTTBLrcCIHjKpvFa,['0LyfQWJT6nXafLPZqxe9Of'],7 Machos,[],51,2017-02-18
+184,0SCKZB4ZgAcQh570pVfSdm,['5psFWO0ApFkCgzjuToEHx3'],Makaroner,[],11,2010-12-06
+185,7Kmmw7Z5D2UD5MVwdm10sT,['7gP3bB2nilZXLfPHJhMdvc'],Torches,[],80,2011-05-23
+186,6uD3oJCWT1gtlSCg5lDiNF,['4dwdTW1Lfiq0cM8nBAqIIz'],My Head Is An Animal,[],73,2012-01-01
+187,7LN1DM2rLG5GFezakJF4vk,['2DlGxzQSjYe5N6G9nkYghR'],Dance Again...The Hits,[],63,2012-07-20
+188,6edYDxspt9uQj21mbAfFIb,['085pc2PYOi8bGKj0PNjekA'],#willpower,[],51,2013-12-10
+189,39P7VD7qlg3Z0ltq60eHp7,['6vWDO969PvNqNYHIOW5v0m'],I AM...SASHA FIERCE,[],75,2008-11-14
+190,2UhhTDJmmzO0vGWpWm0KZN,['2DlGxzQSjYe5N6G9nkYghR'],Rebirth,[],60,2005
+191,5MQBzs5YlZlE28mD9yUItn,['6jJ0s89eD6GaHleKKya26X'],PRISM (Deluxe),[],72,2013-01-01
+192,1dgr18ZOFLrHsw9pBxH29Z,['0LyfQWJT6nXafLPZqxe9Of'],Let's Get It Started,[],42,2010-04-13
+193,53DrBEDi1AvhWOtCdljUiu,['4AK6F7OLvEQ5QYCBNiQWHq'],Up All Night,[],66,2012-05-25
+194,2szeSQtOcJgRhDXmTS3SIf,['1yxSLGMDHlW21z4YXirZDS'],Monkey Business,[],66,2005-01-01
+195,5qf9TEgsN87fxwEKsJP2vu,['1yxSLGMDHlW21z4YXirZDS'],The Beginning & The Best Of The E.N.D.,[],60,2011-01-01
+196,1Kw1bVd07oRqcjrcjQKC8T,['5pKCCKE2ajJHZ9KAiaK11H'],Talk That Talk,[],65,2011-11-19
+197,3xFSl9lIRaYXIYkIn3OIl9,['5WUlDfRSoLAfcVSX1WnrxN'],1000 Forms Of Fear,[],76,2014-07-04
+198,2RjYiccB99aFRJ8C0QxDf7,['1Cs0zKBU1kc0i8ypK3B9ai'],Play Hard (feat. Ne-Yo & Akon) [New Edit],[],58,2013-03-15
+199,2sB7ZYdnxqjVOh3ETtx19Z,['1HY2Jd0NmPuamShAr6KMms'],Applause,[],46,2013-08-12
+200,3Oc7TFerme2LybRGVAcESO,['3E6xrwgnVfYCrCs0ePERDz'],El Regreso del Sobreviviente (Deluxe Edition),[],65,2014-03-18
+201,3kaQUt8Mp906u1fI0LDqO6,['6prmLEyn4LfHlD9NnXWlf7'],The Original High (Deluxe Version),[],66,2015-06-11
+202,1HjSyGjmLNjRAKgT9t1cna,['2AsusXITU8P25dlRNhcAbG'],Making Mirrors,[],66,2011-01-01
+203,2XBnxKeRZi76u2iyGcMych,['738wLrAtLtCtFOLvQBXOXp'],Peace Is The Mission,[],70,2015-05-29
+204,5t4A7Loq1pKRFlkBOs1O2O,['6VuMaDnrHyPL1p4EHjYLi7'],Some Type Of Love,[],71,2015-05-01
+205,6w2rRSUsQk1e9ALB6ybmlz,['1Cs0zKBU1kc0i8ypK3B9ai'],One More Love,[],67,2010-11-22
+206,78GeZ5IA1KSbI0MiR4bAhH,['0C8ZW7ezQVs4URX5aX7Kqx'],For You,[],68,2014-11-24
+207,3fteFdt9UYkGhTtUBMhZ0h,['4RVnAU35WRWra6OZ3CbbMA'],Boombox,[],46,2009
+208,6qvNlKkL5HUJcvHCziZwS9,"['4Sld4E5Q7wwu0qo3gjoA8d', '5HzQ7bk1mrBGEYFKwXU8qc', '2tNuKd2HWVG7NDfj8pIkmO']","Todos los Exitos 2015, Vol. 1",[],34,2015-05-15
+209,7w19PFbxAjwZ7UVNp9z0uT,['7CajNmpbOovFoOoasH2HaY'],18 Months,[],77,2012-10-26
+210,3BoVnvCLPREk5YFAgKzNDD,['085pc2PYOi8bGKj0PNjekA'],T.H.E (The Hardest Ever),[],35,2011-11-20
+211,4QcXq4vTVN7dFb7bZa9jG2,['4sTQVOfp9vEMCemLw50sbu'],Pharmacy,[],74,2015-06-05
+212,2CuI0AW9srCLZLMStZMift,['1Cs0zKBU1kc0i8ypK3B9ai'],One Love [Club Version],[],45,2009-11-27
+213,7tmMk6qGP9CmHOkJWEtsdU,['1Cs0zKBU1kc0i8ypK3B9ai'],Titanium (feat. Sia),[],42,2011-12-09
+214,4bOquAnBK50o5SupKQmdJt,['1Cs0zKBU1kc0i8ypK3B9ai'],She Wolf (Falling to Pieces)[feat. Sia],[],50,2013-01-11
+215,3n2nA5YdK8OKujeHIqIlAd,['4AK6F7OLvEQ5QYCBNiQWHq'],One Way Or Another (Teenage Kicks),[],53,2013-02-17
+216,7slbkjkfIPufuEa858735n,['4AK6F7OLvEQ5QYCBNiQWHq'],Best Song Ever (From THIS IS US),[],39,2013-07-22
+217,2DsqRdeNGtz9Qk5pGnhQeD,['4AK6F7OLvEQ5QYCBNiQWHq'],Live While We're Young,[],34,2012-09-28
+218,3RKhRsifs4RWrqvWV1YpPY,['1h6Cn3P4NGzXbaXidqURXs'],Don't You Worry Child (feat. John Martin),[],70,2012-10-05
+219,2R7iJz5uaHjLEVnMkloO18,['4gzpq5DPGxSnKTe4SA8HAU'],Mylo Xyloto,[],79,2011-10-24
+220,4oVG376KpWeBaxrKqRxVri,['0X2BH1fck6amBIoJhDVmmJ'],Lights,[],63,2010
+221,3T3MLtb5e99Gycmojic6h9,['1Cs0zKBU1kc0i8ypK3B9ai'],Who's That Chick,[],49,2010-12-03
+222,3QqcRWKl9SGY0cY5bGEZq3,['4RVnAU35WRWra6OZ3CbbMA'],In My Arms,[],20,2008-02-15
+223,574xhx2X0G9MkqACxqi4cg,['26dSoYclwsYLMAKD3tpOr4'],Greatest Hits: My Prerogative,[],60,2004
+224,4yHr095BMG5I3IRH4ToE5l,['1HY2Jd0NmPuamShAr6KMms'],The Fame Monster (Deluxe),[],68,2009-01-01
+225,75UPU2NcSRpkQVnLTb92MO,['1Cs0zKBU1kc0i8ypK3B9ai'],Turn Me On (feat.Nicki Minaj) [Remixes],[],35,2012-01-27
+226,5C86A0BGmPvSrRVYO7ZRng,['0hCNtLu0JehylgoiP8L4Gh'],Starships,[],1,2012-01-01
+227,0pqKb2y8h2BWS46HMfmEgD,['1KCSPY1glIKqW2TotWuXOR'],The Truth About Love,[],69,2012-09-14
+228,7m7F7SQ3BXvIpvOgjW51Gp,['5nCi3BB41mBaMH9gfr6Su0'],Some Nights,[],69,2012-02-14
+229,7eLwoxxWs6lfkVYJGkGNbk,['0jnsk9HBra6NMjO2oANoPY'],Wild Ones,[],75,2012-06-22
+230,1qd3tLkP0GWcoEqmkGpeVE,['5pKCCKE2ajJHZ9KAiaK11H'],Good Girl Gone Bad: Reloaded,[],58,2008-06-02
+231,0rmhjUgoVa17LZuS8xWQ3v,['163tK9Wjr9P9DmM0AVK7lm'],Pure Heroine,[],73,2013-01-01
+232,1hg0pQJLE9dzfT1kgZtDPr,['6tbjWDEIzxoDsBA1FuhfPW'],Confessions On A Dance Floor (12 Reg. Tracks),[],63,2005-11-11
+233,5218wVMa75jODZbM6oIa1j,['2cBh5lVMg222FFuRU7EfDE'],Read My Lips,[],40,2001
+234,6BUAjgcgWhtTgRXVqCwF4u,['5ZsFI1h6hIdQRw2ti0hz81'],PILLOWTALK,[],64,2016-01-29
+235,3seeM6e30G01xMPQVmBIyX,['1Cs0zKBU1kc0i8ypK3B9ai'],Bang My Head (feat. Sia & Fetty Wap),[],54,2015-10-30
+236,0tGht9KBhk71vOJCHZzhVk,"['6XwwFnewNgWp81MYMK8zLq', '34dZRjYum6vVBGslgYaBtB']",Stereo Love,[],57,2010-01-31
+237,2qRiBL8BTX3OkHCrNn4z1f,['0BmLNz4nSLfoWYW1cYsElL'],"Saxobeat's (feat. Carlprit, Jason Ray)",[],44,2010
+238,2Zmh8zBWoXVimqrZbpm7wx,['4nfGq1jNSAqLWr0UkGw7Xj'],Ya Odna ? ????,[],36,2012-02-03
+239,4rG0MhkU6UojACJxkMHIXB,['0TnOYISbd1XYRBk9myaseg'],Planet Pit (Deluxe Version),[],71,2011-06-17
+240,1MbBSfcqLg2OjkeZ1RMSIq,['3sgFRtyBnxXD5ESfmbK4dl'],Sorry For Party Rocking,[],60,2011-01-01
+241,5BvgP623rtvlc0HDcpzquz,['6jJ0s89eD6GaHleKKya26X'],Katy Perry - Teenage Dream: The Complete Confection,[],80,2012-03-12
+242,1yKCNIVac6PKISJ5u6IO1T,['6jJ0s89eD6GaHleKKya26X'],Hot N Cold,[],44,2008-11-24
+243,5WOzBj6HZDOXwEbfsG2DlU,['76ptJV8617638xrpeoUtzl'],Best Of 2001-2009 (International Version),[],19,2009-01-01
+244,5maeycU97NHBgwRr2h2A4O,['1HY2Jd0NmPuamShAr6KMms'],Born This Way (Special Edition),[],63,2011-01-01
+245,7j7iPq5rokadGr1ZdJRGgE,['1HY2Jd0NmPuamShAr6KMms'],The Fame Monster (International Deluxe),[],58,2009-01-01
+246,5drTYB3sPmtgLTnj04FUad,['1HY2Jd0NmPuamShAr6KMms'],The Fame,[],54,2008-01-01
+247,3DOIu3Foeaftlxh3yGCecl,['76ptJV8617638xrpeoUtzl'],The Rasmus,[],37,2012-04-18
+248,4vMD7tUKB0Vub5Q6veE0ds,['0LyfQWJT6nXafLPZqxe9Of'],European Dance Charts Vol.1,[],28,2007-07-27
+249,0bUTHlWbkSQysoM3VsWldT,['3AA28KZvwAUcZuOKwyblJQ'],Demon Days,[],80,2005-05-23
+250,3aUyWhKO0N0YzVpSJDDPjV,['1l7ZsJRRS8wlW3WfJfPfNS'],Candyman,[],27,2006
+251,4vyPN44zoiJXE6hruCCrGB,['2Q3eZMfDQgT8MhPowKFXYO'],200 KM/H In The Wrong Lane (10th Anniversary Edition),[],55,2002
+252,3coLNlyStg9h7f8CZ103Rl,['19ra5tSw0tWufvUp8GotLo'],Ladies And Gentlemen... The Best Of George Michael,[],71,1998-11-09
+253,6oxVabMIqCMJRYN1GqR3Vf,['6vWDO969PvNqNYHIOW5v0m'],Dangerously In Love,[],76,2003-06-24
+254,1azUkThwd2HfUDdeNeT147,['4dpARuHxo51G3z768sgnrY'],21,[],80,2011-01-19
+255,4vCYCNlJi2sFZY3hkli3dR,['0ZrpamOxcZybMHGg1AYtHP'],Blurred Lines,[],50,2013-01-01
+256,3qqhNVbjLFNdLviBFrFwCa,['3DiDSECUqqY1AuBP8qtaIa'],Girl On Fire,[],64,2012-11-23
+257,77jAfTh3KH9K2reMOmTgOh,['5WUlDfRSoLAfcVSX1WnrxN'],This Is Acting,[],74,2016-01-29
+258,0RHX9XECH8IVI3LNgWDpmQ,['4gzpq5DPGxSnKTe4SA8HAU'],A Rush Of Blood To The Head,[],82,2002-08-08
+259,1FnkZ3HMw2v2WXTL1L5iHi,['3t5xRXzsuZmMDkQzgOX35S'],Prayer,[],57,2014-09-19
+260,0oHWHIlUObaSopO9wOhvfz,['762310PdDnwsDxAQxzQkfX'],Playing The Angel,[],51,2005-10-18
+261,1aUeYy0hXu0KBuJ5To0hS0,['5YGY8feqx7naU7z4HrwZM6'],Wrecking Ball,[],58,2013-08-25
+262,24REY1t8dFi2VXi6oUVO8j,['5Pwc4xIPtQLFEnJriah9YJ'],Native (Deluxe),[],15,2013-01-01
+263,0bxXUBPhl52es0MgOhNjRx,['6NaTOhsj6iiUNONPrE980Z'],Fix Your Accent,[],53,2013-07-23
+264,5SRimW7mSHutul5C37zA3v,['0LyfQWJT6nXafLPZqxe9Of'],Project X (Original Motion Picture Soundtrack),[],8,2012
+265,0VWYRbEcvJcPrqMGJirO6q,['085pc2PYOi8bGKj0PNjekA'],#willpower (Deluxe),[],62,2013-01-01
+266,0bjL6Jdr0u9HTVfyRByZCn,['7aLdKgvXgDQz0wi5z2PKMV'],The Girl Is Mine featuring Destiny's Child & Brandy (Remixes) - EP,[],57,2016-01-15
+267,1HduTydfaUY3idi2YgT3mb,['4yiQZ8tQPux8cPriYMWUFP'],Love Angel Music Baby,[],68,2004-01-01
+268,7xnZ539lh8x6de9jzlpCJp,['4yiQZ8tQPux8cPriYMWUFP'],The Sweet Escape,[],62,2006-01-01
+269,5mSNx85XpyOijeaS2ojfQZ,"['07EafuRJGR8zatcaf132UV', '3iN9k8uvm4WrgdlOigOH8D']",Take You Higher,[],38,2011-11-01
+270,0K4pIOOsfJ9lK8OjrZfXzd,['4dpARuHxo51G3z768sgnrY'],25,[],80,2016-06-24
+271,1ePkYcH5ZQCb1b4tQeiEDj,['26dSoYclwsYLMAKD3tpOr4'],Blackout,[],69,2007-10-25
+272,1mtWvoEOGCTV112yCmJayi,['3r17AfJCCUqC9Lf0OAc73G'],The Dutchess Deluxe,[],66,2007-01-01
+273,3j7IBBXSCv4xwAKAUe3SiJ,['1KCSPY1glIKqW2TotWuXOR'],Blow Me (One Last Kiss),[],36,2012-07-03
+274,5GlPAy2PRJW06GVFhKwGTl,['53XhwfbYqKCa1cC15pYq2q'],Evolve,[],91,2017-06-23
+275,5MxXY7DbFMUiHFTPUabgJJ,"['5ZsFI1h6hIdQRw2ti0hz81', '06HL4z0CvFAxyc27GXpf02']",I Don’t Wanna Live Forever (Fifty Shades Darker),[],77,2016-12-09
+276,09fggMHib4YkOtwQNXEBII,['1Xyo4u8uXC1ZmMpatF05PJ'],Starboy,[],86,2016-11-25
+277,3meZFplbMmji648oWUNEfQ,['6MDME20pz9RveH9rEXvrOM'],Rockabye (feat. Sean Paul & Anne-Marie),[],80,2016-10-21
+278,0dzeoQhVNzKkwM5ieOJC54,['7CajNmpbOovFoOoasH2HaY'],My Way,[],75,2016-09-16
+279,4PgleR09JVnm3zY1fW3XBA,['0du5cEVh5yTK9QJze8zA0C'],24K Magic,[],89,2016-11-17
+280,64vx3cUb97lQGlgt8zozWL,['69GGBxA162lTqCwzJG5jLp'],Paris,[],76,2017-01-13
+281,4Yy7pSgkobZoK6bOu3PEPB,['3Gm5F95VdRxW3mqCn8RPBJ'],Good For You,[],74,2017-07-28
+282,55bbXORm6ZrVq52zfZnxBf,['540vIaP2JwjQb9dm3aArA4'],Encore,[],79,2016-08-05
+283,0fvTn3WXF39kQs9i3bnNpP,['04gDigrS5kc9YWfZHwBETP'],Don't Wanna Know,[],68,2016-10-11
+284,3T4tUhGYeRNVUGevb0wThu,['6eUKZXaKkcviH0Ku9w2n3V'],÷ (Deluxe),[],100,2017-03-03
+285,1FOJ5IXGXe8dl0cXvCU6wK,"['60d24wfXkVzDSfLS6hyCjZ', '64M6ah0SkkRsnPGtGiRAbb']",In the Name of Love,[],77,2016-07-29
+286,0rSLgV8p5FzfnqlEk4GzxE,['69GGBxA162lTqCwzJG5jLp'],Closer,[],81,2016-07-29
+287,3Kmo85mapQ2wTaCAHBkKsK,['738wLrAtLtCtFOLvQBXOXp'],Cold Water,[],69,2016-07-22
+288,0IUCAsckpNyV4wHKIHQawC,"['23fqKkggKUBHNkbKtXEls4', '0C8ZW7ezQVs4URX5aX7Kqx']",It Ain't Me (with Selena Gomez),[],79,2017-02-16
+289,2v9rQe4F8fVSh5v8bAq0jF,"['60d24wfXkVzDSfLS6hyCjZ', '6M2wZ9GZgrQXHCFfjv46we']",Scared to Be Lonely,[],80,2017-01-27
+290,5yYFrOnqG8cEciKnsxHz2r,['7n2wHs1TKAczGzO7Dd2rGr'],Illuminate (Deluxe),[],87,2017-04-20
+291,7oYKSApfrPWuKk8aH6rH7t,['04gDigrS5kc9YWfZHwBETP'],Cold,[],67,2017-02-14
+292,4JPguzRps3kuWDD5GS6oXr,['69GGBxA162lTqCwzJG5jLp'],Memories...Do Not Open,[],87,2017-04-07
+293,3tWaxq6QGN4jkrrXHcvNBA,['6oMuImdp5ZcFhWP0ESe6mG'],Bad and Boujee (feat. Lil Uzi Vert),[],67,2016-10-28
+294,4eYnvtB4sTtfGr0903YMn4,"['4Q6nIcaBED8qUel8bBx6Cr', '5KKpBU5eC2tJDzf0wmlRp2']",You Don't Know Me,[],74,2016-12-09
+295,39NO201BzBWoBo9WGBp6Dt,['5H6xmHXjsq98NLbEjuE29f'],Sexual,[],70,2016-08-26
+296,52bwpFP1d8uri0V5oWQLF0,['7gAppWoH7pcYmphCVTXkzs'],Night & Day (Night Edition),[],76,2017-07-14
+297,1rMmiDKa8V5H9yYTPAbLng,['4f9iBmdUOhQWeP7dcAn1pf'],Human (Deluxe),[],81,2017-02-10
+298,4lVR2fg3DAUQpGVJ6DciHW,['66CXWjxzNUsdJxJ2JdwvnR'],Dangerous Woman,[],84,2016-05-20
+299,2eV6DIPDnGl1idcjww6xyX,['5WUlDfRSoLAfcVSX1WnrxN'],This Is Acting (Deluxe Version),[],82,2016-10-21
+300,2e8nzTZ0HtK94IifOWgN7o,['50JJSqHUf2RQ9xsHs0KMHg'],The Human Condition,[],73,2016-06-10
+301,4blCxKnK1sGo9D45trrqjt,['7vk5e3vY1uw9plTHJAMwjN'],Alone,[],74,2016-12-02
+302,6msV14ocKnUKffhMpHWhIG,['6TIYQ3jFPwQSRmorSezPxX'],bloom,[],74,2017-05-12
+303,6H74dJOhawVj8dAv7ZBXKd,['738wLrAtLtCtFOLvQBXOXp'],Run Up (feat. PARTYNEXTDOOR & Nicki Minaj),[],66,2017-01-26
+304,1FulpD9JiAPbqP2F31pmUP,['0ZED1XzwlLHW4ZaG4lOT6m'],Issues,[],74,2017-01-13
+305,5w5P7lTPAQAbgJX73on3gx,['2wUjUUtkb5lvLKcGKsKqsR'],"How Far I'll Go (From ""Vaiana"")",[],66,2016-10-28
+306,15qLmAABocTCRBSbWWqL7K,['4qBgvVog0wzW75IQ48mU7v'],iSpy (feat. Lil Yachty),[],79,2016-12-02
+307,3smvpv7CdrhVcGYaNDLOqn,"['4V8Sr092TqfHkfAA5fXXqG', '4VMYDCV2IEDYJArk749S6m']",Despacito Feat. Justin Bieber (Remix),[],82,2017-04-17
+308,4L9b6Oe9iEHHvK1MA2PqZU,['02A3cEvlLLCbIMVDrK2GHV'],Call On Me (Remixes),[],62,2016-09-23
+309,6YDkzHVTEzMXZOVd1r5NqR,['6KImCVD70vtIoJWnq6nGn3'],Sign of the Times,[],75,2017-04-07
+310,6301sWkK7hVwcrhcEwKPcH,['7DMveApC7UnC2NPfPvlHSU'],No Promises (feat. Demi Lovato),[],78,2017-03-31
+311,0VMGOBhLrC5Q2bfZnrocVN,"['2qxJFvFYMEDqd7ui6kSAcq', '2wUjUUtkb5lvLKcGKsKqsR']",Stay,[],77,2017-02-23
+312,4b13SJlne61y53KSEwuQtD,['6MDME20pz9RveH9rEXvrOM'],Symphony (feat. Zara Larsson),[],82,2017-03-16
+313,0t0NkQulrNkxw2oUZZHboA,['6VuMaDnrHyPL1p4EHjYLi7'],Attention,[],87,2017-04-20
+314,6wu7tiTr8zchRG7PWwTOK1,"['23fqKkggKUBHNkbKtXEls4', '0X2BH1fck6amBIoJhDVmmJ']",First Time,[],77,2017-04-28
+315,7CUczABBlsbd5fqng9mjxo,['5YGY8feqx7naU7z4HrwZM6'],Malibu,[],73,2017-05-11
+316,4c2p3TdN7NcQfCXyueCNnC,['6vXTefBL93Dj5IqAWq6OTv'],Jungle Rules,[],90,2017-07-14
+317,5wtHzowB37Fre3iXWQW5v5,"['2XnBwblw31dfGnspMIwgWz', '1xNmvlEiICkRlRGqlNFZ43', '6hyMWrxGBsOx6sWcVj1DqP']",More Than You Know,[],84,2017-05-24
+318,1PZviVfBJJxNw5EtAwzdUu,['1Cs0zKBU1kc0i8ypK3B9ai'],2U (feat. Justin Bieber),[],81,2017-06-09
+319,7J6SYqcOQ705IYA0DUec38,['4ehtJnVumNf6xzSCDk8aLB'],Solo Dance,[],70,2016-11-04
+320,2HaqChIDc5go3qxVunBDK0,['7CajNmpbOovFoOoasH2HaY'],Funk Wav Bounces Vol.1,[],87,2017-06-30
+321,2e5CxfyEwBW115beiwh7Mc,"['07YZf4WDAMNwqr4jfgOZ8y', '0hCNtLu0JehylgoiP8L4Gh', '7c0XG5cIJTrrAgEC3ULPiq']",Swalla (feat. Nicki Minaj & Ty Dolla $ign),[],83,2017-02-23
+322,2nwTJuSqvCygeyI8U7vpeI,['6s22t5Y3prQHyaHWUN1R1C'],The Click,[],72,2017-06-30
+323,3wBabo4pmzsYjALMSKY7Iq,['7n2wHs1TKAczGzO7Dd2rGr'],Illuminate (Deluxe),[],82,2017-04-20
+324,5ULpJyQxXdTaBEMdSfSDCp,['4FLA7MpTdP5nNUQfiaA3WM'],The Sea,[],39,2016-09-16
+325,1Xsprdt1q9rOzTic7b9zYM,['0hEurMDQu99nJRq8pTxO14'],Continuum,[],79,2006-09-11
+326,0oFlNGmGpsFvvhBgnNPirh,['3Ngh2zDBRPEriyxQDAMKd1'],Exile On Mainstream,[],64,2007-10-02
+327,51Hn2Wiq1jmUfI0BLaUhuF,['3AQRLZ9PuTAozP28Skbq8V'],The Script,[],71,2008-09-08
+328,2QLp07RO6anZHmtcKTEvSC,['29kkCKKGXheHuoO829FxWK'],Boston,[],75,1976
+329,3UeHoEHuxnsHaMk0pBATGT,['1Cq0LAHFfvUTBEtMPXUidI'],In Between Now And Then (U.S. Version),[],43,2003-10-07
+330,0FZK97MXMm5mUQ8mtudjuK,['7FBcuc1gsnv6Y1nwFtNRCb'],The Black Parade (Explicit Version),[],79,2006-10-23
+331,0x3uUHhj8bCoM5Uzi5FNIv,['0TcYeHEK9sBtv7xPbKhzHz'],Tubthumper,[],55,1997-01-01
+332,7z6LqzGLGd6tnWvsH9iojB,['6TcnmlCSxihzWOQJ8k0rNS'],Blue,[],59,1999-11-23
+333,4undIeGmofnAYKhnDclN1w,['0C0XlULifJtAgn6ZNCW2eu'],Hot Fuss,[],77,2004-01-01
+334,43NNW7iDuAE8pIouzvwWWi,['4uN3DsfENc7dp0OLO0FEIb'],14:59,[],55,1999
+335,4UMjBXcRqIgMZ1XumU2x5T,['2sil8z5kiy4r76CRTXxBCA'],Dizzy Up The Girl,[],69,1998-09-11
+336,1VW1MFNstaJuygaoTPkdCk,['2DaxqgrOhkeH0fpeiQq2f4'],(What's The Story) Morning Glory? [Remastered],[],76,1995-10-02
+337,3nHpBmW5wJXGeC3ojBkpey,['6FBDaR13swtiWwGhX1WQsP'],Take Off Your Pants And Jacket,[],68,2001
+338,2gToC0XAblE9h3UZD6aAaQ,['6TcnmlCSxihzWOQJ8k0rNS'],Third Eye Blind,[],72,1997-04-08
+339,3P2WRy9eBoBbSTCZWGQOoO,['3ngKsDXZAssmljeXCvEgOe'],Desireless,[],60,1998-07-13
+340,5gO2acKSOaJnP0Mcy8IpU6,['2RTUTCvo6onsAnheUk3aL9'],The Better Life,[],68,2000
+341,2UCyiayMoJOwBilPLQPQvK,['02seUFsFQP7TH4hLrTj77o'],Nathaniel Rateliff & The Night Sweats,[],63,2015-08-21
+342,0QRlYlrBuP7eGpEMZvZiaQ,['1dfeR4HaWDbWqFHLkxsg1d'],A Day At The Races (2011 Remaster),[],64,1976-12-10
+343,0zAsh6hObeNmFgFPrUiFcP,['1l8Fu6IkuTP0U5QetQJ5Xt'],Reflection (Deluxe),[],76,2015-01-30
+344,36k5aXpxffjVGcNce12GLZ,['2FXC3k01G6Gw61bmprjgqS'],Hozier,[],75,2014-07-20
+345,7BWK3eXcbAdwYeulyQj5Kw,['1uNFoZAHBGtllmzznpCI3s'],Believe (Deluxe Edition),[],73,2012-01-01
+346,5szxmEfjHdrXxMtX2uMExs,['6jJ0s89eD6GaHleKKya26X'],PRISM,[],60,2013-01-01
+347,0O82niJ0NpcptYRxogeEZu,['31TPClRtHm23RisEBtV3X7'],The 20/20 Experience (Deluxe Version),[],70,2013-03-15
+348,1kxDY7IJjRHX3dpQTvFUmS,['26VFTg2z8YR0cCuwLzESi2'],BADLANDS (Deluxe),[],74,2015-08-28
+349,1gMxiQQSg5zeu4htBosASY,['4AK6F7OLvEQ5QYCBNiQWHq'],Made In The A.M. (Deluxe Edition),[],81,2015-11-13
+350,5VoeRuTrGhTbKelUfwymwu,['00FQb4jTyendYWaN8pK0wa'],Born To Die - The Paradise Edition,[],76,2012-01-01
+351,5amj9zNeZ3B2EdpBgXrOZ0,['5ZsFI1h6hIdQRw2ti0hz81'],Mind Of Mine (Deluxe Edition),[],82,2016-03-25
+352,02pi98kE0nra0yBqCStzbC,['6eUKZXaKkcviH0Ku9w2n3V'],+,[],83,2011-09-09
+353,3FXsa2yQb8hhpqvZgNKXay,['6S2OmqARrzebs0tKUEyXyp'],Confident,[],59,2015-10-16
+354,6J84szYCnMfzEcvIcfWMFL,['0du5cEVh5yTK9QJze8zA0C'],Doo-Wops & Hooligans,[],80,2010-10-05
+355,2Dw4fYqDQnxsgoXDdMbqh3,['0X2BH1fck6amBIoJhDVmmJ'],Halcyon Days,[],71,2014-01-01
+356,4sgYpkIASM1jVlNC8Wp9oF,['74XFHRwlV6OrjEM0A2NCMF'],Paramore,[],74,2013-04-05
+357,5WAMRPjv81MsnTuwEUY66o,['3bCvHtuIXWXPbCMdSYudmZ'],Love of the Loved,[],1,2014-03-07
+358,6w36pmMA5bxECalu5rxQAw,['06HL4z0CvFAxyc27GXpf02'],1989,[],81,2014-10-27
+359,2AZsm9cX8g9P3sSoZlQiOR,['4AK6F7OLvEQ5QYCBNiQWHq'],Perfect - EP,[],59,2015-10-22
+360,3acnMNG6Um5zdLJgUOAKz8,['6dJeKm76NjfXBNTpHmOhfO'],When the Sun Goes Down (Deluxe Edition),[],63,2011-01-01
+361,4N8UcHPpbzz0KQeTbPi52H,"['4jGPdu95icCKVF31CcFKbS', '41DKMtAnhVo7aDeluAHDJg']",JU1Y,[],45,2017-08-18
+362,3hvxQMfoWHWwUM89pCaRZ5,['0FVj4JuzTyudaXAwfqDQ20'],You Might Be (feat. Lils) [Remixes],[],61,2017-07-07
+363,3teu4biw5zhcN7QgjmKzGS,['2KsP6tYLJlTBvSUxnwlVWa'],"At Night, Alone.",[],73,2016-05-06
+364,0SottnyJaBApBrZZT6Y3kb,"['0SfsnGyD8FpIN4U4WCkBZ5', '5deoijipwIdBiA27rEj14E']",Sunny Days,[],65,2017-06-16
+365,4urwuJbStO1K5ph63U7AZv,"['540vIaP2JwjQb9dm3aArA4', '5JZ7CnR6gTvEMKX4g70Amv']",A Different Way (with Lauv),[],80,2017-09-21
+366,3zu8FQKyO50w6U1u5ljtv9,['02A3cEvlLLCbIMVDrK2GHV'],Call on Me (Remixes),[],65,2016-09-23
+367,7CUcBQ9e6MDpsdBzz7wJaT,['23fqKkggKUBHNkbKtXEls4'],Stay,[],66,2015-12-04
+368,3QFLS29DFJeAVWunon2mn2,"['4Q6nIcaBED8qUel8bBx6Cr', '6S2OmqARrzebs0tKUEyXyp', '2ExGrw6XpbtUAJHTLtUXUD']",Instruction (feat. Demi Lovato & Stefflon Don),[],75,2017-06-16
+369,1RgIfPUFDj361Z6bGhe2zF,['4sTQVOfp9vEMCemLw50sbu'],Hunter,[],72,2017-05-05
+370,2eGlxr3LjTk2bwIxRGsazG,['74eY8wbrhhVD7pACbBHwHw'],Don't Be so Shy (Filatov & Karas Remix) - Single,[],46,2016-01-20
+371,31n3mvXvEfHb0eBfpZdYGg,['2yVoWezRFakj7DpUz2WtE4'],Waiting For You,[],35,2017-09-18
+372,70xyVEfCvYfts3wk5mzRmP,['586uxXMyD5ObPuzjtrzO1Q'],Fuck They,[],57,2017-07-14
+373,2FaCCZ2jSTKrd8kyyNLfme,"['6C0KWmCdqrLU2LzzWBPbOy', '5DzNxD4vwCDEIa20oEzB9l']",Live Your Life,[],49,2015-06-08
+374,2Np748wbf3dtPpmf4pTDcR,['5st4KKihmnSMLRsxWOs2x3'],What You Waiting For,[],35,2016-03-11
+375,3LZSze2SOzF76NkKRKJDus,"['0HAZyL1XzRf6rEoYxLp6k0', '7z8fkGpUDt6eb6fyysRTH9']",Never Gonna Catch Me,[],46,2016-05-16
+376,5jrmk66amDU27Sf3t6yg3a,"['3BETdCqKlraxPwjzH4JUIB', '7Dz9goFmVZZqvJxZoKg7pF']",Mad About You,[],45,2017-01-20
+377,4PwUji6zsRnBU3ZM8ZTeX5,['4lDXfIznmGueBgTjI3qGUX'],Aloha,[],58,2016-04-08
+378,7jkHDMeFZYF6NwF8yIdBiG,['4zGH6gaO4NohcfCXZ31bQG'],"Wide Awake (feat. Gustaf Norén, Filatov & Karas) [Red Mix]",[],51,2016-09-16
+379,1vWyJ6zumpXsorBAw4J6ND,['5mOEJk8YHqMRJpyMBBWBtU'],Androgyn,[],32,2016-06-24
+380,7wzktGiPutYVXxJe8dSh4C,['2bPh6UXbS7wZ7tyN35kFEG'],In the Middle,[],43,2017-03-24
+381,6SPPzbQ4PJVXvpLJMQtED3,"['3WSK3JppX3N41XHVwQp7Gt', '4VfTgWhy9PKLJN3xKJcDqf']",We Won't Leave You,[],58,2017-08-04
+382,0G1JxYzi2gaX3M9Kooc3zY,"['1Cs0zKBU1kc0i8ypK3B9ai', '6cEuCEZu7PAE9ZSzLLc2oQ']",2U (feat. Justin Bieber) [R3hab Remix],[],48,2017-08-04
+383,3CpAohuza9tyeKxLkCV8Wy,['3WSK3JppX3N41XHVwQp7Gt'],Never Been Better,[],55,2017-02-08
+384,6LaLU27ZPXimJIbpbiOahr,['1vCWHaC5f2uS3yhpwWbIA6'],AV?CI (01),[],90,2017-08-10
+385,5tpIeve3nZ0C3NqHMQtPLT,"['6cEuCEZu7PAE9ZSzLLc2oQ', '0fLTK12xF2IMaNmKMSue6g']",You Could Be,[],66,2017-08-25
+386,1J6b7W1nSHH7BObK8zIoEY,['6VD4UEUPvtsemqD3mmTqCR'],Good Evening,[],64,2017-03-31
+387,6SgTiW8a5BHFXbR03BteCd,"['73jBynjsVtofjRpdpRAJGk', '1Cs0zKBU1kc0i8ypK3B9ai']",Complicated (feat. Kiiara),[],77,2017-07-28
+388,2EpqJSvWJR9O3NVLOx3x9X,"['6MDME20pz9RveH9rEXvrOM', '1LOB7jTeEV14pHai6EXSzF']",Symphony (feat. Zara Larsson) [Cash Cash Remix],[],50,2017-05-25
+389,4TjrEGMrirOfrLsBH7AgEx,"['7oqJesfsNfHYYN6bEKR6UP', '2qYZ0i6NpoJ4nv5AiwXsV6']",Dynasty (Mumbai) [feat. KARRA] [Remixes],[],21,2016-04-15
+390,1DMVo1lAsoLiY8UlA4rmKk,"['7tRXG934ruoJ3SAKzCa5ap', '4P857hp4nygerIyJgGGYTy']",Hurt So Good,[],39,2017-06-09
+391,5IgTY4yg7QK2kVVNrztnmo,"['3t5xRXzsuZmMDkQzgOX35S', '7KMqksf0UMdyA0UCf4R3ux']",OK,[],80,2017-05-19
+392,7MMyj9gKH7uapvFZOHISoQ,['2QlwnS23KrBeshXFyK5U6M'],Walk Away,[],56,2017-04-07
+393,3fWKZofaW5sB9WOc5VWLfN,"['5vBSrE1xujD2FXYRarbAXc', '2ZRQcIgzPCVaT9XKhXZIzh']",Desire (Gryffin Remix),[],57,2015-09-18
+394,2jZKz4ZRJOEcW7FimPq4li,['5WdqBAQhGFCrZvBKXiPIu7'],Feels Like Home,[],49,2016-05-06
+395,3Mi8oSJLpZmcCdR9nOn64Q,['6vXTefBL93Dj5IqAWq6OTv'],Unforgettable (Major Lazer Remix),[],66,2017-06-09
+396,5DPg63AYMwUKAHoYTwBckW,"['66WlHWWE9PEuRZ8LI2atjA', '6DDNohapJwOaBOCWQanVvf']",We Can Do It,[],18,2017-08-22
+397,4j9tgSp0zEFgAIhemWVhpw,['1Xyo4u8uXC1ZmMpatF05PJ'],Starboy (Kygo Remix),[],56,2016-11-11
+398,5P2018IbrHevTnbw3jbKeN,['1s8cu0X2A5YDwCLRN8AjFa'],Love Never Died (Nympholodic Remix),[],13,2017-08-22
+399,1WSShu5SDgRFWR9ZXImKLM,"['60d24wfXkVzDSfLS6hyCjZ', '64M6ah0SkkRsnPGtGiRAbb']",In The Name Of Love Remixes,[],61,2016-11-11
+400,5Z05SKsPHRWZWMj1xHCsUw,"['73jBynjsVtofjRpdpRAJGk', '5fMUXHkw8R8eOP2RNVYEZX']",Hey Baby,[],24,2016-10-28
+401,12yYl13Ce7u8LuhtEl75aQ,['1Xyo4u8uXC1ZmMpatF05PJ'],Can't Feel My Face (Martin Garrix Remix),[],46,2015-11-06
+402,7e4eCJT5ON1FpJD5Si341e,['60d24wfXkVzDSfLS6hyCjZ'],Don't Look Down,[],65,2015-03-17
+403,4EV2HGPHQpUu4cPxJTP0OT,['60d24wfXkVzDSfLS6hyCjZ'],Gold Skies,[],57,2014-07-01
+404,2HtWz2HnIBnS4ErQywXnpx,['60d24wfXkVzDSfLS6hyCjZ'],Now That I've Found You (feat. John & Michel),[],56,2016-03-11
+405,4S7o1XHni9g71Sz3mHczx1,"['2o5jDhtHVPhrJdv3cEQ99Z', '3IpvVrP3VLhruTmnququq7']",I Want You,[],63,2016-08-05
+406,45hTiiH7JpJx1P5TN6iDDG,['5CdJjUi9f0cVgo9nFuJrFa'],Red // Blue,[],61,2016-12-02
+407,0JajxG8bZOxz1S4Zhi5nEP,['2o5jDhtHVPhrJdv3cEQ99Z'],On My Way,[],64,2017-01-13
+408,6a89n0OqocPjjN3hCrKUhL,['173M6tvnbPT1Wp5ucD0uAS'],Gold,[],43,2016-06-17
+409,7w3CzB8uRujYLFhvIeHWi9,"['6BrvowZBreEkXzJQMpL174', '2wX6xSig4Rig5kZU6ePlWe']",Power,[],67,2017-09-22
+410,2s6A9WBgvFTMM8CNANb6iv,['2wX6xSig4Rig5kZU6ePlWe'],Wildcard,[],62,2016-04-08
+411,2sPYPyDFwgi1jrRTGhoxq2,['23fqKkggKUBHNkbKtXEls4'],Stargazing - EP,[],89,2017-09-21
+412,0Pu2TfRdLnYUvY16n7c4fK,['0bdfiayQAKewqEvaU6rXCv'],Final Song (Diplo & Jauz Remix),[],53,2016-12-30
+413,0m9OPLqG1e4kmmfT1aprsg,['21NGSSCu57Zbh4tSgf9WRQ'],Join Me (feat. Anica),[],48,2017-05-12
+414,4XvGuEh8FePzLZJlEZtOlq,"['6lB8vOoI4DRrrVxXwuV19c', '7gAppWoH7pcYmphCVTXkzs', '74KM79TiuVKeVCqs8QtB0B']",Hands,[],70,2017-05-19
+415,4odqf3eJ5PwlIj5xhqWvut,['6ioOEWNNGK40H8xrGj6XPW'],America (The Remixes) EP,[],50,2016-06-10
+416,7bhogovOiLN8d5QEKltWyc,"['60d24wfXkVzDSfLS6hyCjZ', '4mHAu7NX2UNsnGXjviBD9e']",Byte,[],63,2017-04-07
+417,18sHL4pCeagFq46Bd9H1uI,"['2wX6xSig4Rig5kZU6ePlWe', '6xQvQwZQQuq9R3TdPNbcR8']",Memories,[],55,2015-09-11
+418,1EIY8rJwkrJhC4ElU0RjAq,"['6cEuCEZu7PAE9ZSzLLc2oQ', '4CrDEHL7ysNabeYvL3xjUX']",Everything,[],59,2016-12-09
+419,6cMs1rlzNK7VhFI5zXNXID,"['60d24wfXkVzDSfLS6hyCjZ', '1vo8zHmO1KzkuU9Xxh6J7W']",Virus (How About Now),[],44,2015-02-13
+420,5LUI1FG3ObfrJGMTUJBtvw,"['6cEuCEZu7PAE9ZSzLLc2oQ', '4mrBetqy378Jf1y6NLszlx']",How We Party,[],40,2014-09-08
+421,77UW17CZFyCaRLHdHeofZu,['1Cs0zKBU1kc0i8ypK3B9ai'],Listen (Deluxe),[],74,2014-11-21
+422,1L80qp8qM8GQGXkNkWAs5p,['77AiFEVeAVj2ORpC85QVJs'],Neon Future I,[],38,2014-11-14
+423,74BVIr6BIAEnqWBSOIigpS,"['3PtCud9dIdOv4exrzdZZ1C', '0CbeG1224FS58EUx4tPevZ']",Party Till We Die,[],61,2016-09-26
+424,6gYM0AAg9WgqWdXEZH7AYh,"['3SvCpwSeoWCcjfo8zjPZKB', '3NKKngINK1tP6BFy0WOyWk']",Badman (Remixes),[],54,2015-03-23
+425,2FLf2GdeVHyKzCsiJqW3Vl,"['540vIaP2JwjQb9dm3aArA4', '1l2ekx5skC4gJH8djERwh1']",Let Me Love You (Don Diablo Remix),[],55,2016-12-09
+426,0f1CZexom6ELxbDZx32fyk,['60d24wfXkVzDSfLS6hyCjZ'],Seven,[],68,2016-10-28
+427,6d9JaB6uyDA3BdhbYbQz2t,['60ETw93KnLzkysVpiZ3VYA'],Shadows,[],48,2017-01-05
+428,2m4U0aYL6QDgbkL5GFbCmn,['60d24wfXkVzDSfLS6hyCjZ'],Poison,[],52,2015-11-02
+429,1K3uNKvyXEJbCUU3uqd2VV,['3UCbp6D1lvILlxRJT9LnFa'],Telling Me,[],37,2016-11-01
+430,6yKs0lAulu13R0uBBOQ5n9,"['60d24wfXkVzDSfLS6hyCjZ', '2o5jDhtHVPhrJdv3cEQ99Z']",The Only Way Is Up,[],50,2015-12-11
+431,5t5mIS38Jqhaz5TU17ShvT,"['66WlHWWE9PEuRZ8LI2atjA', '5txMmnvic4rIbvEBrPsOcz']",So Fly,[],15,2017-03-10
+432,3sZaxbARvLqIHZdaZrbo9t,"['53YSn9tHwGJ6bq5P0gGoYo', '3XINWZaloea97SIRiyTJxX']",Invincible,[],43,2015-05-22
+433,41zUHnHXUzg8TOUZ4OEQkH,['32ejcIBfk6cbs473H0LlBE'],Calabria (Firebeatz Remix),[],52,2014-10-27
+434,5kZ5KxEXZJROh2isNg2awJ,"['4KkHjCe8ouh8C2P9LPoD4F', '6OkVmXCnj1BPjTf5aihiwt']",We No Speak Americano (Complete Remixes),[],53,2010-07-17
+435,4Vae2gJonOoTfqckhobNH1,['3tLYpanVDomWAZqF82NPds'],Shots & Squats,[],61,2015-06-05
+436,0qBShJlnVRY5ft0Sy6b7Qh,"['6cEuCEZu7PAE9ZSzLLc2oQ', '6C0KWmCdqrLU2LzzWBPbOy']",Won't Stop Rocking,[],57,2015-11-06
+437,6PzXquldNYOf5zFoPO3ZsI,"['60d24wfXkVzDSfLS6hyCjZ', '53YSn9tHwGJ6bq5P0gGoYo']",Helicopter,[],53,2014-03-10
+438,7xeMcofhxPZ6zuAORYkqxA,"['54ClucHaj0whgtp28G8ktb', '0CbeG1224FS58EUx4tPevZ', '3Rr1Vx3lro8cxDD6OFnYkJ']",Hipsta,[],47,2015-02-19
+439,5K8G20hlOgEWIIZRUrclRa,['0LyfQWJT6nXafLPZqxe9Of'],We Are Your Friends (Music From The Original Motion Picture/Deluxe),[],59,2015-08-21
+440,1Gyiz2cy77rqXlrLJsw1kh,['4cRXBNKXZ5vfw2IidDobcZ'],Alive,[],35,2015-08-07
+441,0UmmJFd9qidbyG1HeqwtlV,"['3gk0OYeLFWYupGFRHqLSR7', '2INDI0xc49oGYTZC7fBZjX', '3gTl4XARdQR2Sy59osG0Ia']",Booyah (feat. We Are Loud & Sonny Wilson),[],38,2014-10-24
+442,2sXzdtGJP1WqdJghhFc55M,"['2o5jDhtHVPhrJdv3cEQ99Z', '5pkdwIiDACB2SbNhk9DHtQ']",Chemicals,[],51,2015-10-03
+443,5CqHs2WdQDh3vkwT8qRr9H,['60d24wfXkVzDSfLS6hyCjZ'],Sun Is Never Going Down,[],46,2016-10-16
+444,7DLYU2xajqrqQFqZV8Rkwt,['12SPNXi0aDpFt0rMVbmLrr'],Electric Elephants,[],53,2015-11-13
+445,7owxDb0sTrr9l5QsZVbqHV,"['73jBynjsVtofjRpdpRAJGk', '77AiFEVeAVj2ORpC85QVJs', '7e1BNCygl2Gf7CX8LrByPv']",Melody (Radio Mix),[],47,2016-04-25
+446,1sPc841nrhYIHNm8rHvRaa,['5Ip2ecnyGpNyZvPuuYU8Ai'],L'Amour Toujours (Tiësto Edit),[],59,2015-09-22
+447,2MstSWL7D2q69G8oCk4tma,"['6xQvQwZQQuq9R3TdPNbcR8', '4CrDEHL7ysNabeYvL3xjUX', '0EK2nCt5jxbkN2HCmtKy4V']",Pillowfight,[],43,2016-12-05
+448,3zgGI1vpYuq7oJ8Pf7oCOs,"['2o5jDhtHVPhrJdv3cEQ99Z', '69GGBxA162lTqCwzJG5jLp']",Split (Only U),[],61,2015-09-14
+449,6enU6An5odFvMqWB7T884B,['0LyfQWJT6nXafLPZqxe9Of'],Generation HEX ADE Sampler,[],42,2016-10-21
+450,6AFct76pAIPVHMuOHA80YE,['7CCjtD0hCK005Bvg2WG1a7'],Papi Gordo,[],68,2015-10-30
+451,0zhsccii7wC8Z95ElYsMN8,['7e1BNCygl2Gf7CX8LrByPv'],Raise Your Hands,[],43,2014-04-14
+452,6fVHGcZgaNsHy93O8CEPch,"['2wX6xSig4Rig5kZU6ePlWe', '6S3KljEiIOWoLMUyZrkQUc']",Bazaar (Official Sunburn Goa 2015 Anthem),[],52,2015-12-25
+453,5noFcw7TDmz0lZxCjvSZPY,['5keDbKEPwrbe36cPzRpzsK'],Hard to Forget,[],1,2016-02-22
+454,6yKhjUoOsHa60DSqpugerw,"['3t5xRXzsuZmMDkQzgOX35S', '1Cs0zKBU1kc0i8ypK3B9ai', '7DMveApC7UnC2NPfPvlHSU']",Shed A Light,[],72,2016-11-25
+455,47fVF6lOMQ4GumTCWRrO60,['3kcQ94iDBwumLfddrCrse8'],Stellar (The Remixes),[],12,2013-03-29
+456,1qY6cXLpp5IbCekO95Q62T,"['6cEuCEZu7PAE9ZSzLLc2oQ', '2wX6xSig4Rig5kZU6ePlWe']",Strong,[],51,2015-11-27
+457,7viNUmZZ8ztn2UB4XB3jIL,['6l3HvQ5sa6mXTsMTB19rO5'],2014 Forest Hills Drive,[],86,2014-12-09
+458,5v6iBhIlflzR9rEd1LAMbd,['7iZtZyCzp3LItcw1wtPI3D'],SremmLife 2 (Deluxe),[],80,2016-08-12
+459,0zi2TaQkYxfXIBvl2yTjQJ,['73sIBHcqh3Z3NyqHKZ7FOL'],Because The Internet,[],78,2013-12-10
+460,5fF2SyKKkzfvhQwqP5EVhe,['0uuRltdLYtc519o60BlZUK'],Promise,[],6,2017-09-27
+461,59j6szDIwBgVPFHmqMTIz5,['6mcvqwPRMHDl6YPcOyONtv'],Places,[],11,2017-09-17
+462,6sLCnfPuZqaTIkJeOEdMAn,['6lOCVUQbb9wzuZQbZQV9zn'],Slice of Paradise (CAPYAC Remix),[],12,2017-05-05
+463,7fuIwsxcJabX8RYxrmjpg3,['5QBBMyvWnKheZrJ8wAPc3b'],Status,[],30,2017-10-13
+464,07r0nAAxT3qqXV6ypVmUnV,['7jmeOWayhjsGSvY5YNpV65'],Jasmine,[],18,2017-09-01
+465,50MVpGHzuJHVOy3BoB9rFg,['0vQwZcf1LWjBIrR2l9CTss'],2017 (Radio Edit),[],38,2017-01-17
+466,5YP0dxtnCLFuoe0i9z6mrb,['3Jghk94Gog2dhBAO7ZZaM8'],Unforgettable,[],34,2017-11-03
+467,2QHpghbmJfXd0LKHISrCDR,['0z6j3MncRCFuW77JhhPx8b'],Enter the Dreamland (JackEL Mix),[],9,2017-08-08
+468,5DI6eTXVsaD8BZYgf3Mykt,['47p2js8l70JjDWGS0a1hqr'],Mini Girls,[],32,2017-07-17
+469,5garhYZgneLzHSNHNTi3Ht,['3KEhhixoMshqSEJ71rS7w1'],Habits,[],48,2017-10-11
+470,6Ai3q7zWT9Y1Yg17qYTdR0,['550Zxz0BTZi3yd8gX9QINw'],Tribalist,[],39,2017-06-09
+471,0ee5QY1TPMs40M6lIefj2W,['25XngRrWAsddVHfhxUXIE5'],Defected Radio Episode 068 (hosted by Sam Divine),[],32,2017-09-15
+472,5y0SnvmbjCxxTiyQxs11Xi,['6aJAd8zM1s3Slw64KfsmaF'],Alone In The Dark: EP 3,[],38,2017-10-27
+473,5y22MNFLRU45wdXZS20qcl,"['48hZklIMPklae2Mssfp8Cx', '7wXzAJOG2A0jtJXh5VucxT']",Below the Line,[],34,2017-11-03
+474,51VK9yg1tJD95CR5gylyfW,['0924Wzhpfy1iRdRqAGFJ36'],Death Warrior,[],10,2017-11-06
+475,5dxaygdneSP7qiFWoVUEf3,['3Bd1cgCjtCI32PYvDC3ynO'],Hell to the Liars (Gorgon City Remix),[],42,2017-11-10
+476,4c1lj2A98Js2vMnXQcBU6l,['7HHbmXQn47Btk7qRwuGclG'],Juicy,[],5,2017-10-10
+477,6qN4VaSuSMoksKem5Tms7h,['1fkkK8K6H73uxjri2ycMD9'],Pink Gold,[],31,2017-09-22
+478,7b605gHvgca59ZJaINsCgu,['5sl7j6nuDv4dHPdt4FK9pp'],Flicker,[],14,2017-08-25
+479,0pZFa8vHPv1W1c1pViHl4D,['6LGTJS9Ct8SmOznEuTr0NE'],Komfortzone Remixes Pt. 1,[],23,2017-03-03
+480,4iqNcVswCIYdILhTFN7QDZ,['7eW7XlHPEaGBY5JION7Vw9'],Runnin',[],35,2017-09-22
+481,4Lwm3rCW6rQD4TvRE9QJNY,['0vAfBmdtRZEAYgsoH66VhU'],Shadows,[],21,2017-09-29
+482,23B5Nrn6cFMCtYEvYdzyUW,['3lvcOqH6QYNsyXBfHDlMg3'],Head High,[],32,2017-09-26
+483,3eGPnpGprJHpIcwICzgwgb,['5YC29npFQgIa8qJjpi6nSU'],Vice,[],19,2017-10-13
+484,6yvYRJsfmz87yihuc43vpJ,['7GSnGLal6xBBecChmC4W9H'],Resolution,[],33,2017-10-27
+485,4eKfl3ZI0uoqf9IGW348Tx,['2sdQEitmjfbyoATb6OfkEi'],Right,[],23,2017-10-30
+486,7MNLvkba65DRbDEuOzoEo7,['0IVPwrImVEE7gG7WNL7wGQ'],Sleep,[],40,2017-09-22
+487,6nz9RRs6JGztZUlGTg94Av,['0aeLcja6hKzb7Uz2ou7ulP'],5 Years Time (eSingle),[],43,2008-01-01
+488,2nqmAIxUXON1qlX754E2QE,['6VxCmtR7S3yz4vnzsJqhSV'],Geronimo,[],56,2014-01-01
+489,1yAMkQJYPLZY7kY4DXHjpl,['5nCi3BB41mBaMH9gfr6Su0'],Sight Of The Sun,[],49,2014-03-11
+490,03kOqFjrxiwkgvj2ExN6ii,['3vAaWhdBR38Q02ohXqaNHT'],Move Along (International Version),[],62,2005-01-01
+491,0OsjlbBaSZFbZnXGAUysMG,['41Q0HrwWBtuUkJc7C1Rp6K'],Greatest Hits '93 - '03,[],64,2004-06-08
+492,2mnghgVt3RyZeWS9wpjB4n,['4AapPt7H6bGH4i7chTulpI'],Into the Morning,[],56,2010-02-16
+493,2erQbgMo53R5tMFZHQsA1s,['0vEsuISMWAKNctLlUAhSZC'],Big Yellow Taxi (International Version),[],3,2003
+494,2VN0hlQV4ndJqMQUen8uEg,['7DruTvBV7owt1aSAZHsU58'],Viola Beach,[],61,2016-07-29
+495,5tROA4dLGsUtQesckMYNcC,['3yllucl3269fkBdlam9Xot'],Best & B-Sides,[],23,2010-06-03
+496,2DtdEoYFUKomUzIVufijeW,['6JVRYNneRsYNInT4TNr5vU'],Twenty Three Places,[],22,2003
+497,45A2E1YR00sPSwxJw5d3qu,['4NGiEU3Pkd8ASRyQR30jcA'],Some Mad Hope,[],65,2007-08-10
+498,2K1tTNCuGSXbNUoE72Qzn4,['6GI52t8N5F02MxU0g5U69P'],Supernatural/Shaman,[],20,1999
+499,6Z1zv6Hw9bdvSoxI5uYk2h,['3mIj9lX2MWuHmhNCA7LSCW'],The 1975,[],70,2013-01-01
+500,4ySSx2L6h2siW22LK6dwhN,['5Pwc4xIPtQLFEnJriah9YJ'],Waking Up,[],69,2009-01-01
+501,7qrnIySCks1I20KdsXxBxc,['1yAwtBaoHLEDWAnWR87hBT'],The Moon & Antarctica,[],58,2000
+502,03yEcBjqo0NBbaV56InLoB,['3vAaWhdBR38Q02ohXqaNHT'],The All-American Rejects,[],51,2002-01-01
+503,7sG0mPsi6jnKrAKxvpRK4e,['0iui2Be5CP8EWxvHYsVspL'],Baby I'm Yours,[],6,2010-02-15
+504,6DvENZZ1e75ljRU7o4dQHD,['0ZrpamOxcZybMHGg1AYtHP'],Back Together,[],40,2015-08-06
+505,2lkQd5T32QHDOfFkEIPJKz,['2RdwBSPQiwcmiDo9kixcl8'],G I R L,[],70,2014-03-03
+506,0gXHGytb6ZX0ei9vsYRQxI,['2x7EATekOPhFGRx3syMGEC'],Classic (feat. Fetty Wap & POWERS),[],47,2015-07-31
+507,0eXAgjcMHbFt3fS0XXp8Kw,['4Ui2kfOqGujY81UcPrb5KE'],Days Are Gone,[],55,2013-01-01
+508,1UPwxoCoXHYu8REYovIkHR,"['3whuHq0yGx60atvA2RCVRW', '5IHqlcCbQkyhWl0KmIwgeq']",Unpredictable,[],68,2017-05-31
+509,0sDa9RVIilfZnJDrQcKuyD,['6mU8ucezzms5I2kNH6HNlu'],Talking About,[],37,2015-03-02
+510,0dNt3MfPrvj6mHmajSuahw,['6MDME20pz9RveH9rEXvrOM'],New Eyes,[],63,2014-06-02
+511,12zl1WmHPFCSyKYbL4vBZn,['3mIj9lX2MWuHmhNCA7LSCW'],"I like it when you sleep, for you are so beautiful yet so unaware of it",[],74,2016-02-26
+512,2PySerb4YpT8jzhF4c1ZH4,['6sCbFbEjbYepqswM1vWjjs'],Something New,[],48,2016-02-03
+513,7IzpJkWQqgz1BTutQvSitX,"['69GGBxA162lTqCwzJG5jLp', '4gzpq5DPGxSnKTe4SA8HAU']",Something Just Like This,[],78,2017-02-22
+514,3mNoFlD1wsoXfkljfFzExT,['6DIS6PRrLS3wbnZsf7vYic'],TALKING IS HARD,[],75,2014-11-24
+515,2XjPrtaAqvviEgSHCpzHmM,['53XhwfbYqKCa1cC15pYq2q'],Smoke + Mirrors (Deluxe),[],74,2015-05-11
+516,7p7RFI5jtwYDknwhnQgmlp,['2wY79sveU1sp5g7SokKOiI'],In The Lonely Hour (Deluxe Edition),[],29,2014-01-01
+517,4UB0J5V3JsZZtNR360pZ6r,['6MDME20pz9RveH9rEXvrOM'],Rather Be (feat. Jess Glynne),[],68,2014-01-17
+518,2NkUuUsTmsrQd1IjkaLByE,['4pb4rqWSoGUgxm63xmJ8xc'],Pay No Mind,[],39,2015-02-10
+519,71QyofYesSsRMwFOTafnhB,['1anyVhU62p31KFi8MEzkbf'],Coloring Book,[],86,2016-05-27
+520,42UJjk8i8L0De7lQtu7sqi,['5Pwc4xIPtQLFEnJriah9YJ'],Native,[],72,2014-01-01
+521,7fOcGSucyoAaJdRJmkndvJ,['0PHiin6bQggP8WzI7LgTtr'],Get Stupid,[],1,2015-06-29
+522,0F2MMiljdGFIOIkImGVYoh,['0ZrpamOxcZybMHGg1AYtHP'],Blurred Lines (Deluxe),[],61,2013-01-01
+523,2EGptGE7CCkr1dCO0QRGLQ,['6T5tfhQCknKG4UnH90qGnz'],SWAAY,[],21,2015-10-23
+524,5RMMfJzUdV17HoTBq9TgzD,['5oWOx0BBDSMoFB8JDrjQre'],Lick My Lips,[],16,2015-05-26
+525,2JtS8H9AIn9oSE9Hja7GIs,['46GXASE9LHzyssNqKOInUu'],Sunday,[],60,2016-07-29
+526,5l3jo3oe2M7KM37SIeUzLc,['6nS5roXSAGhTGr34W6n7Et'],Omen (Radio Edit),[],62,2015-07-27
+527,2HsuUKaQDEGyIIdjFsLEHt,['4Rxn7Im3LGfyRkY2FlHhWi'],Jealous,[],3,2014-09-05
+528,2gKQvajkEEaDtkqJ8FJ4uw,['6PXS4YHDkKvl1wkIl4V8DL'],Fetty Wap (Deluxe),[],77,2015-09-25
+529,4JaTMQFdRy5TfEKs8M9Doq,['2eam0iDomRHGBypaDQLwWI'],I Wanna Get Better,[],51,2014-02-18
+530,4qugvZbeFLghKN67aQ6PAb,['1dgdvbogmctybPrGEcnYf6'],My Love,[],60,2014-01-01
+531,36dk6ylNZ5Z19xnR3don2u,"['422RLznpwUa5FsQgnTlgUH', '64NYWpxh4HgzMb1SwCCjMw']",Find Yourself,[],67,2017-05-26
+532,2jStuYeaRty1cwxjoxfo9K,['4o0pNHbyj36LPvukNqEug0'],Lovely Little Lonely,[],68,2017-04-07
+533,2q1FPBlcE7cvZY4fz62ZEc,['4D75GcNG95ebPtNvoNVXhz'],SummerThing!,[],37,2015-08-23
+534,3nxlM2DFwij3JVP55yNRya,['7keGfmQR4X5w0two1xKZ7d'],Layers,[],76,2016-11-04
+535,6CF6xvXq2PFRos9FxchznM,['6JVRYNneRsYNInT4TNr5vU'],Gun Shy,[],51,2016-05-20
+536,0aWcnOSntyOxzNCxBksLW6,['0Vw76uk7P8yVtTClWyOhac'],Warm On A Cold Night (Deluxe),[],69,2016-07-13
+537,5vHUSuZ5xizxS3zfr3SKkq,['7gjAu1qr5C2grXeQFFOGeh'],Kindred,[],56,2015-04-17
+538,5Y0p2XCgRRIjna91aQE8q7,['3yY2gUcIsjMr8hjo51PoJ8'],The Queen Is Dead,[],70,1986
+539,4SFOg7ds45qWIsgzpbhXJf,['0oSGxfWSnnOXhD2fKuz2Gy'],Best Of Bowie,[],13,2002-10-21
+540,2NzyXZfWkRcFpsJ8phIjnl,['0k17h0D3J5VfsdmQ1iZtE9'],Wish You Were Here (2011 Remastered Version),[],41,1975-09-12
+541,3JKDzf9F11y9kjWnehKna1,['42TFhl7WlMRXiNqzSrnzPL'],Transformer,[],18,1972-12-01
+542,3Fv4TJQ9iQ0DCLHv02122Z,['3JsMj0DEzyWc0VDlHuy9Bx'],Crime Of The Century (Remastered),[],5,1974-09-01
+543,4ZW7TDJQMQ3RZl2qSlUEGv,['5a2EaR3hamoenG9rDuVn8j'],Purple Rain,[],8,1984-06-19
+544,49LA20VMk65fQyEaIzYdvf,['16eRpMNXSQ15wuJoeqguaB'],Yoshimi Battles The Pink Robots (U.S. Version),[],62,2002-05-13
+545,12aKG91Tj6hJFOe90TzcX2,['7G1GBhoKtEPnP86X2PvEYO'],Nina Simone Sings The Blues,[],52,1967
+546,40pUoRK9pOn3tMoXY02fUB,['0oSGxfWSnnOXhD2fKuz2Gy'],Platinum Collection,[],57,2005-08-22
+547,2hhnkKQp2zvG4UAvpasq4h,['0k17h0D3J5VfsdmQ1iZtE9'],The Best Of Pink Floyd: A Foot In The Door (2011 Remastered Version),[],17,2011-11-07
+548,5ejwNegV5hPkQRyMi7CiCs,['2AOt5htsbtyaHd5Eq3kl3j'],MTV Unplugged,[],44,1997-06-12
+549,35KklLrrp2ieIoWVnluYd9,['6FXMGgJwohJLUSr5nVlf9X'],Collected,[],33,2006-03-27
+550,0Stnb66v5cibvR22sFdLYx,['1ThoqLcyIYvZn7iWbj8fsj'],Bill Withers Live At Carnegie Hall,[],43,1973
+551,6xOtE6lMjESyV5DlTLwVh5,['5gznATMVO85ZcLTkE9ULU7'],Let Love Rule: 20th Anniversary Edition,[],1,1989-09-19
+552,4XIbmP53zK67wpaADb3ErR,['0LyfQWJT6nXafLPZqxe9Of'],Golden Moments,[],21,2010-09-06
+553,64SYukAhDXMKhtFJRoFqUg,['42TFhl7WlMRXiNqzSrnzPL'],Perfect Day,[],8,1997-10-01
+554,0YcQyzstsSbcnLCk4h7AUh,['16GcWuvvybAoaHr0NqT8Eh'],Boys & Girls,[],60,2012-04-09
+555,15mlxovjGm7k2ezzkyr4TY,['7G1GBhoKtEPnP86X2PvEYO'],The Very Best Of Yount Nina Simone,[],0,2009-01-12
+556,7CJvhqb2PJq5fBcY6eKqjl,['1eClJfHLoDI4rZe5HxzBFv'],INXS Remastered,[],69,2011-01-01
+557,7r36rel1M4gyBavfcJP6Yz,['6zFYqv1mOsgBRQbae3JJ9e'],The Essential Billy Joel,[],76,2001-10-02
+558,0AuSyAH7F1UAQbaMHDt0Cu,['5a2EaR3hamoenG9rDuVn8j'],Ultimate,[],50,2006-08-22
+559,2qSwmENEVYoacaxatupAaE,['5a2EaR3hamoenG9rDuVn8j'],Purple Rain,[],14,1984-06-19
+560,7Ce9NBNo6wHUKbvZS41NOH,['0oSGxfWSnnOXhD2fKuz2Gy'],Station To Station,[],6,1976-01-23
+561,0o7IgUEAoOGzsolQgLpnTK,['1aSxMhuvixZ8h9dK9jIDwL'],The Whole Story,[],47,1986-11-10
+562,66DCxEnQoEYwryhMLvAEDG,['6XItHNeKXecnFpkJHOn5JL'],The Complete Syl Johnson on Hi Records,[],1,2000-09-25
+563,1oq0L9KwQnhQm91bNNhaFd,['6bWxFw65IEJzBYjx3SxUXd'],Parts Of The Process (US Standard Version),[],3,2003-06-30
+564,3WXkq52PZAPhUIEuHiMobR,['0k17h0D3J5VfsdmQ1iZtE9'],Echoes - The Best Of Pink Floyd,[],12,2001-11-06
+565,36mvzijHQpxFLBBcrJCjbR,['7Ey4PD4MYsKc5I2dolUwbH'],The Essential Aerosmith,[],5,2002
+566,0fLhefnjlIV3pGNF9Wo8CD,['0L8ExT028jH3ddEcZwqJJ5'],Californication,[],67,1999-06-08
+567,6hmmX5UP4rIvOpGSaPerV8,['7oPgCQqMMXEXrNau5vxYZP'],Tracy Chapman,[],74,1988-01-01
+568,6VAaqblQv4EEI6BQzAhBj9,['3kjuyTCjPG1WMFCiyc5IuB'],Neon Bible,[],23,2007
+569,13jolTb1DQl8IVPczYtQJ3,['7G1GBhoKtEPnP86X2PvEYO'],I Put A Spell On You,[],66,1965-06
+570,0H6TddUF2M63ZSHGvhk5yy,['7bu3H8JO7d0UbMoVzbo70s'],Disintegration (Deluxe Edition),[],62,1989-05-02
+571,2in7TjOFOuw5upPjUGB2jh,['5gznATMVO85ZcLTkE9ULU7'],Mama Said (21st Anniversary Deluxe Edition),[],46,1991-04-02
+572,3qXgnckOi2NbaAyjD3m2jP,['3Y10boYzeuFCJ4Qgp53w6o'],Scissor Sisters (EU Version),[],38,2004
+573,4zJBuQXo92Q7QhA5U4V8kw,['3kjuyTCjPG1WMFCiyc5IuB'],The Suburbs (Deluxe Edition),[],51,2010
+574,39Rw1ijgQ1qb8wncWhd0ux,['3JsMj0DEzyWc0VDlHuy9Bx'],Supertramp - The Very Best Of,[],57,1990-01-01
+575,2SS8nVmmgJqJhRuYGboIOx,['7siPLyFwRFYQkKgWKJ5Sod'],Welcome To The Monkey House,[],52,2003-07-24
+576,2jm9Vixt3Nn2oE4VtOVUD8,['568ZhdwyaiCyOGJRtNYhWf'],Deepest Purple - The Very Best Of Deep Purple,[],57,1980
+577,0vdIT4p5OlKOcEzYKSsqn4,['7siPLyFwRFYQkKgWKJ5Sod'],Thirteen Tales From Urban Bohemia,[],59,2000
+578,1ILnMWNKUXzcXug4Tq2JRP,['6bWxFw65IEJzBYjx3SxUXd'],Big Calm,[],55,1998
+579,4eiObDsh0wSjSUoFVaX1Fy,['0OdUWJ0sBjDrqHygGUXeCF'],Everything All The Time,[],1,2006-03-21
+580,4XCYyAKEiubcv7KJo7nJJe,['3plJVWt88EqjvtuB4ZDRV3'],Ben E King,[],10,2011-03-09
+581,51B1RzotO05EShjth3xkOZ,['45lorWzrKLxfKlWpV7r9CN'],Burn To Shine,[],50,1999-09-21
+582,6U1PifBvvskUGjsJGeKGp4,['4NgfOZCL9Ml67xzM0xzIvC'],Janis Joplin: The Woodstock Experience,[],61,1969
+583,7xbWtTByfdMWFfxXmeFFl0,['0lZoBs4Pzo7R89JM9lxwoT'],Greatest,[],63,1998-11-09
+584,4PxGT1HrLDzScYdhQlZO8S,['4J69yWrKwWJgjv3DKTZcGo'],Live In London,[],5,2010-06-21
+585,4WfjtfjZC1pW1jlU9qpuFr,['2QsynagSdAqZj3U9HgDzjD'],Legend (Deluxe Edition),[],56,2001-02-22
+586,0LtBG81oAbMoKVwHts66MQ,['6bWxFw65IEJzBYjx3SxUXd'],Charango,[],42,2002-07-01
+587,1KFhmgrfmkw1tpiLeZoqTN,['3eqjTLE0HfPfh78zjh6TqT'],Greatest Hits,[],4,1995-02-20
+588,7MCxE9Sx4zHSXL4xXHm4Im,['5RNFFojXkPRmlJZIwXeKQC'],More Than This - The Best Of Bryan Ferry And Roxy Music,[],58,1995
+589,7sxKTBQ32NQxpdbYecBmU0,['0XHiH53dHrvbwfjYM7en7I'],Carry On (International Version),[],55,2007-01-01
+590,4aS233D1sBxySxC1dKVtup,['7290H8m1Dwt8G7jm1y9CQx'],Best Of Chris Isaak,[],60,2006-05-05
+591,3Eli3WxEALRUBF06CvcDtV,['0vEsuISMWAKNctLlUAhSZC'],August And Everything After,[],65,1993-01-01
+592,3ApVtHpllaRso5BXd2wqPG,['0vEsuISMWAKNctLlUAhSZC'],This Desert Life,[],11,1999-01-01
+593,5mAPk4qeNqVLtNydaWbWlf,['6FXMGgJwohJLUSr5nVlf9X'],Blue Lines (2012 Mix/Master),[],58,1991-06-10
+594,3we7A7UllAuA6QH6U9jmHs,['3CkvROUTQ6nRi9yQOcsB50'],The Platinum Collection,[],53,2004-11-29
+595,7Mwqh8hDH11m3niZPzKIIC,['4MVyzYMgTwdP7Z49wAZHx0'],Lynyrd Skynyrd - Rock Legends,[],16,2007-11-02
+596,2mJPi0xA1CwMYEemYkuUPK,['7bu3H8JO7d0UbMoVzbo70s'],Kiss Me Kiss Me Kiss Me,[],58,1987-05-25
+597,1ecv8bJajqX9E0EOX2g3eI,['336vr2M3Va0FjyvB55lJEd'],Voodoo,[],9,2000-01-25
+598,0HOI03PdZTJMI9nCAAvVWx,['5r1bdqzhgRoHC3YcCV6N5a'],Permission To Land (US Version),[],26,2003-07-07
+599,093amtf9s8VkIdUtvd2Tap,['7bu3H8JO7d0UbMoVzbo70s'],Greatest Hits,[],60,2001-01-01
+600,67yJQ4hgI4xpuiOiHgLEtX,['762310PdDnwsDxAQxzQkfX'],The Singles 86-98,[],0,1998-09-28
+601,4sVMaNrLbkffVgd0CMSibC,['0WwSkZ7LtFUFjGjMZBMt6T'],Love Over Gold (Remastered),[],55,1982-09-20
+602,3LGDVd8IZftJYLvDXhrkVA,['0C0XlULifJtAgn6ZNCW2eu'],Day & Age (International Version),[],1,2008
+603,1jWmEhn3ggaL6isoyLfwBn,['22WZ7M8sxp5THdruNY3gXt'],The Doors,[],72,1967-01-04
+604,6v5IVMmY1IvWtbfnQoiFSf,['22WZ7M8sxp5THdruNY3gXt'],Strange Days,[],67,1967-09-25
+605,7a1dlwArQK6OCHkr2SNlZR,['2ye2Wgw4gimLv2eAKyk1NB'],Ride The Lightning,[],13,1984-07-27
+606,5fftlCplrjhybPtzWNFjpA,['6olE6TJLqED3rqDCT0FyPh'],Nevermind,[],11,1991-09-26
+607,7pbHoj33gMJ1rTGFwtuDvB,['6Q192DXotxtaysaqNPy5yR'],Back To Black (Deluxe Edition),[],10,2006
+608,4mzjXaOQgBophd6bHoaqIu,['74ASZWbe4lXaubB36ztrGX'],PAT GARRETT & BILLY THE KID Original Soundtrack Recording,[],4,1973-07-13
+609,3X6GYa2AvbEgz40EYSWJ56,['3IYUhFvPQItj6xySrBmZkd'],Pendulum (40th Anniversary Edition),[],5,1970
+610,2rQ135imvelvp89D8eEZOi,['0L8ExT028jH3ddEcZwqJJ5'],One Hot Minute (Deluxe Version),[],63,1995-09-12
+611,2IS1ph2oa6pjztlXLRQb4p,"['4STHEaNw4mPZ2tzheohgXB', '3sFhA6G1N0gG1pszb6kk1m']",Wings Over America,[],45,1976-12-10
+612,32OnHglDZr3RRIAyDVoApX,['3qm84nBOXUEQ2vnTfUTTFC'],Greatest Hits,[],11,2004-03-15
+613,2zfb6rtqx4GM3V65hhsCMY,['3nnQpaTvKb5jCQabZefACI'],So Real: Songs From Jeff Buckley,[],13,2007-04-27
+614,0swM8EuQkgYV2knrZ8rFl2,['4phGZZrJZRo4ElhRtViYdl'],Mr. A-Z,[],57,2005-07-26
+615,7phJVELkVAMT23h255PK09,['0C0XlULifJtAgn6ZNCW2eu'],Hot Fuss (NEW - France),[],0,2004-01-01
+616,5l3yvoFqd0hNtLQBdVsIax,['2qk9voo8llSGYcZ6xrBzKx'],Only By The Night,[],52,2008-09-23
+617,0IElMJIrRn6lCGbTB5obrM,['1SQRv42e4PjEYfPhS0Tk9E'],The Singles Collection,[],10,1997
+618,03JPFQvZRnHHysSZrSFmKY,['1GLtl8uqKmnyCWxHmw9tL4'],Inside In / Inside Out,[],76,2006-01-23
+619,3SPEGrz31vHsSWSooYWrxf,['4ylR3zwA0zaapAu94fktwa'],The Very Best Of Macy Gray,[],32,2004
+620,1jcnZvZWvAGzNyQ7GNVy8X,['3koiLjNrgRTNbOwViDipeA'],I Heard It Through The Grapevine / In The Groove (Stereo),[],62,1969-08-26
+621,1X4zW7kIY8bQHO9gDTsIVh,['6FXMGgJwohJLUSr5nVlf9X'],Collected,[],56,2006-03-27
+622,0yMBzueqNjfhtmhz0AthB7,['3qm84nBOXUEQ2vnTfUTTFC'],Use Your Illusion II (Explicit Version),[],17,1991-01-01
+623,7jgpev6nHXJ8MLR8HtGg2N,['6FXMGgJwohJLUSr5nVlf9X'],Blue Lines - The Remixes,[],43,2006-01-30
+624,37lWyRxkf3wQHCOlXM5WfX,['2ye2Wgw4gimLv2eAKyk1NB'],Metallica,[],34,1991-08-12
+625,5vLIfhDpTmdyQ0YrlnXzSr,"['0Ty63ceoRnnJKVEYP0VQpk', '5NGO30tJxFlKixkPSgXcFE']",The Very Best Of Sting And The Police,[],66,2002-01-01
+626,0c78nsgqX6VfniSNWIxwoD,['22bE4uQ6baNwSHPVcDxLCe'],Let It Bleed,[],67,1969-12-05
+627,6VAFbY1kcBF748xSyyisxY,['1dfeR4HaWDbWqFHLkxsg1d'],Greatest Hits (2011 Remaster),[],14,1981-10-26
+628,4asvshPH5nL0mjjMCE9mzi,['4hf3caW9H8uFwwbv5pFjcg'],Jake Bugg,[],66,2012-01-01
+629,2Pf0cjNcEcNRXIlokd9Irp,['4pejUc4iciQfgdX6OKulQn'],Lullabies To Paralyze (International Version),[],59,2005-01-01
+630,1waCI4ZmzEPBmlWWOM0lCH,['5SbkVQYYzlw1kte75QIabH'],The Odd Couple (International DMD A),[],50,2008-04-07
+631,5xJ4g1Ly0oEDvjf5T7mX1e,['4KWTAlx2RvbpseOGMEmROg'],"In Time: The Best Of R.E.M., 1988-2003 (U.S. Version)",[],5,2003-10-28
+632,2UHMgxT9GbTyZZ0Ww1OTdp,['3OsRAKCvk37zwYcnzRf5XF'],Go - The Very Best Of Moby,[],2,2006
+633,0xs6oggygZLeaN1qVLSugB,['479Yp6DvyXoIaCssAxB4QR'],Say It Ain't So,[],39,1976
+634,4wBDclsxFzGnR4kVAAMI7K,['1yxSLGMDHlW21z4YXirZDS'],Elephunk,[],65,2003
+635,1WAfK2cTldXnAYhTeAFXpb,['0LyfQWJT6nXafLPZqxe9Of'],Elite do Funk Acústico,[],39,2008-03-11
+636,2KHnaeYEwfXzJe8eJw41wG,['2T9pR6zAB5dUpBOJ1m6Chw'],The Sky Below,[],28,2008
+637,0G1ffjfFuTUTVjDrVdLimH,['3TVXtAsR1Inumwj472S9r4'],Views,[],78,2016-05-13
+638,6h5QybFGJdZByqFuWbPcqm,['0LyfQWJT6nXafLPZqxe9Of'],Wild Palms (Original ABC Event Series Soundtrack),[],23,1993-01-01
+639,500FEaUzn8lN9zWFyZG5C2,['4Z8W4fKeB5YxbusRsdQVPb'],The Bends,[],72,1995-03-28
+640,5bJtyIUH6YhVTO1L24tLX7,['0LyfQWJT6nXafLPZqxe9Of'],The Blues,[],31,2015-05-01
+641,5MBUL8d9FAYCCMrogOFX68,['1xU878Z1QtBldR7ru9owdU'],United,[],65,2000-03-06
+642,18Fj7coTfyMi7mEPXIweN7,['3plJVWt88EqjvtuB4ZDRV3'],Don't Play That Song (Mono),[],71,1962-08-20
+643,3XQdk4BKeIPcaTfNiXzVb2,['0LyfQWJT6nXafLPZqxe9Of'],Blockbuster Movie Hits,[],52,2010-02-05
+644,5HaOXSCK1IlwzV4ve7CUKY,['19ra5tSw0tWufvUp8GotLo'],Twenty Five,[],67,2006-11-11
+645,0UIuHgtBvcHduPDZSweVMi,['7wqtxqI3eo7Gn1P7SpP6cQ'],The Best Of Salt-N-Pepa 20th Century Masters The Millennium Collection,[],59,2008-01-01
+646,1qPXGBnO5cIhvfubKs78oq,['0LyfQWJT6nXafLPZqxe9Of'],Top 40 Bollywood Classic Bar Grooves plus free continuous DJ mix,[],34,2009-08-09
+647,4yATru0hY3VgRHSreswbGj,['6Jrxnp0JgqmeUX1veU591p'],Santigold,[],54,2008-04-29
+648,2HWBPvQoaMFBF6krXyzpOv,['2gBjLmx6zQnFGQJCAQpRgw'],Country Grammar,[],68,2000-01-01
+649,2fOJRN6fzt03jPAudoIFs6,['7v4imS0moSyGdXyLgVTIV7'],The Extraordinary,[],47,2014-05-27
+650,3CuUL8JwdsINNFxuZw9Y7b,['3X3DHASP1G1waqVoEDWMHr'],"Now Look What You've Done, Lyrics Born! Greatest Hits",[],42,2016-04-15
+651,27Uh2bG59noUjczTJEuhR1,['6rBLnxCHDUQTw1nf2qWfm2'],Be Brave,[],30,2010-03-02
+652,4P5bvMUWhoYILjMf2fhKxZ,['450o9jw6AtiQlQkHCdH6Ru'],Maggot Brain,[],13,1971-07-12
+653,5n9Fi1VD4pCojQXs1BhzPz,['4t60EdEbfPZnelA5Qtxulk'],Amazir,[],6,2007-03-05
+654,02lktkm4J7K7N8T63Gm7KX,['4P0dddbxPil35MNN9G2MEX'],Black Sunday,[],68,1993-07-20
+655,5O5I3JbBPsODCmghkVr6dg,['3YyZFf9ZN2YbkqeZia8zHX'],Foundation,[],41,1998-09-01
+656,0VhOOo8icd4fOnt2NDkhEs,['0LyfQWJT6nXafLPZqxe9Of'],House De Luxe Sexy Vol.4,[],0,2009-12-01
+657,60zdKaNDD0nMnM90ndtcGF,['3uCu2WgyG0Iw50ylOYDSpH'],Maria Gadú,[],66,2009-07-20
+658,4A0vJtV9ok7vmr9ursSKj8,['0du5cEVh5yTK9QJze8zA0C'],It Will Rain,[],63,2011-09-28
+659,5z1Su2S6WXspjhLNBkAScm,['4d3yvTptO48nOYTPBcPFZC'],Scorpion,[],62,2001-01-01
+660,71mPApAzW9HkbUGdYzMQHb,['6nzxy2wXs6tLgzEtqOkEi2'],Miss Thang,[],59,1995-06-12
+661,3DSPggBtjAU0GtOSdNNn6x,['5rrmaoBXZ7Jcs4Qb77j0YA'],Luz,[],54,1982
+662,3gPlX9Zs3tXZZKNCyoOkSm,['3koiLjNrgRTNbOwViDipeA'],Midnight Love,[],63,1982-10-01
+663,3ePjMurEXpW2HunSQ691h9,['0GNq4xh8uFCyihPurnunf7'],Maxximum - Engenheiros Do Hawaii,[],47,2005-08-08
+664,4yI2uDHf2YDG9iCPVuEjAF,['1w5Kfo2jwwIPruYS2UWh56'],Backspacer,[],34,2009-09-21
+665,1iUToID4xbYZLLdfr82goF,['0kObWap02DEg9EAJ3PBxzf'],Best of Starship,[],35,2010-06-22
+666,4e8tywT8lMIUakJnX6aFcc,['4FtSnMlCVxCswABUmdhwpm'],Coming Around Again,[],56,1987-04-01
+667,1xn54DMo2qIqBuMqHtUsFd,['6eUKZXaKkcviH0Ku9w2n3V'],x (Deluxe Edition),[],89,2014-06-21
+668,2Y7tJZHyDjB9QxTLjG2e9n,['1pbypJzDS0Glu3baISY6AL'],Stracciatella,[],40,2015-05-30
+669,5K54nmMoME2qVBK4KwF1WE,['5Qvyfq1Nfeju9R8prt8M7a'],Si uno no se rinde,[],57,2015-04-27
+670,2MUkN2mKhLCKzcIVKqZFwZ,['75VXrmAmJCcQKyhDarGE6F'],El Soñador Elegido,[],47,2007-09-26
+671,0qoGwG4wXqZ91lubDNbYc9,['3XLKsJ2N1aG1R1vMctsdPq'],Domenica,[],46,2014-05-04
+672,2WzIM6jELLOQ2IO2kKNZsF,['5JcO3FHEBbWTQMUHmWtU2g'],Blue Sundays,[],55,2017-01-06
+673,5HTtQMQxpNk64Uj1zXjufs,['7GmXwGXJSsmWTkCyk5Twux'],El Círculo (Versión Exclusiva de Spotify),[],68,2016-09-23
+674,0fNRU2Bri98HFdkLPdjY3d,['6zJkLYY6jdwLbRCo3Acc3C'],R de Rumba,[],41,1992-07-26
+675,28KIcqzdyblp6fch95LVrv,['3lP2GgJaO5TZJt8dE1WsSQ'],Mi Toque de Color,[],21,2011-03-22
+676,3pbWxKnA1OPy3OYvgsG5qQ,"['224rbIjYbXaTI7lnP2ZMNJ', '6kSbf0Xe8Bdhitd3d6Jr2z']",Héroe,[],48,2012-10-30
+677,1pjFDutapQtaQBw9ArTKsG,['1DH9RJ0xBVje6gQmK3LWUY'],Violadores Del Verso + Kase.O: Mierda,[],41,1992-07-26
+678,48qhOyJ0EOQ0ALDEpZmr9k,"['7rAjVJgwZhvmMIt5vfyNGn', '04vnNnCkL6fGui3ATn2awd']",Bajo Suelo,[],36,2013-11-15
+679,7wljE8gv95vyRkN0nQ1VT5,['5pIapcAHb6WV4fUjfQchMf'],Sobre Los Márgenes,[],50,2013-04-22
+680,75KUvMXxKDFtCmUJ6xqLqU,['6a7aRbyLNHHiwqgLh87Mpy'],Del Amor y Otros Vicios,[],40,2017-01-27
+681,4JX4igtlPCi9bMDFHELAuM,"['451DVjaBuGYfvDfvG9MxaG', '1v7iZcyrm4fHfsEBiseomy']",Alas Rotas,[],45,2015-05-15
+682,2b1xrfqNozkZaY2eA47UiR,"['0RCFjo3vSZBvq2P2sFXQOp', '0A1LNp0bEWj5DAi518cpTA', '1WbSDBwNT46WSSH26QGskb']","Recopilatorio, Vol. 2",[],36,2017-01-26
+683,26cSruPb03yOhPwx0ctPlp,['4lHAjTCvXGu8QIM3cEe93m'],Makanudo,[],38,2015-06-01
+684,60lh1u4Y7tVGJmImfgbNzI,['72fEVnXpnjN2i2MU99ga0z'],Entre mi casa y la luna,[],41,2017-11-03

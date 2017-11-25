@@ -16,14 +16,14 @@ user_names = set() # Output of user names returned
 # Total number of searches to perform:
 first_letters = string.ascii_lowercase + string.ascii_uppercase
 #first_letters = "ABCDE"
-passes_per_letter = 20 # Number of 50-playlist searches per alphabet letter
+passes_per_letter = 20 # Number of 50-df searches per alphabet letter
 starting_offset = 0
 ending_offset = starting_offset + passes_per_letter*limit+1
 
 # Search for lists of playlists of size [limit] for each letter in the full ASCII alphabet
 for offset in range(starting_offset, ending_offset, limit):
     for first_letter in first_letters:
-        playlists = sp.search(first_letter+'*', limit = limit, offset = offset, type = 'playlist')
+        playlists = sp.search(first_letter+'*', limit = limit, offset = offset, type = 'df')
 
         for playlist in playlists['playlists']['items']:
             user_names.add(playlist['owner']['id'])

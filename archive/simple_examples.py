@@ -43,7 +43,7 @@ def display_artist_info():
 
 
 def user_playlist ():
-    """Retrieving specific playlist info. Prints artists in playlist."""
+    """Retrieving specific df info. Prints artists in df."""
     user = 'indiefolkradio'
     playlist_id = '1Qs40FRP061tVZ9x2npAE3'
     playlist = sp.user_playlist(user, playlist_id)

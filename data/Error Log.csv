@@ -1,0 +1,8 @@
+,Method,DataID,ErrDescription
+0,Adding playlist.,bedburger,"http status: 404, code:-1 - https://api.spotify.com/v1/users/bedburger/playlists/7EXAIwU5PKDwJDaMfAyWVO:
+ Not found."
+1,Adding playlist.,1231537904,"http status: 404, code:-1 - https://api.spotify.com/v1/users/1231537904/playlists/0b9t3t86ts7nCQehdaz9qP:
+ Not found."
+2,Adding playlist.,126007696,"http status: 404, code:-1 - https://api.spotify.com/v1/users/126007696/playlists/37i9dQZF1DWZiL5ws2FFSx:
+ Not found."
+3,Adding playlist.,homerjsimson,'NoneType' object is not subscriptable

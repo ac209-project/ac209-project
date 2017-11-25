@@ -2,25 +2,13 @@
 Saving the CSVs with data retrieved using Spotify API.
 """
 
-from time import clock
-
 import pandas as pd
 
-from utils import clean_csv_path, flatten, get_auth_spotipy
+from utils import ProgramTimer, chunks, clean_csv_path, flatten, \
+    get_auth_spotipy
 
+log = ProgramTimer(ud_start=True, ud_end=False)
 sp = get_auth_spotipy()  # same client used throughout module to query
-
-
-def get_album_ids (tracks):
-    """Loops through tracks to extract each album:id attribute."""
-    album_ids = []
-    for track in tracks:
-        try:
-            album_id = track['album']['id']
-            album_ids.append(album_id)
-        except:
-            pass
-    return album_ids
 
 
 #####################################################################
@@ -58,7 +46,6 @@ def build_album_row (album):
 def build_track_row (track):
     """Returns dict representing row in track DataFrame."""
     artist_ids = [artist['id'] for artist in track['artists']]
-
     return {'id':track['id'],
             'name':track['name'],
             'duration_ms':int(track['duration_ms']),
@@ -68,7 +55,7 @@ def build_track_row (track):
 
 
 #####################################################################
-# Building playlist CSV.
+# Building df CSV.
 #####################################################################
 
 def build_data_from_playlist (plist, user):
@@ -134,50 +121,73 @@ def build_data (users):
     # Append data to the two DataFrames for info extracted from playlists.
     plist_count = 0
     for user in users:
-        playlists = sp.user_playlists(user)
+        try:
+            playlists = sp.user_playlists(user)
+        except Exception as e:
+            log.log_err('sp.user_playlists()', user, str(e))
+            continue
         for plist in playlists['items']:
-            time0 = clock()
-            plist_info = sp.user_playlist(user, plist['id'])
-            row_plist, rows_track = build_data_from_playlist(plist_info, user)
-            df_playlist = df_playlist.append(row_plist, ignore_index=True)
-            df_track = df_track.append(rows_track)
-            time = (clock() - time0)
-            print('Added playlist {0} in {1:.1f}s.'.format(plist_count, time))
-            plist_count += 1
-            if plist_count > 2:
-                break
+            try:
+                log.start('Adding playlist {}'.format(plist_count))
+                plist_info = sp.user_playlist(user, plist['id'])
+                row_plist, rows_track = build_data_from_playlist(plist_info,
+                                                                 user)
+            except Exception as e:
+                log.log_err('Adding playlist.', user, str(e))
+                log.end()
+            else:
+                df_playlist = df_playlist.append(row_plist, ignore_index=True)
+                df_track = df_track.append(rows_track, ignore_index=True)
+                log.end()
+            finally:
+                plist_count += 1
+                if plist_count > 2:
+                    break
 
     # Save playlist and track DFs to CSV.
     # Define file paths to save to.
+    log.start('Saving playlist and track')
     playlist_path = clean_csv_path('playlist/playlist')
     track_path = clean_csv_path('track/track')
     df_playlist.to_csv(playlist_path)
     df_track.to_csv(track_path)
+    log.end()
 
     # Build album DataFrame.
+    log.start('Saving album')
     df_album = pd.DataFrame(
           columns=['id', 'artist_ids', 'name', 'genres', 'popularity',
                    'release_date'])
     album_ids = df_track['album_id'].unique().tolist()
-    albums = sp.albums(album_ids)
-    for album in albums:
-        album_row = build_album_row(album)
-        df_album = df_album.append(album_row, ignore_index=True)
+    # Break up albums into chunks.
+    for album_id_chunk in chunks(album_ids, 10):
+        albums = sp.albums(album_id_chunk)['albums']
+        for album in albums:
+            album_row = build_album_row(album)
+            df_album = df_album.append(album_row, ignore_index=True)
+    df_album.drop_duplicates('id', inplace=True)
     album_path = clean_csv_path('album/album')
     df_album.to_csv(album_path)
+    log.end()
 
     # Build artist DataFrame.
+    log.start('Saving artist')
     df_artist = pd.DataFrame(
           columns=['id', 'name', 'genres', 'popularity', 'followers'])
     artist_ids = flatten(df_track['artist_ids'].tolist())
-    print('Artist ids', artist_ids)
-
-    artists = sp.artists(artist_ids)
-    for artist in artists:
-        artist_row = build_artist_row(artist)
-        df_artist = df_artist.append(artist_row, ignore_index=True)
+    for artist_id_chunk in chunks(artist_ids, 10):
+        artists = sp.artists(artist_id_chunk)['artists']
+        for artist in artists:
+            artist_row = build_artist_row(artist)
+            df_artist = df_artist.append(artist_row, ignore_index=True)
+    df_artist.drop_duplicates('id', inplace=True)
     artist_path = clean_csv_path('artist/artist')
     df_artist.to_csv(artist_path)
+    log.end()
+
+    # Save error log.
+    log.errors.to_csv('Error Log.csv')
+    log.print_summary('Finished building data.')
 
 
 #####################################################################
@@ -185,5 +195,12 @@ def build_data (users):
 #####################################################################
 
 if __name__ == '__main__':
-    users = ['bedburger', 'buzzfeed']
-    build_data(users)
+    # users = ['bedburger', '11132487979', '1214248943', 'tobykeithofficial',
+    #          'ethanhugueville', '12127609470', 'ceferinocutzal43-us',
+    #          'paulalogo', '1298398592', 'ellenholstad', '1231537904',
+    #          '126007696', 'samuelcisnerosgo95', 'askild96', 'nmald35',
+    #          'fabianalazarini23', '11153776572', 'sssuzy13', 'mickhaselden',
+    #          '1177637361', 'homerjsimson', '1117462564', '1231900366',
+    #          'matheusrmd', 'franvalverde93']
+    # build_data(users)
+    print('No users provided as of now.')
