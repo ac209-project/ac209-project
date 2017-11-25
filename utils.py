@@ -153,7 +153,9 @@ class ProgramTimer:
         self.errors = DataFrame(
               columns=['Method', 'DataID', 'ErrDescription'])  # type: DataFrame
 
-    def start (self, name: str):
+    def start (self, name, show_msg=None):
+        if show_msg is None:
+            show_msg = self._ud_start
         new_id = self.__event_count + 1
         prior_open_id = self.__prior_open_event_id()
         if prior_open_id is None:
@@ -163,13 +165,13 @@ class ProgramTimer:
 
         event = Event(name, new_id, hrchy, prior_open_id)
         self._events[new_id] = event
-        if self._ud_start:
+        if show_msg:
             msg = self._start_ud_pre_txt + name + \
                   self._start_ud_post_txt
             print(msg)
 
     def end (self, show_msg=None):
-        if not show_msg:
+        if show_msg is None:
             show_msg = self._ud_end
 
         prior_open_id = self.__prior_open_event_id()

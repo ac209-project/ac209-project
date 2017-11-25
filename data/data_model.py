@@ -2,7 +2,7 @@
 Compiling the DataFrame used for EDA / modeling.
 """
 
-import ast
+from ast import literal_eval
 
 import numpy as np
 import pandas as pd
@@ -18,7 +18,7 @@ def load_track ():
     track = pd.read_csv('track/track.csv', encoding='ISO-8859-1')
     track.drop_duplicates('id', inplace=True)
     track.set_index('id', inplace=True)
-    track['artist_ids'] = track['artist_ids'].apply(ast.literal_eval)
+    track['artist_ids'] = track['artist_ids'].apply(literal_eval)
     return track
 
 
@@ -33,7 +33,7 @@ def load_artist ():
     df = pd.read_csv('artist/artist.csv', encoding='ISO-8859-1')
     df.drop_duplicates('id', inplace=True)
     df.set_index('id', inplace=True)
-    df['genres'] = df['genres'].apply(ast.literal_eval)
+    df['genres'] = df['genres'].apply(literal_eval)
     return df
 
 
@@ -90,7 +90,7 @@ def track_popularity (playlist_row):
 def load_main_df ():
     """Aggregates information across DataFrames to produce model-ready DF."""
     playlist = pd.read_csv('playlist/playlist.csv', encoding='ISO-8859-1')
-    playlist['track_ids'] = playlist['track_ids'].apply(ast.literal_eval)
+    playlist['track_ids'] = playlist['track_ids'].apply(literal_eval)
     playlist['track_pop'] = playlist.apply(track_popularity, axis=1)
     playlist['album_pop'] = playlist.apply(album_popularity, axis=1)
     playlist['artist_pop'] = playlist.apply(artist_popularity, axis=1)
