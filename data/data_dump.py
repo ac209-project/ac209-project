@@ -10,6 +10,10 @@ from utils import ProgramTimer, chunks, clean_csv_path, flatten, \
 log = ProgramTimer(ud_start=True, ud_end=False)
 sp = get_auth_spotipy()  # same client used throughout module to query
 
+import sqlite3
+
+conn = sqlite3.connect('spotify_db.sqlite')
+
 
 #####################################################################
 # Building artist CSV.
@@ -144,20 +148,24 @@ def build_data (users):
 
     # Save playlist, track, album and artist CSVs.
 
-    log.start('Saving playlist')
-    print(df_playlist.head())
-    playlist_path = clean_csv_path('playlist/playlist')
-    df_playlist.to_csv(playlist_path)
+    log.start('Writing playlist to DB')
+    df_playlist['track_added_at'] = df_playlist['track_added_at'].apply(repr)
+    df_playlist['track_ids'] = df_playlist['track_ids'].apply(repr)
+    df_playlist.set_index('id', drop=True, inplace=True)
+    df_playlist.to_sql('playlist', conn, if_exists='append')
     log.end()
 
-    log.start('Saving track')
+    log.start('Writing track to DB')
     df_track.drop_duplicates('id', inplace=True)
     df_track.set_index('id', drop=True, inplace=True)
-    track_path = clean_csv_path('track/track')
-    df_track.to_csv(track_path)
+    # Get artist IDs before converting the field to list (needed to produce
+    # artists DF later on).
+    artist_ids = set(flatten(df_track['artist_ids'].tolist()))
+    df_track['artist_ids'] = df_track['artist_ids'].apply(repr)
+    df_track.to_sql('track', conn, if_exists='append', index_label='id')
     log.end()
 
-    log.start('Saving album')
+    log.start('Writing album to DB')
     df_album = pd.DataFrame(
           columns=['id', 'artist_ids', 'name', 'popularity', 'release_date'])
     album_ids = df_track['album_id'].unique().tolist()
@@ -170,14 +178,13 @@ def build_data (users):
             df_album = df_album.append(album_row, ignore_index=True)
     df_album.drop_duplicates('id', inplace=True)
     df_album.set_index('id', drop=True, inplace=True)
-    album_path = clean_csv_path('album/album')
-    df_album.to_csv(album_path)
+    df_album['artist_ids'] = df_album['artist_ids'].apply(repr)
+    df_album.to_sql('album', conn, if_exists='append', index_label='id')
     log.end()
 
-    log.start('Saving artist')
+    log.start('Writing artist to DB')
     df_artist = pd.DataFrame(
           columns=['id', 'name', 'genres', 'popularity', 'followers'])
-    artist_ids = set(flatten(df_track['artist_ids'].tolist()))
     artist_ids = [id for id in artist_ids if id is not None]
     for artist_id_chunk in chunks(artist_ids, 10):
         artists = sp.artists(artist_id_chunk)['artists']
@@ -185,9 +192,9 @@ def build_data (users):
             artist_row = build_artist_row(artist)
             df_artist = df_artist.append(artist_row, ignore_index=True)
     df_artist.drop_duplicates('id', inplace=True)
-    df_album.set_index('id', drop=True, inplace=True)
-    artist_path = clean_csv_path('artist/artist')
-    df_artist.to_csv(artist_path)
+    df_artist.set_index('id', drop=True, inplace=True)
+    df_artist['genres'] = df_artist['genres'].apply(repr)
+    df_artist.to_sql('artist', conn, if_exists='append', index_label='id')
     log.end()
 
 
@@ -210,13 +217,17 @@ if __name__ == '__main__':
         log.start('Building data block {}'.format(block_count))
         try:
             build_data(user_chunk)
-        except Exception as e:
-            log.log_err('build_data(user_chunk)', user_chunk, str(e))
+            conn.commit()
+        except:
+            conn.rollback()
         finally:
             log.end()
             block_count += 1
             if block_count >= MAX_BLOCKS:
                 break
+
+
+    conn.close()
 
     log.print_summary('Finished building data')
     # Save error log.

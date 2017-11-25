@@ -1,8 +1,75 @@
 ,Method,DataID,ErrDescription
-0,Adding playlist.,bedburger,"http status: 404, code:-1 - https://api.spotify.com/v1/users/bedburger/playlists/7EXAIwU5PKDwJDaMfAyWVO:
+0,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/7fYyLyWkMP2snjxqBl8aej:
  Not found."
-1,Adding playlist.,1231537904,"http status: 404, code:-1 - https://api.spotify.com/v1/users/1231537904/playlists/0b9t3t86ts7nCQehdaz9qP:
+1,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/6FHPyJ2PcJGbfAW5bZTbjZ:
  Not found."
-2,Adding playlist.,126007696,"http status: 404, code:-1 - https://api.spotify.com/v1/users/126007696/playlists/37i9dQZF1DWZiL5ws2FFSx:
+2,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/7KOixt9JRTdhOnJtiJWuiZ:
  Not found."
-3,Adding playlist.,homerjsimson,'NoneType' object is not subscriptable
+3,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/748CfpIqsCuZjAZzE7ARpm:
+ Not found."
+4,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/1jJCa2PM78Jat6J9LFS4D5:
+ Not found."
+5,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/1Yt2Eb6s3yxZiJABZVMzXy:
+ Not found."
+6,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/4Qj8RIs4Mav4YM23cl2I6y:
+ Not found."
+7,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/1DNf5g32iYCYSQ0nGB5gqj:
+ Not found."
+8,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/3yvnxl8HL78pHsF3SIqWWF:
+ Not found."
+9,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/23BFRqrnBR81f0sIhRotri:
+ Not found."
+10,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/4KpG3uP5U6qZTVjudIaEXD:
+ Not found."
+11,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/7Anb1HtKdhvK3Pb1d36f22:
+ Not found."
+12,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/0OuK478zkoxst5N3FUHXhE:
+ Not found."
+13,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/6J1r02xyO2qkMA9dDNZytJ:
+ Not found."
+14,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX6RA5ZrA5a23:
+ Not found."
+15,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DWT8fmnlYTQW3:
+ Not found."
+16,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/3oRNodhtGLVnZl0Q32FJHB:
+ Not found."
+17,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/38KngtbWE1PROJhtUFKBgi:
+ Not found."
+18,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX0XYoY9uUkXA:
+ Not found."
+19,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/3U7bvMi57kT8BPByLJ5BNw:
+ Not found."
+20,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/6s2BE4YIG6rYlj7HjdTEJv:
+ Not found."
+21,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX3fXJqxGjuEP:
+ Not found."
+22,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX3NRlBOcUOcY:
+ Not found."
+23,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX2rVwh3lcWku:
+ Not found."
+24,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/7s1nG7WypAP6bwhdFkzuRh:
+ Not found."
+25,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DWU8quswnFt3c:
+ Not found."
+26,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX843Qf4lrFtZ:
+ Not found."
+27,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX6ALfRKlHn1t:
+ Not found."
+28,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DWXIFKBoyoLJJ:
+ Not found."
+29,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DXca8AyWK6Y7g:
+ Not found."
+30,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX2sUQwD7tbmL:
+ Not found."
+31,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DWYzTSrc7SiSZ:
+ Not found."
+32,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX9XIFQuFvzM4:
+ Not found."
+33,Adding playlist.,11132487979,"http status: 404, code:-1 - https://api.spotify.com/v1/users/11132487979/playlists/37i9dQZF1DX8CTD7HWYPDn:
+ Not found."
+34,Adding playlist.,1214248943,"http status: 404, code:-1 - https://api.spotify.com/v1/users/1214248943/playlists/37i9dQZF1DXdPec7aLTmlC:
+ Not found."
+35,Adding playlist.,1214248943,"http status: 404, code:-1 - https://api.spotify.com/v1/users/1214248943/playlists/3KYxa1WIJwanBKhTr9poa3:
+ Not found."
+36,Adding playlist.,1214248943,"http status: 404, code:-1 - https://api.spotify.com/v1/users/1214248943/playlists/55Tz2FB1nsrWcpEoaqgnxo:
+ Not found."

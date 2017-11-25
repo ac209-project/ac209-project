@@ -3,11 +3,14 @@ Compiling the DataFrame used for EDA / modeling.
 """
 
 from ast import literal_eval
+import sqlite3
 
 import numpy as np
 import pandas as pd
 
 from utils import flatten
+
+CONN = sqlite3.connect('spotify_db.sqlite')
 
 
 #####################################################################
@@ -15,28 +18,39 @@ from utils import flatten
 #####################################################################
 
 def load_track ():
-    track = pd.read_csv('track/track.csv', encoding='ISO-8859-1')
-    track.drop_duplicates('id', inplace=True)
-    track.set_index('id', inplace=True)
-    track['artist_ids'] = track['artist_ids'].apply(literal_eval)
-    return track
+    df = pd.read_sql('SELECT * FROM track', CONN)
+    df.drop_duplicates('id', inplace=True)
+    df.set_index('id', inplace=True)
+    df['artist_ids'] = df['artist_ids'].apply(literal_eval)
+    return df
 
 
 def load_album ():
-    album = pd.read_csv('album/album.csv', encoding='ISO-8859-1')
-    album.drop_duplicates('id', inplace=True)
-    album.set_index('id', inplace=True)
-    return album
+    df = pd.read_sql('SELECT * FROM album', CONN)
+    df.drop_duplicates('id', inplace=True)
+    df.set_index('id', inplace=True)
+    df['artist_ids'] = df['artist_ids'].apply(literal_eval)
+    df['release_date'] = pd.to_datetime(df['release_date'])
+    return df
 
 
 def load_artist ():
-    df = pd.read_csv('artist/artist.csv', encoding='ISO-8859-1')
+    df = pd.read_sql('SELECT * FROM artist', CONN)
     df.drop_duplicates('id', inplace=True)
     df.set_index('id', inplace=True)
     df['genres'] = df['genres'].apply(literal_eval)
     return df
 
 
+def load_playlist ():
+    df = pd.read_sql('SELECT * FROM playlist', CONN)
+    df['track_ids'] = df['track_ids'].apply(literal_eval)
+    df['track_added_at'] = df['track_added_at'].apply(literal_eval)
+    df.set_index('id', inplace=True)
+    return df
+
+
+# Load supporting DFs, which are used in calculating metrics below.
 album = load_album()
 artist = load_artist()
 track = load_track()
@@ -58,7 +72,6 @@ def album_popularity (playlist_row):
         album_rows = album.loc[album_ids]
         return album_rows['popularity'].mean()
     except:
-        print('Exception at this row:\n\n{}'.format(playlist_row))
         return np.NaN
 
 
@@ -87,17 +100,17 @@ def track_popularity (playlist_row):
     return track_rows['popularity'].mean()
 
 
-def load_main_df ():
+def build_analysis_df ():
     """Aggregates information across DataFrames to produce model-ready DF."""
-    playlist = pd.read_csv('playlist/playlist.csv', encoding='ISO-8859-1')
-    playlist['track_ids'] = playlist['track_ids'].apply(literal_eval)
-    playlist['track_pop'] = playlist.apply(track_popularity, axis=1)
-    playlist['album_pop'] = playlist.apply(album_popularity, axis=1)
-    playlist['artist_pop'] = playlist.apply(artist_popularity, axis=1)
-    playlist['artist_followers'] = playlist.apply(artist_followers, axis=1)
-    return playlist
+    df = load_playlist()
+    df['track_pop'] = df.apply(track_popularity, axis=1)
+    df['album_pop'] = df.apply(album_popularity, axis=1)
+    df['artist_pop'] = df.apply(artist_popularity, axis=1)
+    df['artist_followers'] = df.apply(artist_followers, axis=1)
+    return df
 
 
 if __name__ == '__main__':
-    df = load_main_df()
+    df = build_analysis_df()
     print(df.head())
+
