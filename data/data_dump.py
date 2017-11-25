@@ -2,6 +2,8 @@
 Saving the CSVs with data retrieved using Spotify API.
 """
 
+import sqlite3
+
 import pandas as pd
 
 from utils import ProgramTimer, chunks, clean_csv_path, flatten, \
@@ -10,9 +12,7 @@ from utils import ProgramTimer, chunks, clean_csv_path, flatten, \
 log = ProgramTimer(ud_start=True, ud_end=False)
 sp = get_auth_spotipy()  # same client used throughout module to query
 
-import sqlite3
-
-conn = sqlite3.connect('spotify_db.sqlite')
+CONN = sqlite3.connect('spotify_db.sqlite')
 
 
 #####################################################################
@@ -152,7 +152,7 @@ def build_data (users):
     df_playlist['track_added_at'] = df_playlist['track_added_at'].apply(repr)
     df_playlist['track_ids'] = df_playlist['track_ids'].apply(repr)
     df_playlist.set_index('id', drop=True, inplace=True)
-    df_playlist.to_sql('playlist', conn, if_exists='append')
+    df_playlist.to_sql('playlist', CONN, if_exists='append')
     log.end()
 
     log.start('Writing track to DB')
@@ -162,7 +162,7 @@ def build_data (users):
     # artists DF later on).
     artist_ids = set(flatten(df_track['artist_ids'].tolist()))
     df_track['artist_ids'] = df_track['artist_ids'].apply(repr)
-    df_track.to_sql('track', conn, if_exists='append', index_label='id')
+    df_track.to_sql('track', CONN, if_exists='append', index_label='id')
     log.end()
 
     log.start('Writing album to DB')
@@ -179,7 +179,7 @@ def build_data (users):
     df_album.drop_duplicates('id', inplace=True)
     df_album.set_index('id', drop=True, inplace=True)
     df_album['artist_ids'] = df_album['artist_ids'].apply(repr)
-    df_album.to_sql('album', conn, if_exists='append', index_label='id')
+    df_album.to_sql('album', CONN, if_exists='append', index_label='id')
     log.end()
 
     log.start('Writing artist to DB')
@@ -194,7 +194,7 @@ def build_data (users):
     df_artist.drop_duplicates('id', inplace=True)
     df_artist.set_index('id', drop=True, inplace=True)
     df_artist['genres'] = df_artist['genres'].apply(repr)
-    df_artist.to_sql('artist', conn, if_exists='append', index_label='id')
+    df_artist.to_sql('artist', CONN, if_exists='append', index_label='id')
     log.end()
 
 
@@ -217,17 +217,16 @@ if __name__ == '__main__':
         log.start('Building data block {}'.format(block_count))
         try:
             build_data(user_chunk)
-            conn.commit()
+            CONN.commit()
         except:
-            conn.rollback()
+            CONN.rollback()
         finally:
             log.end()
             block_count += 1
             if block_count >= MAX_BLOCKS:
                 break
 
-
-    conn.close()
+    CONN.close()
 
     log.print_summary('Finished building data')
     # Save error log.
