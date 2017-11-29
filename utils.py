@@ -88,7 +88,7 @@ def make_working_df():
     tracks = pd.read_json('data/track_df.json')
     user_followers = pd.read_json('data/user_follow.json')
     artist_genres = pd.read_json('data/artist_genres_df.json')
-    artist_genres['artist_genre'] = [tuple(g) if g else () for g in artist_genres['artist_genre']]
+    # artist_genres['artist_genre'] = [tuple(g) if g else () for g in artist_genres['artist_genre']]
 
     plists = plists.rename(columns={'name': 'playlist_name','id': 'playlist_id'})
     tracks = tracks.rename(columns={'id': 'track_id','name':'track_name','popularity': 'track_pop'})
