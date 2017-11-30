@@ -2,6 +2,7 @@
 
 ### Next Deliverable
 **Thurs, Dec 7: Project due (80 points)**
+
 Submit your final project on Canvas. Your submission includes
 - Jupyter notebook with relevant code (30 points), and
 - Report presented on a website (45 points = 40 points content + 5 points for style).
