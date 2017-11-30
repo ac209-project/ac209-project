@@ -7,10 +7,11 @@ import spotipy
 from spotipy.client import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 import copy
+import datetime
 
 def explode_value(df_in, col1, col2=None):
-    """ This function is used when you have a list or two in your pandas 
-    dataframe and you want to 'explode' (like the Hive feature out the 
+    """ This function is used when you have a list or two in your pandas
+    dataframe and you want to 'explode' (like the Hive feature out the
     dataframe so your list now has a row for every element.
     ------------
     Example:        col1    col2    col3
@@ -21,18 +22,18 @@ def explode_value(df_in, col1, col2=None):
     Example:        col1    col2    col3
                 0   'mike'   12      'dog'
                 1   'mike'   8       'cat'
-                2   'lucy'   9       'mouse'   
+                2   'lucy'   9       'mouse'
                 3   'lucy'   44      'lemon'
     -----------
-    Args: df_in; Pandas Dataframe that contains the columns as lists that 
+    Args: df_in; Pandas Dataframe that contains the columns as lists that
             you want to explode out.
           col1; string name of the column that you want to explode out.
-          col2; string name of the second column that you want to explode 
+          col2; string name of the second column that you want to explode
             out.  (optional argument)
     -----------
     Returns: Pandas Dataframe that is exploded out by your chosen column(s)
     -----------
-    Raises: ValueError in the case you do not input a dataframe or you have 
+    Raises: ValueError in the case you do not input a dataframe or you have
         columns with different lengths to blow out.
     """
     if not isinstance(df_in, pd.DataFrame):
@@ -90,14 +91,66 @@ def make_working_df():
     artist_genres = pd.read_json('data/artist_genres_df.json')
     # artist_genres['artist_genre'] = [tuple(g) if g else () for g in artist_genres['artist_genre']]
 
-    plists = plists.rename(columns={'name': 'playlist_name','id': 'playlist_id'})
-    tracks = tracks.rename(columns={'id': 'track_id','name':'track_name','popularity': 'track_pop'})
+    # plists = plists.rename(columns={'name': 'playlist_name','id': 'playlist_id'})
+    plists = plists.rename(columns = {'name':'pl_name', 'id':'pl_id', 'followers':'pl_followers',
+                          'num_tracks':'pl_num_trks', 'user':'pl_owner',
+                         'desc':'pl_desc'})
+    # tracks = tracks.rename(columns={'id': 'track_id','name':'track_name','popularity': 'track_pop'})
+    tracks = tracks.rename(columns = {'name':'trk_name', 'id':'trk_id',
+                            'playlist_id':'pl_id', 'artist':'art_name',
+                            'popularity':'trk_popularity', 'added_at':'trk_added_at',
+                           'duration':'trk_duration'})
+    user_followers = user_followers.rename(columns={'user': 'pl_owner'})
+    artist_genres = artist_genres.rename(columns={'artist': 'art_name'})
     # Merging
-    temp1 = pd.merge(tracks,artist_genres,how='left',on='artist')
-    temp2 = pd.merge(temp1,plists,how='left',on='playlist_id')
-    final_df = pd.merge(temp2,user_followers,how='left',on='user')
+    temp1 = pd.merge(tracks,artist_genres,how='left',on='art_name')
+    temp2 = pd.merge(temp1,plists,how='left',on='pl_id')
+    df_trk = pd.merge(temp2,user_followers,how='left',on='pl_owner')
 
-    return final_df
+    df_trk = df_trk.dropna(subset = ['trk_popularity', 'pl_followers'])
+
+    # Data wrangling - additional track-level and playlist-level features
+
+    # Oldest and newest date that a track was added to the playlist
+    df_trk['pl_first_date'] = df_trk.groupby('pl_id')['trk_added_at'].transform('min')
+    df_trk['pl_last_date'] = df_trk.groupby('pl_id')['trk_added_at'].transform('max')
+    df_trk['pl_days_active'] = (df_trk['pl_last_date'] - df_trk['pl_first_date']).astype('timedelta64[D]')
+    df_trk['pl_days_old'] = (datetime.datetime.now() - df_trk['pl_first_date']).astype('timedelta64[D]')
+
+    # Number of tracks in the playlist
+    df_trk['pl_num_trk'] = df_trk.groupby('pl_id')['trk_id'].transform('count')
+
+    # Number of artists in the playlist
+    df_trk['pl_num_art'] = df_trk.groupby('pl_id')['art_name'].transform('nunique')
+
+    # Max, min, and average track popularity (by playlist)
+    df_trk['pl_min_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('min')
+    df_trk['pl_max_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('max')
+    df_trk['pl_mean_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('mean')
+
+    df_trk['art_min_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('min')
+    df_trk['art_max_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('max')
+    df_trk['art_mean_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('mean')
+    df_trk['art_total_trks'] = df_trk.groupby('art_name')['trk_name'].transform('nunique').astype('int')
+
+    # Add a label category for each artist (currently just 5 labels but could be expanded)
+    df_trk['art_class'] = ""
+    df_trk.loc[(df_trk.art_mean_trkpop>=50) & (df_trk.art_total_trks>=10), 'art_class'] = 'superstar'
+    df_trk.loc[(df_trk.art_mean_trkpop>=20) & (df_trk.art_mean_trkpop<50) & (df_trk.art_total_trks>=10), 'art_class'] = 'star'
+    df_trk.loc[(df_trk.art_mean_trkpop>=0) & (df_trk.art_mean_trkpop<20) & (df_trk.art_total_trks>=10), 'art_class'] = 'crap_factory'
+    df_trk.loc[(df_trk.art_mean_trkpop>=40) & (df_trk.art_total_trks<10), 'art_class'] = 'one_hit_wonder'
+    df_trk.loc[(df_trk.art_mean_trkpop<40) & (df_trk.art_total_trks<10), 'art_class'] = 'garage_band'
+    df_trk['art_class'] = pd.Categorical(df_trk['art_class'], categories=["superstar","star","crap_factory", "one_hit_wonder", "garage_band"])
+
+    # Fix followers to int
+    df_trk['pl_followers'] = df_trk.loc[:,'pl_followers'].astype('int')
+
+    # Number of playlists per user
+    df_trk['user_pls_in_sample'] = df_trk.groupby('pl_owner')['pl_id'].transform('count')
+
+    # Size number of characters in the playlist description
+    df_trk['pl_desc_chars'] = df_trk.pl_desc.str.len().fillna(0).astype('int')
+    return df_trk
 
 def get_auth_spotipy () -> Spotify:
     """Returns authorized Spotify client."""
