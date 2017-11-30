@@ -1,13 +1,13 @@
 # Spotify Playlist Analysis
 
 ### Next Deliverable
-**Tues, Nov 28: EDA and Revised Project Statement (15 points)**
-Submit a 2 - 3 page revised project statement and EDA to Canvas. Your submission should
-include:
-- A description of the data: what type of data are you dealing with? What methods have
-you used to explore the data (initial explorations, data cleaning and reconciliation, etc)?
-- Visualizations and captions that summarize the noteworthy findings of the EDA.
-- A revised project question based on the insights you gained through EDA.
+**Thurs, Dec 7: Project due (80 points)**
+Submit your final project on Canvas. Your submission includes
+- Jupyter notebook with relevant code (30 points), and
+- Report presented on a website (45 points = 40 points content + 5 points for style).
+- A peer evaluation of each team member (5 points)
+A template for the report will be posted on Canvas, and the last lab will be devoted to
+presentations on websites.
 
 ### High-level project goals
 1. Derive a model that can predict Playlist success using only Spotify-provided predictors.
