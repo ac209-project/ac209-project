@@ -160,3 +160,10 @@ def get_auth_spotipy () -> Spotify:
     client_credentials_manager = SpotifyClientCredentials()
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
     return sp
+
+def load_celebs_df(lcase=False):
+    """Lowercase celeb names because """
+    df = pd.read_csv('data/celebs.csv', encoding='latin')
+    if lcase:
+        df['name'] = df['name'].apply(str.lower)
+    return df
