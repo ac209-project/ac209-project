@@ -122,7 +122,7 @@
                         directly from each playlist, but rather from the artists of each track as a separate query.
                         Before combining, the separate files have the following basic form:
                     </p>
-                    <table class="table table-hover">
+                    <table class="table table-striped table-project">
                         <thead>
                         <tr>
                             <th>Data File</th>
@@ -186,7 +186,7 @@
             </div>
 
             <div class="row">
-                <div class="col col-md-9">
+                <div class="col col-md-6">
                     <p><b>First look at playlist success:</b><br>
                         Engineering more features around artist and playlist data yielded interesting relationships. A
                         cursory measure of playlist success, our generalized project goal, is the number of followers
@@ -194,12 +194,26 @@
                         having few followers and a few approaching the 1M mark. The log-transform of followers
                         illustrates a potentially more useful response variable (see plots to the right).
                     </p>
+                </div>
+                <div class="col col-md-3">
+                    <img src="img/eda1.png" align="center" class="img">
+                </div>
+                <div>
+                    <img src="img/eda2.png" align="center" class="img">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <p><b>Categorizing artists:</b><br>
                         We further aggregated the artists by splitting them up into five distinct categories using
                         combinations of their mean popularity (as determined by Spotify's popularity metric) and total
                         number of artist tracks as follows:
                     </p>
-                    <table class="table">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <table class="table table-project">
                         <thead>
                         <tr>
                             <th>Artist Category</th>
@@ -231,10 +245,21 @@
                         </tr>
                         <tr style="background-color: #761a7c">
                             <td>Trash Factory</td>
-                            <td>>= 0 and < 20 </td>
+                            <td>>= 0 and < 20</td>
                             <td>>= 10</td>
                         </tbody>
                     </table>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/eda3.png" align="center" class="img"/>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/eda4.png" align="center" class="img"/>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
 
                     <p style="font-style: italic"><b>EDA Notes from Nick (fill in as required above and remove
                         below):</b> - Good job on the log. It is interesting to note that there are those two modes that
@@ -255,17 +280,6 @@
                         - Can you make sure to motivate to me what exactly you mean by playlist velocity when we meet? I
                         mean I get the idea by again we need to make sure you define this clearly and motivate why your
                         definition makes sense.</p>
-                </div>
-                <div class="col col-md-3">
-                    <div>
-                        <img src="img/eda1.png" align="center" class="img"/>
-                    </div>
-                    <div>
-                        <p class="caption">Linear (above) vs. log (below) x-scale comparison of playlist followers.</p>
-                    </div>
-                    <div>
-                        <img src="img/eda2.png" align="center" class="img"/>
-                    </div>
                 </div>
             </div>
 
