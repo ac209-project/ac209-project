@@ -1,10 +1,23 @@
 .img {
-    max-width: 300px;
+    max-width: 100%;
     padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .caption {
     font-weight: bold;
     text-align: left;
-    padding: 5px
+    font-size: 12px;
+    padding: 5px;
+}
+
+.bands {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.table-project {
+    font-size: 12px;
 }
