@@ -65,11 +65,12 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
+
             <div class="row">
                 <div class="col-md-9">
                     <h1>Predicting Spotify Playlist Success</h1>
-                    <p>Welcome to our Fall 2017 - Data Science I final project page. Please use the menu found at the
-                        button below to jump to your section of choice.<br><br>
+                    <p>Welcome to our Harvard University, Fall 2017 - Data Science I final project page. Please use the menu button
+                        below to jump to your section of choice.<br><br>
                         <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
                     </p>
                 </div>
@@ -79,35 +80,31 @@
             <div id="intro" class="row">
                 <div class="col col-md-12"><h2>Introduction</h2></div>
             </div>
-            <div class="row">
-                <div class="col col-md-9">
-                    <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
 
+            <div class="row">
+                <div class="col col-md-12">
+                    <p>
+                        The purpose of this project is to use publicly available data through Spotify's
+                        <a href="https://developer.spotify.com/web-api/">API</a>, the
+                        <a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library, and audio features
+                        in the <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a> (MSD) to
+                        predict the success of user playlists, and create a tool to build successful playlists based on
+                        user specified features (genre, artist, etc.).
+                    </p>
+                    <p>
+                        Throughout this project playlist "success" is defined as <b>FILL IN HERE</b>. We have employed
+                        machine-learning regression techniques taught throughout the semester as well as
+                        <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a>
+                        modeling to predict the success of <b>BLANK NUMBER OF</b> playlists.
                     </p>
                 </div>
-                <div class="col col-md-2">
-                    <img src="img/placeholderPaul.png" align="center" class="img"/>
-                    <p class="caption">Beautiful Paul</p>
-                </div>
             </div>
+
+
             <div id="eda" class="row">
                 <div class="col col-md-12"><h2>Exploratory Data Analysis</h2></div>
             </div>
+
             <div class="row">
                 <div class="col col-md-9">
                     <p>
@@ -140,26 +137,90 @@
             <div id="models" class="row">
                 <div class="col col-md-12"><h2>Models</h2></div>
             </div>
+
             <div class="row">
                 <div class="col col-md-9">
                     <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                    </p>
+                </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
+            </div>
 
+
+            <div id="beyond109a" class="row">
+                <div class="col col-md-12"><h2>Beyond 109A</h2></div>
+            </div>
+
+            <div class="row">
+                <div class="col col-md-9">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
                     </p>
                 </div>
                 <div class="col col-md-2">
@@ -171,23 +232,38 @@
             <div id="playlistgeneration" class="row">
                 <div class="col col-md-12"><h2>Playlist Generation</h2></div>
             </div>
+
             <div class="row">
                 <div class="col col-md-9">
                     <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
 
                     </p>
                 </div>
@@ -201,23 +277,38 @@
             <div id="conclusions" class="row">
                 <div class="col col-md-12"><h2>Conclusions</h2></div>
             </div>
+
             <div class="row">
                 <div class="col col-md-9">
                     <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
 
                     </p>
                 </div>
@@ -235,9 +326,12 @@
                     <ul>
                         <li><a href="https://developer.spotify.com/web-api/">Spotify Web API</a></li>
                         <li><a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library.</li>
-                        <li>Project <a
+                        <li><a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a></li>
+                        <li>This project's <a
                                 href="https://github.com/ac209-project/ac209-project">GitHub repository</a>.
                         </li>
+                        <li>Course project guidlines <a href="https://github.com/cs109/a-2017/tree/master/Projects">GitHub
+                            repository</a></li>
                         <li>Website framework provided by <a
                                 href="https://github.com/BlackrockDigital/startbootstrap-simple-sidebar">BlackrockDigital</a>.
                         </li>
@@ -254,16 +348,25 @@
             <div class="row">
                 <div class="col col-md-12">
                     <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-
+                        This project was produced by the following students:
                     </p>
+                    <ul>
+                        <li>
+                            <a href="mailto:pblankley@g.harvard.edu">Paul Blankley</a>
+                        </li>
+                        <li>
+                            <a href="mailto:ryanjanssen@g.harvard.edu">Ryan Janssen</a>
+                        </li>
+                        <li>
+                            <a href="mailto:andrewlund@g.harvard.edu">Andrew Lund</a>
+                        </li>
+                        <li>
+                            <a href="mailto:nathaniel_stein@g.harvard.edu">Nate Stein</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -287,7 +390,5 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
-
 </body>
-
 </html>
