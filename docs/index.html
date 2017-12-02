@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Predicting Spotify Playlist Success</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Our styles -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Project Menu
+                </a>
+            </li>
+            <li>
+                <a href="#intro">Introduction</a>
+            </li>
+            <li>
+                <a href="#eda">Exploratory Data Analysis</a>
+            </li>
+            <li>
+                <a href="#models">Models</a>
+            </li>
+            <li>
+                <a href="#beyond109a">Beyond 109A</a>
+            </li>
+            <li>
+                <a href="#playlistgeneration">Playlist Generation</a>
+            </li>
+            <li>
+                <a href="#conclusions">Conclusions</a>
+            </li>
+            <li>
+                <a href="#references">References</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1>Predicting Spotify Playlist Success</h1>
+                    <p>Welcome to our Fall 2017 - Data Science I final project page. Please use the menu found at the
+                        button below to jump to your section of choice.<br><br>
+                        <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="intro" class="row">
+                <div class="col col-md-12"><h2>Introduction</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-9">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+                    </p>
+                </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
+            </div>
+            <div id="eda" class="row">
+                <div class="col col-md-12"><h2>Exploratory Data Analysis</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-9">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+                    </p>
+                </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
+            </div>
+
+
+            <div id="models" class="row">
+                <div class="col col-md-12"><h2>Models</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-9">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+                    </p>
+                </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
+            </div>
+
+            <div id="playlistgeneration" class="row">
+                <div class="col col-md-12"><h2>Playlist Generation</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-9">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+                    </p>
+                </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
+            </div>
+
+
+            <div id="conclusions" class="row">
+                <div class="col col-md-12"><h2>Conclusions</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-9">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+                    </p>
+                </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
+            </div>
+
+            <div id="references" class="row">
+                <div class="col col-md-12"><h2>References</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <ul>
+                        <li><a href="https://developer.spotify.com/web-api/">Spotify Web API</a></li>
+                        <li><a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library.</li>
+                        <li>Project <a
+                                href="https://github.com/ac209-project/ac209-project">GitHub repository</a>.
+                        </li>
+                        <li>Website framework provided by <a
+                                href="https://github.com/BlackrockDigital/startbootstrap-simple-sidebar">BlackrockDigital</a>.
+                        </li>
+                    </ul>
+
+
+                    </p>
+                </div>
+            </div>
+
+            <div id="contact" class="row">
+                <div class="col col-md-12"><h2>Contact</h2></div>
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <p>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+<!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+//        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+</body>
+
+</html>
