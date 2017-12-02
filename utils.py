@@ -9,6 +9,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import copy
 import datetime
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def explode_value(df_in, col1, col2=None):
     """ This function is used when you have a list or two in your pandas
     dataframe and you want to 'explode' (like the Hive feature out the
@@ -85,14 +87,15 @@ def make_working_df():
     NOTE: DO NOT CHANGE THE NAMES OR LOCATIONS OF OUR BASE JSON DATAFRAMES!!!!
     """
     # Import dataframes
-    plists = pd.read_json('data/plist_df.json')
-    tracks = pd.read_json('data/track_df.json')
-    user_followers = pd.read_json('data/user_follow.json')
-    artist_genres = pd.read_json('data/artist_genres_df.json')
-    w2v = pd.read_json('data/w2v_feature.json')
+    plists = pd.read_json(os.path.join(BASE_DIR, 'data/plist_df.json'))
+    tracks = pd.read_json(os.path.join(BASE_DIR, 'data/track_df.json'))
+    user_followers = pd.read_json(os.path.join(BASE_DIR, 'data/user_follow.json'))
+    artist_genres = pd.read_json(os.path.join(BASE_DIR, 'data/artist_genres_df.json'))
+    w2v = pd.read_json(os.path.join(BASE_DIR, 'data/w2v_feature.json'))
+    w2vnorm = pd.read_json(os.path.join(BASE_DIR, 'data/w2vnorm_feature.json'))
     # artist_genres['artist_genre'] = [tuple(g) if g else () for g in artist_genres['artist_genre']]
 
-    # plists = plists.rename(columns={'name': 'playlist_name','id': 'playlist_id'})
+    w2vnorm = w2vnorm.rename(columns={'cluster': 'cluster_norm'})
     plists = plists.rename(columns = {'name':'pl_name', 'id':'pl_id', 'followers':'pl_followers',
                           'num_tracks':'pl_num_trks', 'user':'pl_owner',
                          'desc':'pl_desc'})
@@ -107,7 +110,8 @@ def make_working_df():
     temp1 = pd.merge(tracks,artist_genres,how='left',on='art_name')
     temp2 = pd.merge(temp1,plists,how='left',on='pl_id')
     temp3 = pd.merge(temp2,w2v,how='left',on='pl_id')
-    df_trk = pd.merge(temp3,user_followers,how='left',on='pl_owner')
+    temp4 = pd.merge(temp3,w2vnorm,how='left',on='pl_id')
+    df_trk = pd.merge(temp4,user_followers,how='left',on='pl_owner')
 
     df_trk = df_trk.dropna(subset = ['trk_popularity', 'pl_followers'])
 
