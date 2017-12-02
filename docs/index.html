@@ -70,9 +70,10 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <h1>Predicting Spotify Playlist Success</h1>
-                    <p>Welcome to our Harvard University, Fall 2017 - Data Science I final project page. Please use the
+                    <p>
+                        Welcome to our Harvard University, Fall 2017 - Data Science I final project page. Please use the
                         menu button below to jump to your section of choice.<br><br>
                         <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
                     </p>
@@ -80,7 +81,7 @@
             </div>
 
 
-            <div id="intro" class="row">
+            <div id="intro" class="row section">
                 <div class="col col-md-12"><h2>Introduction</h2></div>
             </div>
 
@@ -121,7 +122,7 @@
                         directly from each playlist, but rather from the artists of each track as a separate query.
                         Before combining, the separate files have the following basic form:
                     </p>
-                    <table class="table table-light">
+                    <table class="table table-hover">
                         <thead>
                         <tr>
                             <th>Data File</th>
@@ -162,6 +163,20 @@
                         and artist name attributes. While cleaning, we decided to eliminate any playlist with only one
                         follower (the owner).
                     </p>
+                    <p style="font-style: italic"><b>Notes from Nick (fill in as required above and remove below):</b>
+                        Given your new
+                        target of predicting playlist success I suggest you make two notes in the final deliverable. (1)
+                        your data collection method is novel, let's
+                        highlight that and draw it out a bit for the final. You should give a description of how you get
+                        these users and why you chose them? You say the users "own a large number of playlists" but this
+                        isn't clear from the statistics quoted (see first point under Q1). (2) This is clearly a biased
+                        subsample of data. But that's okay. We can make a comment about how we are looking at playlists
+                        that have certain properties (i.e. more than x followers etc) as these are the interesting ones
+                        for predicting popularity. Explicitly state that this will not generalise to seriously not
+                        popular playlists though (which might have 0 followers). Why are there fewer playlists than
+                        users (who supposedly create playlists)? This doesn't really make much sense to me. Does each
+                        user really only have less than one playlist on average?How many playlists in that final
+                        dataframe? How much data did you need to drop in doing the table joins?</p>
                 </div>
             </div>
 
@@ -172,29 +187,85 @@
 
             <div class="row">
                 <div class="col col-md-9">
-                    <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-
+                    <p><b>First look at playlist success:</b><br>
+                        Engineering more features around artist and playlist data yielded interesting relationships. A
+                        cursory measure of playlist success, our generalized project goal, is the number of followers
+                        per playlist. The histograms to the right show a significant right-skew, with most playlists
+                        having few followers and a few approaching the 1M mark. The log-transform of followers
+                        illustrates a potentially more useful response variable (see plots to the right).
                     </p>
+                    <p><b>Categorizing artists:</b><br>
+                        We further aggregated the artists by splitting them up into five distinct categories using
+                        combinations of their mean popularity (as determined by Spotify's popularity metric) and total
+                        number of artist tracks as follows:
+                    </p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Artist Category</th>
+                            <th>Artist Mean Track Popularity</th>
+                            <th>Artist Total Tracks</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bands">
+                        <tr style="background-color: #ed3a2b">
+                            <td>Superstar</td>
+                            <td>>= 50</td>
+                            <td>>= 10</td>
+                        </tr>
+                        <tr style="background-color: #f4a83c">
+                            <td>Star</td>
+                            <td>>= 20 and < 50</td>
+                            <td>>= 10</td>
+                        </tr>
+                        </tr>
+                        <tr style="background-color: #0022f5">
+                            <td>One-hit-wonder</td>
+                            <td>>= 40</td>
+                            <td>< 10</td>
+                        </tr>
+                        <tr style="background-color: #959595">
+                            <td>Garage Band</td>
+                            <td>< 40</td>
+                            <td>< 10</td>
+                        </tr>
+                        <tr style="background-color: #761a7c">
+                            <td>Trash Factory</td>
+                            <td>>= 0 and < 20 </td>
+                            <td>>= 10</td>
+                        </tbody>
+                    </table>
+
+                    <p style="font-style: italic"><b>EDA Notes from Nick (fill in as required above and remove
+                        below):</b> - Good job on the log. It is interesting to note that there are those two modes that
+                        almost look like they could be considered different clusters. Idea for a higher level model is
+                        to maybe use a mixture model to try and capture that distribution?
+                        - Love the definition of the artist categories. This is some cool application insight into what
+                        the data might be saying.
+                        - You might want to have a paragraph or two on the final project detailing exactly why you made
+                        the decision thresholds where you did. I.e. is it to capture 20% of the data in each category?
+                        - Length of description?? You have to be joking! That got me thinking though. What about using
+                        key words that are found in the description? You can run a lasso / stepwise regression to find
+                        the most predictive words (assuming some words appear in many descriptions) and use those
+                        selected words as predictive at some level?
+                        - I would have expected playlist age to be more correlated with followers.
+                        - For the final project make sure you standardise the plot styles and types. I.e. why scatter
+                        and then suddenly hexagon? Why cool_blue color theme but red/orange above...
+                        - It could be my eyes but I honestly couldn't read the labels on the plots right at the bottom.
+                        - Can you make sure to motivate to me what exactly you mean by playlist velocity when we meet? I
+                        mean I get the idea by again we need to make sure you define this clearly and motivate why your
+                        definition makes sense.</p>
                 </div>
-                <div class="col col-md-2">
-                    <img src="img/placeholderPaul.png" align="center" class="img"/>
-                    <p class="caption">Beautiful Paul</p>
+                <div class="col col-md-3">
+                    <div>
+                        <img src="img/eda1.png" align="center" class="img"/>
+                    </div>
+                    <div>
+                        <p class="caption">Linear (above) vs. log (below) x-scale comparison of playlist followers.</p>
+                    </div>
+                    <div>
+                        <img src="img/eda2.png" align="center" class="img"/>
+                    </div>
                 </div>
             </div>
 
@@ -411,7 +482,7 @@
                 <div class="col col-md-12"><h2>Contact</h2></div>
             </div>
             <div class="row">
-                <div class="col col-md-12">
+                <div class="col col-md-9">
                     <p>
                         This project was produced by the following students:
                     </p>
@@ -430,8 +501,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col col-md-2">
+                    <img src="img/placeholderPaul.png" align="center" class="img"/>
+                    <p class="caption">Beautiful Paul</p>
+                </div>
             </div>
-
         </div>
     </div>
 </div>
