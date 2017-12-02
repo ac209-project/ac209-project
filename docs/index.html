@@ -47,7 +47,7 @@
                 <a href="#models">Models</a>
             </li>
             <li>
-                <a href="#beyond109a">Beyond 109A</a>
+                <a href="#word2vec">Word2vec</a>
             </li>
             <li>
                 <a href="#playlistgeneration">Playlist Generation</a>
@@ -163,7 +163,12 @@
                         and artist name attributes. While cleaning, we decided to eliminate any playlist with only one
                         follower (the owner).
                     </p>
-                    <p style="font-style: italic"><b>Notes from Nick (fill in as required above and remove below):</b>
+                    <p>
+                        Click <a href="https://github.com/ac209-project/ac209-project/tree/master/getplaylist">here</a>
+                        to explore our data collection techniques.
+                    </p>
+                    <p style="font-style: italic"><b>Data notes from Nick (fill in as required above and remove
+                        below):</b>
                         Given your new
                         target of predicting playlist success I suggest you make two notes in the final deliverable. (1)
                         your data collection method is novel, let's
@@ -182,7 +187,7 @@
 
 
             <div id="eda" class="row">
-                <div class="col col-md-12"><h2>Exploratory Data Analysis</h2></div>
+                <div class="col col-md-12"><h2>Exploratory Data Analysis (EDA)</h2></div>
             </div>
 
             <div class="row">
@@ -260,6 +265,25 @@
             <div class="row">
 
                 <div class="col-md-12">
+                    <p>
+                        Below you can see a illustrative distribution of these five artist categories grouped by
+                        playlist as they relate to number of playlist followers and specific track popularity. We see
+                        that, unsurprisingly, not only do most playlists incorporate popular artists (red/orange), but a
+                        lot of them have the superstar artists’ best songs (the mostly red right side), as well as a
+                        smattering of one-hit-wonders (blue in the middle) and a dense area of moderately popular songs
+                        throughout (between 30 and 70 popularity). This relationship and playlist architecture should
+                        be intuitive.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class ='col-md-5'><img src="img/eda5.png" class="img"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Click <a href="https://github.com/ac209-project/ac209-project/tree/master/EDA</p>">here</a> for a
+                        closer look at our EDA techniques.</p>
+
 
                     <p style="font-style: italic"><b>EDA Notes from Nick (fill in as required above and remove
                         below):</b> - Good job on the log. It is interesting to note that there are those two modes that
@@ -332,45 +356,37 @@
             </div>
 
 
-            <div id="beyond109a" class="row">
-                <div class="col col-md-12"><h2>Beyond 109A</h2></div>
+            <div id="word2vec" class="row">
+                <div class="col col-md-12"><h2>Word2vec on Playlist Names</h2></div>
             </div>
 
             <div class="row">
                 <div class="col col-md-9">
                     <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
+                        In order to go beyond the scope of 109A and incorporate a method not discussed in class, we
+                        decided to apply a word-to-vec (w2v) transform to as many applicable words as there are in the
+                        set of playlist names. The core intuition being that the playlist name is what represents the
+                        playlist to the outside world. A bad playlist name can keep people from following or listening
+                        to it, even if the tracks within are great.
+                    </p>
+                    <p>
+                        Click <a href="https://github.com/ac209-project/ac209-project/tree/master/w2v">here</a> to
+                        explore the w2v model training and implentation specific to our project.
+                    </p>
+                    <p>
+                        <b>Techique:</b><br>
+                        By using word-to-vec we seek to cluster the playlist names into meaningful categories based on
+                        the sum of
+                        the vectors of known words in each playlist. This implicitly seperates playlists with longer
+                        (presumably more informative) names by giving them a total higher magnitude in the
+                        100-dimensional space of our w2v transform, but seems to be a good aggregation
+                        technique.
+                    </p>
+                    <p>
+                        <b>Difficulties:</b><br>
+                        Ultimately, there will be some difficulties with misspellings, different languages, and internet
+                        slang, and we will doubtless lose information in this quick application of w2v, but we
+                        think the output will still be a meaningful feature in our final model.
                     </p>
                 </div>
                 <div class="col col-md-2">
@@ -477,8 +493,8 @@
                         <li><a href="https://developer.spotify.com/web-api/">Spotify Web API</a></li>
                         <li><a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library.</li>
                         <li><a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a></li>
-                        <li>This project's <a
-                                href="https://github.com/ac209-project/ac209-project">GitHub repository</a>.
+                        <li>This project's <a href="https://github.com/ac209-project/ac209-project">GitHub
+                            repository</a>.
                         </li>
                         <li>Course project guidlines <a href="https://github.com/cs109/a-2017/tree/master/Projects">GitHub
                             repository</a></li>
@@ -486,8 +502,6 @@
                                 href="https://github.com/BlackrockDigital/startbootstrap-simple-sidebar">BlackrockDigital</a>.
                         </li>
                     </ul>
-
-
                     </p>
                 </div>
             </div>
@@ -497,22 +511,12 @@
             </div>
             <div class="row">
                 <div class="col col-md-9">
-                    <p>
-                        This project was produced by the following students:
-                    </p>
+                    <p>This project was produced by the following students:</p>
                     <ul>
-                        <li>
-                            <a href="mailto:pblankley@g.harvard.edu">Paul Blankley</a>
-                        </li>
-                        <li>
-                            <a href="mailto:ryanjanssen@g.harvard.edu">Ryan Janssen</a>
-                        </li>
-                        <li>
-                            <a href="mailto:andrewlund@g.harvard.edu">Andrew Lund</a>
-                        </li>
-                        <li>
-                            <a href="mailto:nathaniel_stein@g.harvard.edu">Nate Stein</a>
-                        </li>
+                        <li><a href="mailto:pblankley@g.harvard.edu">Paul Blankley</a></li>
+                        <li><a href="mailto:ryanjanssen@g.harvard.edu">Ryan Janssen</a></li>
+                        <li><a href="mailto:andrewlund@g.harvard.edu">Andrew Lund</a></li>
+                        <li><a href="mailto:nathaniel_stein@g.harvard.edu">Nate Stein</a></li>
                     </ul>
                 </div>
                 <div class="col col-md-2">
@@ -523,14 +527,6 @@
         </div>
     </div>
 </div>
-
-</div>
-
-</div>
-<!-- /#page-content-wrapper -->
-
-</div>
-<!-- /#wrapper -->
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
