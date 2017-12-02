@@ -89,6 +89,7 @@ def make_working_df():
     tracks = pd.read_json('data/track_df.json')
     user_followers = pd.read_json('data/user_follow.json')
     artist_genres = pd.read_json('data/artist_genres_df.json')
+    w2v = pd.read_json('data/w2v_feature.json')
     # artist_genres['artist_genre'] = [tuple(g) if g else () for g in artist_genres['artist_genre']]
 
     # plists = plists.rename(columns={'name': 'playlist_name','id': 'playlist_id'})
@@ -105,7 +106,8 @@ def make_working_df():
     # Merging
     temp1 = pd.merge(tracks,artist_genres,how='left',on='art_name')
     temp2 = pd.merge(temp1,plists,how='left',on='pl_id')
-    df_trk = pd.merge(temp2,user_followers,how='left',on='pl_owner')
+    temp3 = pd.merge(temp2,w2v,how='left',on='pl_id')
+    df_trk = pd.merge(temp3,user_followers,how='left',on='pl_owner')
 
     df_trk = df_trk.dropna(subset = ['trk_popularity', 'pl_followers'])
 
