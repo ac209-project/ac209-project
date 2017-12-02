@@ -38,6 +38,9 @@
                 <a href="#intro">Introduction</a>
             </li>
             <li>
+                <a href="#data">Data Collection</a>
+            </li>
+            <li>
                 <a href="#eda">Exploratory Data Analysis</a>
             </li>
             <li>
@@ -69,8 +72,8 @@
             <div class="row">
                 <div class="col-md-9">
                     <h1>Predicting Spotify Playlist Success</h1>
-                    <p>Welcome to our Harvard University, Fall 2017 - Data Science I final project page. Please use the menu button
-                        below to jump to your section of choice.<br><br>
+                    <p>Welcome to our Harvard University, Fall 2017 - Data Science I final project page. Please use the
+                        menu button below to jump to your section of choice.<br><br>
                         <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
                     </p>
                 </div>
@@ -86,16 +89,78 @@
                     <p>
                         The purpose of this project is to use publicly available data through Spotify's
                         <a href="https://developer.spotify.com/web-api/">API</a>, the
-                        <a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library, and audio features
+                        <a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library, and audio
+                        features
                         in the <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a> (MSD) to
-                        predict the success of user playlists, and create a tool to build successful playlists based on
+                        predict the success of Spotify user playlists, and create a tool to build successful playlists
+                        based on
                         user specified features (genre, artist, etc.).
                     </p>
                     <p>
-                        Throughout this project playlist "success" is defined as <b>FILL IN HERE</b>. We have employed
-                        machine-learning regression techniques taught throughout the semester as well as
-                        <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a>
-                        modeling to predict the success of <b>BLANK NUMBER OF</b> playlists.
+                        Throughout this project "playlist success" (our response variable) is defined as the number of
+                        playlist followers <b>CORRECT ME IF I'M WRONG, BUT I THINK THAT'S WHERE WE LANDED</b>. We have
+                        employed machine-learning regression techniques taught throughout the semester as well as
+                        <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a> modeling to predict the success of
+                        <b>BLANK NUMBER OF</b> playlists.
+                    </p>
+                </div>
+            </div>
+
+            <div id="data" class="row">
+                <div class="col col-md-12"><h2>Data Collection</h2></div>
+            </div>
+
+            <div class="row">
+                <div class="col col-md-12">
+                    <p>
+                        Baseline data was collected primarily from two sources - the Spotify Web API and the MSD. After
+                        sourcing the Spotify users who “own” (the playlists are attached to their accounts) a large
+                        number of playlists, the spotipy library was employed to collect user playlists, tracks, user
+                        followers, and genre data from the API, each saved as JSON files. Genre information for
+                        each playlist was harder to source and incorporate than one would think. It does not come
+                        directly from each playlist, but rather from the artists of each track as a separate query.
+                        Before combining, the separate files have the following basic form:
+                    </p>
+                    <table class="table table-light">
+                        <thead>
+                        <tr>
+                            <th>Data File</th>
+                            <th>Observations</th>
+                            <th>Features</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Usernames</td>
+                            <td>8466</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>User Followers</td>
+                            <td>8457</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Playlists</td>
+                            <td>8231</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Genres</td>
+                            <td>39998</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Tracks</td>
+                            <td>367949</td>
+                            <td>8</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        The files were combined and manipulated into a single DataFrame via the playlist ID, username,
+                        and artist name attributes. While cleaning, we decided to eliminate any playlist with only one
+                        follower (the owner).
                     </p>
                 </div>
             </div>
