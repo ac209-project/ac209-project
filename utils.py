@@ -71,6 +71,22 @@ def explode_value(df_in, col1, col2=None):
         df_out = pd.DataFrame(new_obs)
         return df_out
 
+def join_genre_features(dfi):
+    """ This will join the two dataframes that make up our genre features with the
+    provided df, given that the df has both 'pl_id' and 'trk_id'.
+    -----
+    Args: df; pandas dataframe with columns 'trk_id' and 'pl_id'
+    -----
+    Returns: pandas dataframe; the given df joined with the genere features.
+    """
+    # get the genre features
+    df = dfi.copy(True)
+    pl = pd.read_json(os.path.join(BASE_DIR,'data/genre_feat_pl.json'))
+    trk = pd.read_json(os.path.join(BASE_DIR,'data/genre_feat_trk.json'))
+
+    temp0 = pd.merge(df,trk,how='left',on='trk_id')
+    outdf = pd.merge(temp0,pl,how='left',on='pl_id')
+    return outdf
 
 
 def make_working_df():
@@ -145,10 +161,10 @@ def make_working_df():
     df_trk['art_class'] = ""
     df_trk.loc[(df_trk.art_mean_trkpop>=50) & (df_trk.art_total_trks>=10), 'art_class'] = 'superstar'
     df_trk.loc[(df_trk.art_mean_trkpop>=20) & (df_trk.art_mean_trkpop<50) & (df_trk.art_total_trks>=10), 'art_class'] = 'star'
-    df_trk.loc[(df_trk.art_mean_trkpop>=0) & (df_trk.art_mean_trkpop<20) & (df_trk.art_total_trks>=10), 'art_class'] = 'crap_factory'
+    df_trk.loc[(df_trk.art_mean_trkpop>=0) & (df_trk.art_mean_trkpop<20) & (df_trk.art_total_trks>=10), 'art_class'] = 'trash_factory'
     df_trk.loc[(df_trk.art_mean_trkpop>=40) & (df_trk.art_total_trks<10), 'art_class'] = 'one_hit_wonder'
     df_trk.loc[(df_trk.art_mean_trkpop<40) & (df_trk.art_total_trks<10), 'art_class'] = 'garage_band'
-    df_trk['art_class'] = pd.Categorical(df_trk['art_class'], categories=["superstar","star","crap_factory", "one_hit_wonder", "garage_band"])
+    df_trk['art_class'] = pd.Categorical(df_trk['art_class'], categories=["superstar","star","trash_factory", "one_hit_wonder", "garage_band"])
 
     # Fix followers to int
     df_trk['pl_followers'] = df_trk.loc[:,'pl_followers'].astype('int')
