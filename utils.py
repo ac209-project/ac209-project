@@ -93,6 +93,7 @@ def make_working_df():
     artist_genres = pd.read_json(os.path.join(BASE_DIR, 'data/artist_genres_df.json'))
     w2v = pd.read_json(os.path.join(BASE_DIR, 'data/w2v_feature.json'))
     w2vnorm = pd.read_json(os.path.join(BASE_DIR, 'data/w2vnorm_feature.json'))
+    isceleb = pd.read_json(os.path.join(BASE_DIR, 'data/celeb_df.json'))
     # artist_genres['artist_genre'] = [tuple(g) if g else () for g in artist_genres['artist_genre']]
 
     w2vnorm = w2vnorm.rename(columns={'cluster': 'cluster_norm'})
@@ -111,7 +112,8 @@ def make_working_df():
     temp2 = pd.merge(temp1,plists,how='left',on='pl_id')
     temp3 = pd.merge(temp2,w2v,how='left',on='pl_id')
     temp4 = pd.merge(temp3,w2vnorm,how='left',on='pl_id')
-    df_trk = pd.merge(temp4,user_followers,how='left',on='pl_owner')
+    temp5 = pd.merge(temp4,isceleb,how='left',on='pl_owner')
+    df_trk = pd.merge(temp5,user_followers,how='left',on='pl_owner')
 
     df_trk = df_trk.dropna(subset = ['trk_popularity', 'pl_followers'])
 
@@ -169,7 +171,7 @@ def get_auth_spotipy () -> Spotify:
 
 def load_celebs_df(lcase=False):
     """Lowercase celeb names because """
-    df = pd.read_csv('data/celebs.csv', encoding='latin')
+    df = pd.read_csv(os.path.join(BASE_DIR, 'data/celebs.csv'), encoding='latin')
     if lcase:
         df['name'] = df['name'].apply(str.lower)
     return df

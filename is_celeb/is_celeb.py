@@ -7,14 +7,16 @@ comparing to list of celebrity names obtained from US Magazine.
 
 Saves DF to CSV in directory of this file.
 """
+# add the path for the utils file
+import sys
+sys.path.append('../')
 
+# imports
 from string import digits
-
 from nltk.metrics.distance import edit_distance
 import numpy as np
 from pandas import Series
 import pandas as pd
-
 import utils
 
 #####################################################################
@@ -63,12 +65,11 @@ def is_celeb (owner, max_thresh):
 # Create results DataFrame indexed by unique playlist owners.
 trk_df = utils.make_working_df()
 uniq_pl_owners = trk_df['pl_owner'].unique().tolist()
-results_df = pd.DataFrame(uniq_pl_owners, columns=['owner'])
+results_df = pd.DataFrame(uniq_pl_owners, columns=['pl_owner'])
 
 # Add new fields.
-results_df[['is_celeb', 'celeb_name']] = results_df['owner'].apply(is_celeb,
+results_df[['is_celeb', 'celeb_name']] = results_df['pl_owner'].apply(is_celeb,
                                                                    args=(0.25,))
 
 # Save results.
-results_df.set_index('owner', inplace=True, drop=True)
-results_df.to_csv('is_celeb_tests.csv')
+results_df.to_json('../data/celeb_df.json')
