@@ -81,8 +81,8 @@ def join_genre_features(dfi):
     """
     # get the genre features
     df = dfi.copy(True)
-    pl = pd.read_json(os.path.join(BASE_DIR,'data/genre_feat_pl.json'))
-    trk = pd.read_json(os.path.join(BASE_DIR,'data/genre_feat_trk.json'))
+    pl = pd.read_json(os.path.join(BASE_DIR,'data/genre_feat_pl_v2.json'))
+    trk = pd.read_json(os.path.join(BASE_DIR,'data/genre_feat_trk_v2.json'))
 
     temp0 = pd.merge(df,trk,how='left',on='trk_id')
     outdf = pd.merge(temp0,pl,how='left',on='pl_id')
