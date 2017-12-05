@@ -77,7 +77,7 @@ def join_genre_features(dfi):
     -----
     Args: df; pandas dataframe with columns 'trk_id' and 'pl_id'
     -----
-    Returns: pandas dataframe; the given df joined with the genere features.
+    Returns: pandas dataframe; the given df joined with the genre features.
     """
     # get the genre features
     df = dfi.copy(True)
@@ -123,6 +123,7 @@ def make_working_df():
                            'duration':'trk_duration'})
     user_followers = user_followers.rename(columns={'user': 'pl_owner'})
     artist_genres = artist_genres.rename(columns={'artist': 'art_name'})
+
     # Merging
     temp1 = pd.merge(tracks,artist_genres,how='left',on='art_name')
     temp2 = pd.merge(temp1,plists,how='left',on='pl_id')
@@ -151,10 +152,12 @@ def make_working_df():
     df_trk['pl_min_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('min')
     df_trk['pl_max_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('max')
     df_trk['pl_mean_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('mean')
+    df_trk['pl_std_trkpop'] = df_trk.groupby('pl_id')['trk_popularity'].transform('std')
 
     df_trk['art_min_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('min')
     df_trk['art_max_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('max')
     df_trk['art_mean_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('mean')
+    df_trk['art_std_trkpop'] = df_trk.groupby('art_name')['trk_popularity'].transform('std')
     df_trk['art_total_trks'] = df_trk.groupby('art_name')['trk_name'].transform('nunique').astype('int')
 
     # Add a label category for each artist (currently just 5 labels but could be expanded)
@@ -164,7 +167,8 @@ def make_working_df():
     df_trk.loc[(df_trk.art_mean_trkpop>=0) & (df_trk.art_mean_trkpop<20) & (df_trk.art_total_trks>=10), 'art_class'] = 'trash_factory'
     df_trk.loc[(df_trk.art_mean_trkpop>=40) & (df_trk.art_total_trks<10), 'art_class'] = 'one_hit_wonder'
     df_trk.loc[(df_trk.art_mean_trkpop<40) & (df_trk.art_total_trks<10), 'art_class'] = 'garage_band'
-    df_trk['art_class'] = pd.Categorical(df_trk['art_class'], categories=["superstar","star","trash_factory", "one_hit_wonder", "garage_band"])
+    df_trk['art_class'] = pd.Categorical(df_trk['art_class'],
+                                         categories=["superstar", "star", "trash_factory", "one_hit_wonder", "garage_band"])
 
     # Fix followers to int
     df_trk['pl_followers'] = df_trk.loc[:,'pl_followers'].astype('int')
