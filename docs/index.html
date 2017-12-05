@@ -456,6 +456,45 @@
                         slang (or emojis), and we will doubtless lose information in this quick application of w2v, but
                         we think the output will still be a meaningful feature in our final model. We have corrected for
                         many of these as was quickly possible with some simple NLTK and regex tools.
+                    </p>
+                    <p>
+                        <b>W2V Model:</b><br>
+                        Our w2v model was trained with the Text8 wikipedia corpus. This corpus seemed to be the
+                        most applicable one that was both a reasonable size to download to a personal computer and took
+                        a reasonable amount of time to train. After training the model, the "sentences" formed
+                        by the playlist names were added to the vocabulary of the model. Without proper
+                        context the model will not denote a vector transform for a word, so there are still several
+                        words that do not have a related vector representation.
+                    </p>
+                    <p>
+                        About 84% of the playlist names have at least one meaningful word (not a stop word by NLTK
+                        standards) that has a vector representation in our model. This number could doubtless be
+                        improved with a music specific or more casual internet chat area like Twitter or Reddit dataset
+                        as opposed to the more formal Wikipedia dataset, but there is only so much time to make our
+                        features.
+                    </p>
+                    <p>
+                        The below plot shows different word locations in a sample of our TSNE plot. Though hard to see,
+                        there is some structure to the word placement. Toward the bottom, there are several spanish
+                        words and related genres (like salsa, classicos). We can also see some other consistencies,
+                        like "kendrick" and "hip hop" are together in one group, and "party", "club" and "pill" are all
+                        together in another group. The w2v transform is definitely noisy in this case though. We
+                        think this is due to the smaller training set, and the makeup of the training set. The training
+                        set is made up of wikipedia documents which, though they contain a lot of words, probably do not
+                        have a lot of the same contexts or slang that we will see here. If we could train with a corpus
+                        from Twitter or Reddit we might have better context for the slang and pithy statements we often
+                        see in playlist names.
+                    </p>
+                    <div><img src="img/word_groupings.png" class="img"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <b>Generating Playlists:</b><br>
+
+                    </p>
                 </div>
             </div>
             <hr>
@@ -612,7 +651,13 @@
                     </p>
                     <p>
                         <b>Future Work:</b><br>
-                        If given more time, we woud....
+                        As noted in the w2v section, about 84% of the playlist names have at least one meaningful word
+                        (not a stop word by NLTK standards) that has a vector representation in our model. This number
+                        could doubtless be improved with a music specific or more casual internet chat area like Twitter
+                        or Reddit dataset as opposed to the more formal Wikipedia dataset.
+                    </p>
+                    <p>
+
 
                     </p>
                     <p style="font-style: italic">
