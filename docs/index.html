@@ -490,12 +490,19 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <p>
                         <b>Generating Playlists:</b><br>
-
+                        Aside from modeling playlist success we also developed a model to generate a of a user defined
+                        size and user specified genre within the top 15 genres: alternative, christmas, country,
+                        dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
                     </p>
                 </div>
+                <div class="col-md-6">
+                    <img src="img/playlist.png" class="img">
+                    <div class="caption">Sample 20 song "Latin" playlist</div>
+                </div>
+
             </div>
             <hr>
 
@@ -507,6 +514,16 @@
                 <div class="col col-md-12">
                     <p>
                         <b>Results:</b><br>
+                        As you have probably noticed below, the additional clustering from our w2v feature, does
+                        not add much to the model as a whole. This is likely for two reasons. First, the w2v model could
+                        just be too noisy to actually add value to the model. Second, the playlist name
+                        might not be that important in general when you have information about the number of followers
+                        of the user who "owns" the playlist. Essentially, any influence from the name of the playlist,
+                        may be close to conditionally independent of the response given one (or a few) of the other
+                        variables. For either of these two reasons, the 209 w2v feature does not increase our
+                        score appreciably. To test this hypothesis, we looked at a quick difference in the
+                        straightforward regression models and took the average of the improvement on test accuracy with
+                        the feature versus without.
                     </p>
                 </div>
             </div>
