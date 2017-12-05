@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title>Predicting Spotify Playlist Success</title>
+    <title>Spotify's Next Top Model</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,25 +35,19 @@
                 </a>
             </li>
             <li>
-                <a href="#intro">Introduction</a>
+                <a href="#probstatement">Problem Statement</a>
             </li>
             <li>
-                <a href="#data">Data Collection</a>
+                <a href="#data">Introduction & Data</a>
             </li>
             <li>
-                <a href="#eda">Exploratory Data Analysis</a>
+                <a href="#lit">Literature Review</a>
             </li>
             <li>
-                <a href="#models">Models</a>
+                <a href="#models">Modeling & Trajectory</a>
             </li>
             <li>
-                <a href="#word2vec">Word2vec</a>
-            </li>
-            <li>
-                <a href="#playlistgeneration">Playlist Generation</a>
-            </li>
-            <li>
-                <a href="#conclusions">Conclusions</a>
+                <a href="#results">Results</a>
             </li>
             <li>
                 <a href="#references">References</a>
@@ -71,7 +65,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Predicting Spotify Playlist Success</h1>
+                    <h1>Spotify's Next Top Model</h1>
                     <p>
                         Welcome to our Harvard University, Fall 2017 - Data Science I final project page. Please use the
                         menu button below to jump to your section of choice.<br><br>
@@ -82,8 +76,8 @@
             <hr>
 
 
-            <div id="intro" class="row section">
-                <div class="col col-md-12"><h2>Introduction</h2></div>
+            <div id="probstatement" class="row section">
+                <div class="col col-md-12"><h2>Problem Statement & Motivation</h2></div>
             </div>
 
             <div class="row">
@@ -95,13 +89,12 @@
                         features
                         in the <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a> (MSD) to
                         predict the success of Spotify user playlists, and create a tool to build successful playlists
-                        based on
-                        user specified features (genre, artist, etc.).
+                        based on user specified features (genre, artist, etc.).
                     </p>
                     <p>
                         Throughout this project "playlist success" (our response variable) is defined as the number of
-                        playlist followers <b>CORRECT ME IF I'M WRONG, BUT I THINK THAT'S WHERE WE LANDED</b>. We have
-                        employed machine-learning regression techniques taught throughout the semester as well as
+                        playlist followers. We have employed machine-learning regression techniques taught throughout
+                        the semester as well as
                         <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a> modeling to predict the success of
                         <b>BLANK NUMBER OF</b> playlists.
                     </p>
@@ -110,12 +103,12 @@
             <hr>
 
             <div id="data" class="row">
-                <div class="col col-md-12"><h2>Data Collection</h2></div>
+                <div class="col col-md-12"><h2>Introduction & Description of Data</h2></div>
             </div>
 
             <div class="row">
                 <div class="col col-md-12">
-                    <p>
+                    <p><b>Baseline Data:</b><br>
                         Baseline data was collected primarily from two sources - the Spotify Web API and the MSD. After
                         sourcing the Spotify users who “own” (the playlists are attached to their accounts) a large
                         number of playlists, the spotipy library was employed to collect user playlists, tracks, user
@@ -186,13 +179,6 @@
                         dataframe? How much data did you need to drop in doing the table joins?</p>
                 </div>
             </div>
-            <hr>
-
-
-            <div id="eda" class="row">
-                <div class="col col-md-12"><h2>Exploratory Data Analysis (EDA)</h2></div>
-            </div>
-
             <div class="row">
                 <div class="col col-md-6">
                     <p><b>First look at playlist success:</b><br>
@@ -266,7 +252,6 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-md-12">
                     <p>
                         Below you can see a illustrative distribution of these five artist categories grouped by
@@ -280,7 +265,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class ='col-md-5'><img src="img/eda5.png" class="img"/></div>
+                <div class='col-md-5'><img src="img/eda5.png" class="img"/></div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -312,45 +297,16 @@
             <hr>
 
 
-            <div id="models" class="row">
-                <div class="col col-md-12"><h2>Models</h2></div>
+            <div id="lit" class="row">
+                <div class="col col-md-12"><h2>Literature Review/Related Work</h2></div>
             </div>
 
             <div class="row">
                 <div class="col col-md-9">
-                    <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
+                    <p style="font-style: italic">
+                        This could include noting any key papers, texts, or websites
+                        that you have used to develop your modeling approach, as well as what others have
+                        done on this problem in the past. You must properly credit sources.
                     </p>
                 </div>
                 <div class="col col-md-2">
@@ -361,17 +317,59 @@
             <hr>
 
 
-            <div id="word2vec" class="row">
-                <div class="col col-md-12"><h2>Word2vec on Playlist Names</h2></div>
+            <div id="models" class="row">
+                <div class="col col-md-12"><h2>Modeling Approach & Project Trajectory</h2></div>
             </div>
 
             <div class="row">
                 <div class="col col-md-9">
-                    <p>
+                    <p><b>Baseline Modeling:</b><br>
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                        blah
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-md-9">
+                    <p><b>Word2vec on Playlist Names:</b><br>
                         In order to go beyond the scope of 109A and incorporate a method not discussed in class, we
-                        decided to apply a word-to-vec (w2v) transform to as many applicable words as there are in the
-                        set of playlist names. The core intuition being that the playlist name is what represents the
-                        playlist to the outside world. A bad playlist name can keep people from following or listening
+                        decided to apply a word-to-vec (w2v) transform to as many applicable words as there are in
+                        the
+                        set of playlist names. The core intuition being that the playlist name is what represents
+                        the
+                        playlist to the outside world. A bad playlist name can keep people from following or
+                        listening
                         to it, even if the tracks within are great.
                     </p>
                     <p>
@@ -380,7 +378,8 @@
                     </p>
                     <p>
                         <b>Techique:</b><br>
-                        By using word-to-vec we seek to cluster the playlist names into meaningful categories based on
+                        By using word-to-vec we seek to cluster the playlist names into meaningful categories based
+                        on
                         the sum of
                         the vectors of known words in each playlist. This implicitly seperates playlists with longer
                         (presumably more informative) names by giving them a total higher magnitude in the
@@ -389,7 +388,8 @@
                     </p>
                     <p>
                         <b>Difficulties:</b><br>
-                        Ultimately, there will be some difficulties with misspellings, different languages, and internet
+                        Ultimately, there will be some difficulties with misspellings, different languages, and
+                        internet
                         slang, and we will doubtless lose information in this quick application of w2v, but we
                         think the output will still be a meaningful feature in our final model.
                     </p>
@@ -401,88 +401,17 @@
             </div>
             <hr>
 
-            <div id="playlistgeneration" class="row">
-                <div class="col col-md-12"><h2>Playlist Generation</h2></div>
+
+            <div id="results" class="row">
+                <div class="col col-md-12"><h2>Results, Conclusions, & Future Work</h2></div>
             </div>
 
             <div class="row">
                 <div class="col col-md-9">
-                    <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-
-                    </p>
-                </div>
-                <div class="col col-md-2">
-                    <img src="img/placeholderPaul.png" align="center" class="img"/>
-                    <p class="caption">Beautiful Paul</p>
-                </div>
-            </div>
-            <hr>
-
-
-            <div id="conclusions" class="row">
-                <div class="col col-md-12"><h2>Conclusions</h2></div>
-            </div>
-
-            <div class="row">
-                <div class="col col-md-9">
-                    <p>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-
+                    <p style="font-style: italic">
+                        Show and interpret your results. Summarize your
+                        results, the strengths and short-comings of your results, and speculate on how you might
+                        address these short-comings if given more time.
                     </p>
                 </div>
                 <div class="col col-md-2">
