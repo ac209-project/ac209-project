@@ -95,8 +95,8 @@
                         Throughout this project "playlist success" (our response variable) is defined as the number of
                         playlist followers. We have employed machine-learning regression techniques taught throughout
                         the semester as well as
-                        <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a> modeling to predict the success of
-                        <b>BLANK NUMBER OF</b> playlists.
+                        <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a> modeling to predict playlist
+                        success.
                     </p>
                 </div>
             </div>
@@ -114,8 +114,10 @@
                         number of playlists, the spotipy library was employed to collect user playlists, tracks, user
                         followers, and genre data from the API, each saved as JSON files. Genre information for
                         each playlist was harder to source and incorporate than one would think. It does not come
-                        directly from each playlist, but rather from the artists of each track as a separate query.
-                        Before combining, the separate files have the following basic form:
+                        directly from each playlist, but rather from the artists of each track as a separate query. We
+                        also collected celebrity names from <a href="https://www.usmagazine.com/celebrities/a/">US
+                            Magazine</a> to determine if usernames corresponded to recognized celebrities. Before
+                        combining into one comprehensive DataFrame, the separate files have the following basic form:
                     </p>
                     <table class="table table-striped table-project">
                         <thead>
@@ -134,6 +136,11 @@
                         <tr>
                             <td>User Followers</td>
                             <td>8457</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Celebrity Names</td>
+                            <td>840</td>
                             <td>1</td>
                         </tr>
                         <tr>
@@ -180,20 +187,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col col-md-6">
-                    <p><b>First look at playlist success:</b><br>
-                        Engineering more features around artist and playlist data yielded interesting relationships. A
+                <div class="col col-md-8">
+                    <p><b>Playlist Followers - A first look at playlist success:</b><br>
+                        Engineering features around artist and playlist data yielded interesting relationships. A
                         cursory measure of playlist success, our generalized project goal, is the number of followers
-                        per playlist. The histograms to the right show a significant right-skew, with most playlists
-                        having few followers and a few approaching the 1M mark. The log-transform of followers
-                        illustrates a potentially more useful response variable (see plots to the right).
+                        per playlist. The distribution of playlist followers shows a significant right-skew, with most
+                        playlists having few followers and a few approaching the 1M mark. The log-transform of followers
+                        illustrates a potentially more useful response variable (right).
                     </p>
                 </div>
-                <div class="col col-md-3">
+                <div class="col col-md-4">
                     <img src="img/eda1.png" align="center" class="img">
-                </div>
-                <div class="col-md-3">
-                    <img src="img/eda2.png" align="center" class="img">
                 </div>
             </div>
             <div class="row">
@@ -201,7 +205,11 @@
                     <p><b>Categorizing artists:</b><br>
                         We further aggregated the artists by splitting them up into five distinct categories using
                         combinations of their mean popularity (as determined by Spotify's popularity metric) and total
-                        number of artist tracks as follows:
+                        number of artist tracks as seen in the following table. These categories should be
+                        self-descriptive, but the two plots below do a fantastic job of illustrating each in terms of
+                        their thresholds and relationships. The artist popularity metric ties in with our expectations
+                        because we see people like Post Malone, Camila Cabello, and Ed Sheeran in our superstar
+                        category.
                     </p>
                 </div>
             </div>
@@ -244,18 +252,16 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-md-4">
-                    <img src="img/eda3.png" align="center" class="img"/>
-                </div>
-                <div class="col-md-4">
-                    <img src="img/eda4.png" align="center" class="img"/>
+                <div class="col-md-8">
+                    <img src="img/eda2.png" align="center" class="img"/>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p>
+                    <p><b>Continuing Artist Analysis:</b><br>
                         Below you can see a illustrative distribution of these five artist categories grouped by
-                        playlist as they relate to number of playlist followers and specific track popularity. We see
+                        playlist as they relate to number of playlist followers and specific track popularity (as
+                        determined by Spotify). We see
                         that, unsurprisingly, not only do most playlists incorporate popular artists (red/orange), but a
                         lot of them have the superstar artists’ best songs (the mostly red right side), as well as a
                         smattering of one-hit-wonders (blue in the middle) and a dense area of moderately popular songs
@@ -265,7 +271,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class='col-md-5'><img src="img/eda5.png" class="img"/></div>
+                <div class='col-md-8 mx-auto'><img src="img/eda5.png" class="img"/></div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -407,16 +413,144 @@
             </div>
 
             <div class="row">
-                <div class="col col-md-9">
+                <div class="col col-md-12">
+                    <table class="table table-project">
+                        <thead>
+                        <tr>
+                            <th>Results without Word2vec</th>
+                            <th>Results with Word2vec</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table class="table table-striped">
+                                    <thead>
+                                    <th>Model</th>
+                                    <th>Cross-validated validation<br>set R^2 mean/std (5-folds)</th>
+                                    <th>Train Score</th>
+                                    <th>Test Score</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Linear Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ridge Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lasso Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elastic Net Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>k-NN Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Random Forest Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AdaBoost Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SVM Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-striped">
+                                    <thead>
+                                    <th>Model</th>
+                                    <th>Cross-validated validation<br>set R^2 mean/std (5-folds)</th>
+                                    <th>Train Score</th>
+                                    <th>Test Score</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Linear Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ridge Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lasso Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elastic Net Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>k-NN Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Random Forest Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AdaBoost Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SVM Regression</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                     <p style="font-style: italic">
                         Show and interpret your results. Summarize your
                         results, the strengths and short-comings of your results, and speculate on how you might
                         address these short-comings if given more time.
                     </p>
-                </div>
-                <div class="col col-md-2">
-                    <img src="img/placeholderPaul.png" align="center" class="img"/>
-                    <p class="caption">Beautiful Paul</p>
                 </div>
             </div>
             <hr>
@@ -456,10 +590,6 @@
                         <li><a href="mailto:andrewlund@g.harvard.edu">Andrew Lund</a></li>
                         <li><a href="mailto:nathaniel_stein@g.harvard.edu">Nate Stein</a></li>
                     </ul>
-                </div>
-                <div class="col col-md-2">
-                    <img src="img/placeholderPaul.png" align="center" class="img"/>
-                    <p class="caption">Beautiful Paul</p>
                 </div>
             </div>
         </div>
