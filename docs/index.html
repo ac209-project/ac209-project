@@ -84,10 +84,12 @@
                 <div class="col col-md-12">
                     <p>
                         The purpose of this project is to use publicly available data through Spotify's
-                        <a href="https://developer.spotify.com/web-api/">API</a>, the
-                        <a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library, and audio
+                        <a href="https://developer.spotify.com/web-api/" target="_blank">API</a>, the
+                        <a href="https://spotipy.readthedocs.io/en/latest/" target="_blank">Spotipy</a> python library,
+                        and audio
                         features
-                        in the <a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a> (MSD) to
+                        in the <a href="https://labrosa.ee.columbia.edu/millionsong/" target="_blank">Million Song
+                        Dataset</a> (MSD) to
                         predict the success of Spotify user playlists, and create a tool to build successful playlists
                         based on user specified features (genre, artist, etc.).
                     </p>
@@ -95,7 +97,8 @@
                         Throughout this project "playlist success" (our response variable) is defined as the number of
                         playlist followers. We have employed machine-learning regression techniques taught throughout
                         the semester as well as
-                        <a href="https://en.wikipedia.org/wiki/Word2vec">Word2vec</a> modeling to predict playlist
+                        <a href="https://en.wikipedia.org/wiki/Word2vec" target="_blank">Word2vec</a> modeling to
+                        predict playlist
                         success.
                     </p>
                 </div>
@@ -103,7 +106,14 @@
             <hr>
 
             <div id="data" class="row">
-                <div class="col col-md-12"><h2>Introduction & Description of Data</h2></div>
+                <div class="col col-md-12">
+                    <h2>Introduction & Description of Data</h2>
+                    <p>In this section we will give you some insights in to the data we collected, aggregated, and
+                        combined, as well as the in-depth exploratory data analysis (EDA) performed to try and
+                        illustrate relationships surrounding playlist success - specifically artist categorization,
+                        artist
+                        and playlist genres, and playlist popularity as it relates to time.</p>
+                </div>
             </div>
 
             <div class="row">
@@ -166,7 +176,8 @@
                         follower (the owner).
                     </p>
                     <p>
-                        Click <a href="https://github.com/ac209-project/ac209-project/tree/master/getplaylist">here</a>
+                        Click <a href="https://github.com/ac209-project/ac209-project/tree/master/getplaylist"
+                                 target="_blank">here</a>
                         to explore our data collection techniques.
                     </p>
                     <p style="font-style: italic"><b>Data notes from Nick (fill in as required above and remove
@@ -266,16 +277,96 @@
                         lot of them have the superstar artists’ best songs (the mostly red right side), as well as a
                         smattering of one-hit-wonders (blue in the middle) and a dense area of moderately popular songs
                         throughout (between 30 and 70 popularity). This relationship and playlist architecture should
-                        be intuitive.
+                        be intuitive. You can also note, interestingly, that only on-hit-wonders get perfect 100s for
+                        track popularity.
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class='col-md-8 mx-auto'><img src="img/eda5.png" class="img"/></div>
+                <div class='col-md-10 mx-auto'><img src="img/eda3.png" class="img"/></div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p>Click <a href="https://github.com/ac209-project/ac209-project/tree/master/EDA</p>">here</a> for a
+                    <p>
+                        <b>Playlists & Time:</b><br>
+                        It appears that there may be a relationship between the number of tracks a playlist has and its
+                        number of followers (top-left), as well as length of its description (top-right). We also
+                        investigated the impact of playlist turnover rate, or relative age, days between the oldest and
+                        newest track being added (bottom-left), as well as the age of the oldest song on playlist
+                        follower count (bottom-right).
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-md-8 mx-auto'><img src="img/eda4.png" class="img"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>We also took a closer look at other playlist metrics, specifically average playlist track
+                        popularity versus the number of tracks in a playlist or the maximum playlist track popularity as
+                        seen in the following two plots, respectively.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto"><img src="img/eda5.png" class="img"/></div>
+                <div class="col-md-6 mx-auto"><img src="img/eda6.png" class="img"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <b>Genres:</b><br>
+                        If you were to ask anyone on the street how they would measure the success of any playlist, one
+                        of their first responses would probably be "Depends on the genre." This is a natural
+                        categorization we do with music on a daily basis. It is typically how we choose what we are
+                        going to listen to when we go to the gym, start our daily commute, or go for a hike in the
+                        woods, so of course the predominate genres that make up a playlist will have some impact on the
+                        relative success of that playlist against all others, as well as those geared toward the same
+                        genre.
+                    </p>
+                    <p>
+                        In this section you will see we took four distinct looks at how genres, at the artist, playlist,
+                        and track levels, impact playlist success.<br>
+
+                        <b>Artist Genres - </b>The top-left barplot shows the median number of playlist followers, so as
+                        to be less sensitive
+                        to outliers.
+
+                        The top-right barplot is based on mean artist popularity by genre. As you can
+                        see, there are some specific genres at the top that we would usually associate with one artist
+                        (canadian pop - Justin Bieber, detroit hip hop - Eminem). It is likely those artists are skewing
+                        the distribution, since those are their respective genres. Sadly, we do not have enough members
+                        of each genre to get a good view of the most popular genres by artist.<br>
+
+                        <b>Playlist Genres - </b>The bottom-left barplot look at the most common genre by number of
+                        playlist occurances. Here we
+                        use the "mode genre" field. This field is made by looking at all the genres that make up a
+                        playlist (on a track level) and choosing the most common (mode).<br>
+
+                        <b>Track Genres - </b>The bottom-right barplot takes a look at some "genre-type"
+                        information. We are specifically looking at any sub-genres that fall in a larger, more
+                        general genre. For example, 'classic rock', 'heavy rock', and 'swedish electronic pop rock'
+                        would all fall in our 'rock' genre-type. For each genre related to a song we have binary
+                        variables to indicate whether that genre-type is present in the track. The genres in this plot
+                        represent the 15 most common genres in our dataset.<br>
+
+                        <br><b>Note:</b> We decided to use the top 15 genres since this corresponds to industry
+                        standards for categorizing music. For example, iTunes "search-by-genre" has twenty-two and
+                        <i>Billboard 200</i> uses ten.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto"><img src="img/eda7.png" class="img"/></div>
+                <div class="col-md-6 mx-auto"><img src="img/eda8.png" class="img"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto"><img src="img/eda9.png" class="img"/></div>
+                <div class="col-md-6 mx-auto"><img src="img/eda10.png" class="img"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Click <a href="https://github.com/ac209-project/ac209-project/tree/master/EDA" target="_blank">here</a>
+                        for a
                         closer look at our EDA techniques.</p>
 
 
@@ -330,38 +421,16 @@
             <div class="row">
                 <div class="col col-md-9">
                     <p><b>Baseline Modeling:</b><br>
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
-                        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                        blah
+                        As we move into modeling and attempting to predict playlist success based on number of
+                        followers, we again use the playlists (and related tracks) that have more than one follower. The
+                        rational being that we do not want to use data that could skew the popularity metrics for tracks
+                        if it is unikely that those users have any followers that could potentially follow their
+                        playlist. Essentially, we do not think those users have enough presence on Spotify for the
+                        number of followers to be a meaningful feedback metric for playlist success.
+                    </p>
+                    <p>
+                        Since we have a number of categorical measures, one-hot-encoding was applied and resulted in a
+                        DataFrame with 210,798 observations across 480 columns.
                     </p>
                 </div>
             </div>
@@ -379,7 +448,8 @@
                         to it, even if the tracks within are great.
                     </p>
                     <p>
-                        Click <a href="https://github.com/ac209-project/ac209-project/tree/master/w2v">here</a> to
+                        Click <a href="https://github.com/ac209-project/ac209-project/tree/master/w2v" target="_blank">here</a>
+                        to
                         explore the w2v model training and implentation specific to our project.
                     </p>
                     <p>
@@ -427,7 +497,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <th>Model</th>
-                                    <th>Cross-validated validation<br>set R^2 mean/std (5-folds)</th>
+                                    <th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>
                                     <th>Train Score</th>
                                     <th>Test Score</th>
                                     </thead>
@@ -487,7 +557,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <th>Model</th>
-                                    <th>Cross-validated validation<br>set R^2 mean/std (5-folds)</th>
+                                    <th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>
                                     <th>Train Score</th>
                                     <th>Test Score</th>
                                     </thead>
@@ -561,16 +631,21 @@
             <div class="row">
                 <div class="col col-md-12">
                     <ul>
-                        <li><a href="https://developer.spotify.com/web-api/">Spotify Web API</a></li>
-                        <li><a href="https://spotipy.readthedocs.io/en/latest/">Spotipy</a> python library.</li>
-                        <li><a href="https://labrosa.ee.columbia.edu/millionsong/">Million Song Dataset</a></li>
-                        <li>This project's <a href="https://github.com/ac209-project/ac209-project">GitHub
+                        <li><a href="https://developer.spotify.com/web-api/" target="_blank">Spotify Web API</a></li>
+                        <li><a href="https://spotipy.readthedocs.io/en/latest/" target="_blank">Spotipy</a> python
+                            library.
+                        </li>
+                        <li><a href="https://labrosa.ee.columbia.edu/millionsong/" target="_blank">Million Song
+                            Dataset</a></li>
+                        <li>This project's <a href="https://github.com/ac209-project/ac209-project" target="_blank">GitHub
                             repository</a>.
                         </li>
-                        <li>Course project guidlines <a href="https://github.com/cs109/a-2017/tree/master/Projects">GitHub
+                        <li>Course project guidlines <a href="https://github.com/cs109/a-2017/tree/master/Projects"
+                                                        target="_blank">GitHub
                             repository</a></li>
                         <li>Website framework provided by <a
-                                href="https://github.com/BlackrockDigital/startbootstrap-simple-sidebar">BlackrockDigital</a>.
+                                href="https://github.com/BlackrockDigital/startbootstrap-simple-sidebar"
+                                target="_blank">BlackrockDigital</a>.
                         </li>
                     </ul>
                     </p>
