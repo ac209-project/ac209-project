@@ -7,7 +7,7 @@ import utils
 
 # Make the most common sub-genre feature
 current_df = utils.make_working_df()
-current_df['artist_genre'] = [tuple(g) if type(g)==list else () for g in current_df['artist_genre']]
+current_df['artist_genre'] = [tuple([i.replace('hip hop','hip_hop') for i in g]) if type(g)==list else () for g in current_df['artist_genre']]
 
 trk_df = current_df[['trk_id','artist_genre']].drop_duplicates('trk_id')
 
@@ -34,7 +34,7 @@ print(sum(trk_df['no_genre'])/len(trk_df['no_genre']),'do not have genres out of
 
 print('the working df has {} rows.'.format(len(trk_df)))
 
-trk_df.drop('artist_genre',axis=1).to_json('data/genre_feat_trk.json')
+trk_df.drop('artist_genre',axis=1).to_json('data/genre_feat_trk_v2.json')
 # done with sub genre features
 
 # Get down to the artist level without duplicates
@@ -59,4 +59,4 @@ print(len(pl_genres['mode_genre'].value_counts()),'unique genres out of',len(pl_
 # out_df = pd.merge(current_df,pl_genres,how='left',on='pl_id')
 # keep_cols = ['has_{}'.format(g) for g in mc_genres]+['no_genre','mode_genre','trk_id','pl_id']
 # out_df = out_df[keep_cols]
-pl_genres[['pl_id','mode_genre']].to_json('data/genre_feat_pl.json')
+pl_genres[['pl_id','mode_genre']].to_json('data/genre_feat_pl_v2.json')
