@@ -86,10 +86,9 @@
                         The purpose of this project is to use publicly available data through Spotify's
                         <a href="https://developer.spotify.com/web-api/" target="_blank">API</a>, the
                         <a href="https://spotipy.readthedocs.io/en/latest/" target="_blank">Spotipy</a> python library,
-                        and audio
-                        features
-                        in the <a href="https://labrosa.ee.columbia.edu/millionsong/" target="_blank">Million Song
-                        Dataset</a> (MSD) to
+                        <a href="https://github.com/ac209-project/ac209-project/tree/master/w2v" target="_blank">word-to-vector
+                            feature engineering</a>, and <a href="https://www.usmagazine.com/celebrities/a/">celebrity
+                        information</a> to
                         predict the success of Spotify user playlists, and create a tool to build successful playlists
                         based on user specified features (genre, artist, etc.).
                     </p>
@@ -111,26 +110,21 @@
                     <p>In this section we will give you some insights in to the data we collected, aggregated, and
                         combined, as well as the in-depth exploratory data analysis (EDA) performed to try and
                         illustrate relationships surrounding playlist success - specifically artist categorization,
-                        artist
-                        and playlist genres, and playlist popularity as it relates to time.</p>
+                        artist and playlist genres, and playlist popularity as it relates to time.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col col-md-12">
                     <p><b>Baseline Data:</b><br>
-                        Baseline data was collected primarily from two sources - the Spotify Web API and the MSD. After
+                        Baseline data was collected primarily from the Spotify API. After
                         sourcing the Spotify users who “own” (the playlists are attached to their accounts) a large
                         number of playlists, the spotipy library was employed to collect user playlists, tracks, user
                         followers, and genre data from the API, each saved as JSON files. Genre information for
                         each playlist was harder to source and incorporate than one would think. It does not come
                         directly from each playlist, but rather from the artists of each track as a separate query. We
                         also collected celebrity names from <a href="https://www.usmagazine.com/celebrities/a/">US
-                            Magazine</a> to determine if usernames corresponded to recognized celebrities. The
-                        motivation for identifying celebrities is that some of the most popular playlists we have seen
-                        have been from a celebrity's official spotify account. We'd like to be able to account for this
-                        bias.
-                    </p>
+                            Magazine</a>.
                     <p>
                         Before combining into one comprehensive DataFrame, the separate files have the following basic
                         form:
@@ -166,15 +160,22 @@
                         </tr>
                         <tr>
                             <td>Tracks</td>
-                            <td>207954</td>
+                            <td>367911</td>
                             <td>8</td>
                         </tr>
                         </tbody>
                     </table>
                     <p>
                         The files were combined and manipulated into a single DataFrame via the playlist ID, username,
-                        and artist name attributes. While cleaning, we decided to eliminate any playlist with only one
-                        follower (the owner).
+                        and artist name attributes. While cleaning, we decided to eliminate any playlist with fewer than
+                        one follower (the owner).
+                    </p>
+                    <p>
+                        We explore the data (and our engineered features) at both the track and the playlist level. As
+                        you can see above, we have about 9.7 playlists per user when we include all users. When we
+                        drop playlists with below 1 follower, we have about 4.4 playlists per user. Likewise, we start
+                        with ~368k tracks and after we drop the playlists with fewer than 1 follower we only have ~211k
+                        tracks remaining.
                     </p>
                     <p>
                         This is clearly a biased subsample of playlists in that we sourced users that own high numbers
@@ -189,6 +190,7 @@
                     </p>
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col col-md-8">
                     <p><b>Playlist Followers - A first look at playlist success:</b><br>
@@ -203,6 +205,7 @@
                     <img src="img/eda1.png" align="center" class="img">
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <p><b>Categorizing artists:</b><br>
@@ -227,28 +230,28 @@
                         </tr>
                         </thead>
                         <tbody class="bands">
-                        <tr style="background-color: #ed3a2b">
+                        <tr style="background-color: #0022f5">
                             <td>Superstar</td>
                             <td>>= 50</td>
                             <td>>= 10</td>
                         </tr>
-                        <tr style="background-color: #f4a83c">
+                        <tr style="background-color: #ed3323">
                             <td>Star</td>
                             <td>>= 20 and < 50</td>
                             <td>>= 10</td>
                         </tr>
                         </tr>
-                        <tr style="background-color: #0022f5">
+                        <tr style="background-color: #357d22">
                             <td>One-hit-wonder</td>
                             <td>>= 40</td>
                             <td>< 10</td>
                         </tr>
-                        <tr style="background-color: #959595">
+                        <tr style="background-color: #761a7c">
                             <td>Garage Band</td>
                             <td>< 40</td>
                             <td>< 10</td>
                         </tr>
-                        <tr style="background-color: #761a7c">
+                        <tr style="background-color: #fffd54">
                             <td>Trash Factory</td>
                             <td>>= 0 and < 20</td>
                             <td>>= 10</td>
@@ -259,17 +262,20 @@
                     <img src="img/eda2.png" align="center" class="img"/>
                 </div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <p><b>Continuing Artist Analysis:</b><br>
                         Below you can see a illustrative distribution of these five artist categories grouped by
                         playlist as they relate to number of playlist followers and specific track popularity (as
                         determined by Spotify). We see
-                        that, unsurprisingly, not only do most playlists incorporate popular artists (red/orange), but a
-                        lot of them have the superstar artists’ best songs (the mostly red right side), as well as a
-                        smattering of one-hit-wonders (blue in the middle) and a dense area of moderately popular songs
+                        that, unsurprisingly, not only do most playlists incorporate popular artists (superstar: blue
+                        and star:red), but a
+                        lot of them have the superstar artists’ best songs (the mostly blue right side), as well as a
+                        smattering of one-hit-wonders (green in the middle) and a dense area of moderately popular songs
                         throughout (between 30 and 70 popularity). This relationship and playlist architecture should
-                        be intuitive. You can also note, interestingly, that only on-hit-wonders get perfect 100s for
+                        be intuitive. You can also note, interestingly, that only on-hit-wonders (green) get perfect
+                        100s for
                         track popularity.
                     </p>
                 </div>
@@ -277,6 +283,7 @@
             <div class="row">
                 <div class='col-md-7 mx-auto'><img src="img/eda3.png" class="img"/></div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <p>
@@ -290,19 +297,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class='col-md-8 mx-auto'><img src="img/eda4.png" class="img"/></div>
+                <div class='col-md-10 mx-auto'><img src="img/eda4.png" class="img"/></div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-md-12">
-                    <p>We also took a closer look at other playlist metrics, specifically average playlist track
+                    <p><b>Track Popularity:</b><br>
+                        We also took a closer look at other playlist metrics, specifically average playlist track
                         popularity versus the number of tracks in a playlist or the maximum playlist track popularity as
-                        seen in the following two plots, respectively.</p>
+                        seen in the following two plots, respectively. Does it matter more to have a few really popular
+                        songs, or just a lot of decent songs? From our graphs below we would say having a few good songs
+                        is more important. The graph on the right below shows the average playlist track popularity and
+                        the max track popularity colored by playlist followers. We can see the playlists with lots of
+                        followers (dark blue) are much more consistently in the section with high max track popularity
+                        regardless of their mean track popularity.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 mx-auto"><img src="img/eda5.png" class="img"/></div>
-                <div class="col-md-6 mx-auto"><img src="img/eda6.png" class="img"/></div>
+                <div class="col-md-10 mx-auto"><img src="img/eda5.png" class="img"/></div>
             </div>
+            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <p>
@@ -316,7 +330,7 @@
                         genre.
                     </p>
                     <p>
-                        In this section you will see we took four distinct looks at how genres, at the artist, playlist,
+                        In this section you will see four distinct looks at how genres, at the artist, playlist,
                         and track levels, impact playlist success.<br>
 
                         <b>Artist Genres - </b>The top-left barplot shows the median number of playlist followers, so as
@@ -330,16 +344,16 @@
                         of each genre to get a good view of the most popular genres by artist.<br>
 
                         <b>Playlist Genres - </b>The bottom-left barplot look at the most common genre by number of
-                        playlist occurances. Here we
-                        use the "mode genre" field. This field is made by looking at all the genres that make up a
-                        playlist (on a track level) and choosing the most common (mode).<br>
+                        playlist occurrences. Here we use the "mode genre" field. This field is made by looking at all
+                        the genres that make up a playlist (on a track level) and choosing the most common (mode).<br>
 
                         <b>Track Genres - </b>The bottom-right barplot takes a look at some "genre-type"
                         information. We are specifically looking at any sub-genres that fall in a larger, more
                         general genre. For example, 'classic rock', 'heavy rock', and 'swedish electronic pop rock'
                         would all fall in our 'rock' genre-type. For each genre related to a song we have binary
                         variables to indicate whether that genre-type is present in the track. The genres in this plot
-                        represent the 15 most common genres in our dataset.<br>
+                        represent the 15 most common genres in our dataset [alternative, Christmas, country, dance,
+                        deep, hip hop, house, indie, jazz, latin, metal, pop, rap, rock, soul].<br>
 
                         <br><b>Note:</b> We decided to use the top 15 genres since this corresponds to industry
                         standards for categorizing music. For example, iTunes "search-by-genre" has twenty-two and
@@ -355,15 +369,29 @@
                 <div class="col-md-6 mx-auto"><img src="img/eda9.png" class="img"/></div>
                 <div class="col-md-6 mx-auto"><img src="img/eda10.png" class="img"/></div>
             </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <b>Celebrity Playlist Owners:</b><br>
+                        Lastly, we explored whether the owner of the playlist is a known celebrity. The motivation for
+                        this is that some of the most popular playlists we have seen have been from a celebrity's
+                        official
+                        Spotify account. We would like to be able to account for this bias.</p>
+                    <p>
+                        As you can see, there are not a huge numb
+                    </p>
+                </div>
+                <div class="col-md-4 mx-auto"><img src="img/eda11.png" class="img"/></div>
+
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <p>Click <a href="https://github.com/ac209-project/ac209-project/tree/master/EDA" target="_blank">here</a>
-                        for a
-                        closer look at our EDA techniques.</p>
+                        for a closer look at our EDA techniques.</p>
                 </div>
             </div>
             <hr>
-
 
             <div id="lit" class="row">
                 <div class="col col-md-12"><h2>Literature Review & Related Work</h2></div>
@@ -405,25 +433,36 @@
                 <div class="col col-md-12">
                     <p><b>Baseline Modeling:</b><br>
                         As we move into modeling and attempting to predict playlist success based on number of
-                        followers, we again use the playlists (and related tracks) that have more than one follower. The
+                        followers, we again use the playlists (and related tracks) that have at least one follower. The
                         rational being that we do not want to use data that could skew the popularity metrics for tracks
                         if it is unikely that those users have any followers that could potentially follow their
                         playlist. Essentially, we do not think those users have enough presence on Spotify for the
-                        number of followers to be a meaningful feedback metric for playlist success.
+                        number of followers to be a meaningful feedback metric for playlist success. This left us with
+                        a DataFrame consisting of 210,798 observations (tracks) across 49 measures, but since we are
+                        predicting playlist followers and do not have time or experience to implement a full
+                        hierarchical model, we aggregate our track, artist, and user information up to the playlist
+                        level.
                     </p>
                     <p>
+                        <b>Imputation:</b><br>
+                        We also changed our datetime format columns to just include the year, and we median impute for
+                        the (few) missing values in other columns.
+                    </p>
+                    <p>
+                        <b>One-hot-encoding and train/test split:</b><br>
                         Since we have a number of categorical measures, one-hot-encoding was applied and resulted in a
                         DataFrame with ~3500 playlists across 480 columns.
                     </p>
                     <p>
-                        We split the the the data with 75% in the training set and 25% in test, then took an iterative
-                        approach to modeling, using 5-fold cross-validation throughout, and moved through eight
+                        We split the the the data with 75% in the training set and 25% in test, standardized the
+                        numerical columns, then took an iterative
+                        approach to modeling, using 5-fold cross-validation throughout, and moved through nine
                         different regression techniques: linear, ridge, lasso, elastic net, k-NN, random forest,
-                        adaboost, and SVM.
+                        AdaBoost, XGBoost, and SVM.
                     </p>
                 </div>
             </div>
-
+            <hr>
             <div class="row">
                 <div class="col col-md-12">
                     <p><b>Word2vec on Playlist Names:</b><br>
@@ -476,7 +515,7 @@
                     <p>
                         The below plot shows different word locations in a sample of our TSNE plot. There is some
                         structure to the word placement. Toward the bottom, there are several spanish
-                        words and related genres (like salsa, classicos). We can also see some other consistencies,
+                        words and related genres (like salsa and classicos). We can also see some other consistencies,
                         like "kendrick" and "hip hop" are together in one group, and "party", "club" and "pill" are all
                         together in another group. The w2v transform is definitely noisy in this case though. We
                         think this is due to the smaller training set, and the makeup of the training set. The training
@@ -488,17 +527,330 @@
                     <div><img src="img/word_groupings.png" class="img"></div>
                 </div>
             </div>
-
+            <hr>
             <div class="row">
                 <div class="col-md-6">
+                    <p><b>Modeling without the w2v feature:</b><br>
+                        We first used some basic regression models (and Random Forest) to see how they compare to the
+                        models with the w2v feature.
+                    </p>
                     <p>
-                        <b>Generating Playlists:</b><br>
-                        Aside from modeling playlist success we also developed a model to generate a of a user defined
-                        size and user specified genre within the top 15 genres: alternative, christmas, country,
-                        dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
+                        Note: We did not include Linear Regression for two reasons:
+                    <ol>
+                        <li>We cross validate with Ridge and Lasso over very small values for our regularization term.
+                        </li>
+                        <li>We looked at unregularized linear regression; it was bad and not worth the time to run it.
+                        </li>
+                    </ol>
                     </p>
                 </div>
                 <div class="col-md-6">
+                    <table class="table table-striped table-project">
+                        <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Train Score</th>
+                            <th>Test Score</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Linear Regression</td>
+                            <td>0.120596102678</td>
+                            <td>-8.25071756605e+18</td>
+                        </tr>
+                        <tr>
+                            <td>Ridge Regression</td>
+                            <td>0.084026380104</td>
+                            <td>0.0411555898746</td>
+                        </tr>
+                        <tr>
+                            <td>Elastic Net Regression</td>
+                            <td>0.0856918846622</td>
+                            <td>0.0408969940616</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest Regression</td>
+                            <td>0.872547373809</td>
+                            <td>0.136527177719</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        <b>Full Model Selection without w2v:</b><br>
+                        We next iterated over several regressor models (with each parameter set optimized by 5-fold
+                        cross-validation) to determine which performs best with this data both without the w2v
+                        feature included. Find the results to the right.
+
+                    <p>
+                        We can see in these results that the best performing model on a cross-validated training set is
+                        our random forest with 300 estimators.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-striped table-project">
+                        <thead>
+                        <th>Model</th>
+                        <th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>
+                        <th>Train Score</th>
+                        <th>Test Score</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Linear Regression</td>
+                            <td>-9.661837490455958e+20, 1.3658652789203555e+21</td>
+                            <td>0.132484290729</td>
+                            <td>-7.77393283572e+18</td>
+                        </tr>
+                        <tr>
+                            <td>Ridge Regression</td>
+                            <td>-0.030256576859918376, 0.11125313901459834</td>
+                            <td>0.0853779911556</td>
+                            <td>0.0413614492559</td>
+                        </tr>
+                        <tr>
+                            <td>Lasso Regression</td>
+                            <td>-0.030256576859918376, 0.11125313901459834</td>
+                            <td>0.0853779911556</td>
+                            <td>0.0413614492559</td>
+                        </tr>
+                        <tr>
+                            <td>Elastic Net Regression</td>
+                            <td>-0.0028011693799219937, 0.06249175213203975</td>
+                            <td>0.0884215423941</td>
+                            <td>0.0410473844718</td>
+                        </tr>
+                        <tr>
+                            <td>k-NN Regression</td>
+                            <td>0.013480236420100952, 0.014509798407915084</td>
+                            <td>0.0923044971552</td>
+                            <td>0.0447576215128</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest Regression</td>
+                            <td>0.06498151001454726, 0.03988285917502669</td>
+                            <td>0.878798558284</td>
+                            <td>0.102835631709</td>
+                        </tr>
+                        <tr>
+                            <td>AdaBoost Regression</td>
+                            <td>-0.06615510226947337, 0.14867997551870718</td>
+                            <td>0.471762846853</td>
+                            <td>0.0671178069851</td>
+                        </tr>
+                        <tr>
+                            <td>XGBoost Regression</td>
+                            <td>-0.06309052342991424, 0.25255449612691144</td>
+                            <td>0.471512394636</td>
+                            <td>0.110631159802</td>
+                        </tr>
+                        <tr>
+                            <td>SVM Regression</td>
+                            <td>0.050170049519681514, 0.014360689088760155</td>
+                            <td>0.161309635032</td>
+                            <td>0.0632341098191</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <b>Feature Selection:</b><br>
+                        Before moving on to the results and playlist generation, let's take a quick look at feature
+                        selection.
+                    </p>
+                    <p>
+                        We can see above that the best performing model on a cross-validated training set is our random
+                        forest with 300 estimators. We will use that as our baseline model - but we note that some
+                        over-fitting occurs on the training set. We believe this is due to the high number of features
+                        (some of which are codependent). So next, we try to reduce the feature set overall and see if
+                        this leads to an increase in model performance.
+                    </p>
+                    <p>
+                        The 30 most common features below are as expected - for example:
+                    <ul>
+                        <li>The followers of the playlist owner are highly predictive of playlist followers.</li>
+                        <li>Having a playlist description makes followers more likely to follow.</li>
+                        <li>Having a playlist description makes followers more likely to follow.</li>
+                    </ul>
+                    One hit wonders and superstars are the most important class of bands in a playlist.
+                    Next, we try fitting all of our models again on the first 50 important features to see if
+                    the model performs better on the significantly reduced feature set.
+                    </p>
+                    <p>
+                        We can see below that the model performance on a cross-validated training set is generally worse
+                        with the reduced feature set. So we will keep our baseline model and our original random forest
+                        regressor when we add in the w2v feature.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/features.png" class="img"/>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-striped table-project">
+                        <thead>
+                        <th>Model</th>
+                        <th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>
+                        <th>Train Score</th>
+                        <th>Test Score</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Linear Regression</td>
+                            <td>-0.10404422368737314, 0.19349222672167976</td>
+                            <td>0.102807293108</td>
+                            <td>0.0224559417845</td>
+                        </tr>
+                        <tr>
+                            <td>Ridge Regression</td>
+                            <td>-0.0012099350604610388, 0.06014401823558278</td>
+                            <td>0.0506409957292</td>
+                            <td>0.034960605146</td>
+                        </tr>
+                        <tr>
+                            <td>Lasso Regression</td>
+                            <td>-0.031179089608199113, 0.11043536489467987</td>
+                            <td>0.0835771438137</td>
+                            <td>0.040393327611</td>
+                        </tr>
+                        <tr>
+                            <td>Elastic Net Regression</td>
+                            <td>-0.0028709466278603233, 0.06259040628484479</td>
+                            <td>0.0742195304118</td>
+                            <td>0.0420117696879</td>
+                        </tr>
+                        <tr>
+                            <td>k-NN Regression</td>
+                            <td>0.02365696902444836, 0.005290415228039509</td>
+                            <td>0.0938927608193</td>
+                            <td>0.0471011530949</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest Regression</td>
+                            <td>-0.012824365374335844, 0.17363765832838546</td>
+                            <td>0.874413756852</td>
+                            <td>0.108460311935</td>
+                        </tr>
+                        <tr>
+                            <td>AdaBoost Regression</td>
+                            <td>0.06851789843488665, 0.01991264170112891</td>
+                            <td>0.815443417418</td>
+                            <td>0.104618730911</td>
+                        </tr>
+                        <tr>
+                            <td>XGBoost Regression</td>
+                            <td>-0.06831414541031067, 0.24532113197831398</td>
+                            <td>0.460142391737</td>
+                            <td>0.123005276447</td>
+                        </tr>
+                        <tr>
+                            <td>SVM Regression</td>
+                            <td>0.044348184474051755, 0.03186671954730048</td>
+                            <td>0.0870515728538</td>
+                            <td>0.0503707715865</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        <b>Adding the 209 W2V Feature:</b><br>
+                        The additional clustering from our w2v feature does not add
+                        much to the model as a whole. This is likely for two reasons:
+                    <ol>
+                        <li>The w2v model could just be too noisy to actually add value to the model.</li>
+                        <li>The playlist name might not be that important in general when you have information about the
+                            number of followers of the user who "owns" the playlist, or some other confounding variable.
+                        </li>
+                    </ol>
+                    Essentially, any influence from the name of the playlist may be close to conditionally independent
+                    of the response given one (or a few) of the other variables. For either of these two reasons, the
+                    209 w2v feature does not increase our model score. To test this hypothesis, we look at a quick
+                    difference in the straightforward regression models and take the average of the improvement on
+                    test accuracy with the feature vs without.
+                    </p>
+                    <p>
+                        As seen to the right, the average improvement in score for each model with the w2v feature is
+                        <b>2.36%</b>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-striped table-project">
+                        <thead>
+                        <th>Model</th>
+                        <th>Train Score<br>with W2V</th>
+                        <th>Train Score<br>without W2V</th>
+                        <th>Test Score<br>with W2V</th>
+                        <th>Test Score<br>without W2V</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Ridge Regression</td>
+                            <td>0.0812653316532</td>
+                            <td>0.0797564462589</td>
+                            <td>0.0392014393826</td>
+                            <td>0.038960622454</td>
+                        </tr>
+                        <tr>
+                            <td>Lasso Regression</td>
+                            <td>0.0812653316532</td>
+                            <td>0.0797564462589</td>
+                            <td>0.0392014393826</td>
+                            <td>0.038960622454</td>
+                        </tr>
+                        <tr>
+                            <td>Elastic Net Regression</td>
+                            <td>0.0728789565471</td>
+                            <td>0.0810526332472</td>
+                            <td>0.0412664603581</td>
+                            <td>0.0389881477994</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-7">
+                    <p>
+                        <b>Generating Playlists:</b><br>
+                        Aside from modeling playlist success we also developed a model to generate a of a user-defined
+                        length and user-specified genre within the top 15 genres: alternative, christmas, country,
+                        dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
+                    </p>
+                    <p>
+                        The model works by using our predictive model to predict a score for a playlist, and then
+                        joining this with the unique track playlist combos. Then we aggregate up to individual track
+                        id's, summing up the playlist scores. Once we are here, we have the data we need.
+                    </p>
+                    <p>
+                        Now, when we run the generative model, we get just tracks that are realted to the specified
+                        genre, and treat that as a distribution to sample from. We then normalize the predicted "scores"
+                        from our model and scale them so they are valid probabilities.
+                    </p>
+                    <p>
+                        Finally we sample from the distribution of the songs in our genre with the
+                        associated probabilities given to them by the model. A sample "Latin" 20-song playlist is found
+                        to the right.
+                    </p>
+                    <p>
+                        Note: Each song can possibly be found in multiple genres.
+                    </p>
+                </div>
+                <div class="col-md-5">
                     <img src="img/playlist.png" class="img">
                     <div class="caption">Sample 20 song "Latin" playlist</div>
                 </div>
@@ -512,169 +864,24 @@
             </div>
             <div class="row">
                 <div class="col col-md-12">
-                    <p>
-                        <b>Results:</b><br>
-                        As you have probably noticed below, the additional clustering from our w2v feature, does
-                        not add much to the model as a whole. This is likely for two reasons. First, the w2v model could
-                        just be too noisy to actually add value to the model. Second, the playlist name
-                        might not be that important in general when you have information about the number of followers
-                        of the user who "owns" the playlist. Essentially, any influence from the name of the playlist,
-                        may be close to conditionally independent of the response given one (or a few) of the other
-                        variables. For either of these two reasons, the 209 w2v feature does not increase our
-                        score appreciably. To test this hypothesis, we looked at a quick difference in the
-                        straightforward regression models and took the average of the improvement on test accuracy with
-                        the feature versus without.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-md-12">
-                    <table class="table table-project">
-                        <thead>
-                        <tr>
-                            <th>Results without Word2vec</th>
-                            <th>Results with Word2vec</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <table class="table table-striped">
-                                    <thead>
-                                    <th>Model</th>
-                                    <th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>
-                                    <th>Train Score</th>
-                                    <th>Test Score</th>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Linear Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ridge Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lasso Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Elastic Net Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>k-NN Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Random Forest Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AdaBoost Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SVM Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <table class="table table-striped">
-                                    <thead>
-                                    <th>Model</th>
-                                    <th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>
-                                    <th>Train Score</th>
-                                    <th>Test Score</th>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Linear Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ridge Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lasso Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Elastic Net Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>k-NN Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Random Forest Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AdaBoost Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SVM Regression</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        We see the average percent improvement in score for each model with w2v feature: <b>FILL IN
-                        HERE.</b>
+                    <p><b>Results:</b><br>
+                        Overall the best perfoming models for predicting Spotify playlist success are random forest and
+                        XGBoost. When incorporating our 209-level w2v feature we see the average test score improve by
+                        2.36%.
                     </p>
                     <p>
                         <b>Conclusions:</b><br>
-                        We cannot say for sure that these genre variables confound the feature we made for with w2v,
+                        We cannot say for sure that the genre variables confound the feature we made for with w2v,
                         but there is improvement with the feature versus without it, where there was previously none. In
-                        addition, these features are the most intiuative to remove to check for improvement,
+                        addition, these features are the most intuitive to remove to check for improvement,
                         because they are related to the distribution of genres (i.e. the type of music in a playlist),
                         which is what our hypothesis about the playlist names was based on. We said a playlist's name
-                        would be a good proxy for the contents, and our w2v feature shows promis that this hypothesis
+                        would be a good proxy for the contents, and our w2v feature shows promise that this hypothesis
                         could be true.
-
+                    </p>
+                    <p>
+                        We also made a novel generative model to produce playlist with specific user-specified genres
+                        that could have pratical value if adapted into a web or mobile application.
                     </p>
                     <p>
                         <b>Future Work:</b><br>
@@ -762,3 +969,144 @@
 </script>
 </body>
 </html>
+
+
+<!--Table for possible use in results section-->
+<!--<table class="table table-project">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Results without Word2vec</th>-->
+<!--<th>Results with Word2vec</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>-->
+<!--<table class="table table-striped">-->
+<!--<thead>-->
+<!--<th>Model</th>-->
+<!--<th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>-->
+<!--<th>Train Score</th>-->
+<!--<th>Test Score</th>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>Linear Regression</td>-->
+<!--<td>-9.661837490455958e+20, 1.3658652789203555e+21</td>-->
+<!--<td>0.132484290729</td>-->
+<!--<td>-7.77393283572e+18</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Ridge Regression</td>-->
+<!--<td>-0.030256576859918376, 0.11125313901459834</td>-->
+<!--<td>0.0853779911556</td>-->
+<!--<td>0.0413614492559</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Lasso Regression</td>-->
+<!--<td>-0.030256576859918376, 0.11125313901459834</td>-->
+<!--<td>0.0853779911556</td>-->
+<!--<td>0.0413614492559</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Elastic Net Regression</td>-->
+<!--<td>-0.0028011693799219937, 0.06249175213203975</td>-->
+<!--<td>0.0884215423941</td>-->
+<!--<td>0.0410473844718</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>k-NN Regression</td>-->
+<!--<td>0.013480236420100952, 0.014509798407915084</td>-->
+<!--<td>0.0923044971552</td>-->
+<!--<td>0.0447576215128</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Random Forest Regression</td>-->
+<!--<td>0.06498151001454726, 0.03988285917502669</td>-->
+<!--<td>0.878798558284</td>-->
+<!--<td>0.102835631709</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>AdaBoost Regression</td>-->
+<!--<td>-0.06615510226947337, 0.14867997551870718</td>-->
+<!--<td>0.471762846853</td>-->
+<!--<td>0.0671178069851</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>XGBoost Regression</td>-->
+<!--<td>-0.06309052342991424, 0.25255449612691144</td>-->
+<!--<td>0.471512394636</td>-->
+<!--<td>0.110631159802</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>SVM Regression</td>-->
+<!--<td>0.050170049519681514, 0.014360689088760155</td>-->
+<!--<td>0.161309635032</td>-->
+<!--<td>0.0632341098191</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</td>-->
+<!--<td>-->
+<!--<table class="table table-striped">-->
+<!--<thead>-->
+<!--<th>Model</th>-->
+<!--<th>Cross-validated validation<br>set R^2 mean & std<br>(5-folds)</th>-->
+<!--<th>Train Score</th>-->
+<!--<th>Test Score</th>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>Linear Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Ridge Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Lasso Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Elastic Net Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>k-NN Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Random Forest Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>AdaBoost Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>SVM Regression</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--<td>0</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
