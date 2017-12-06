@@ -181,7 +181,7 @@
                         This is clearly a biased subsample of playlists in that we sourced users that own high numbers
                         of playlists and removed those playlists with only one follower, but the flipside is that the
                         vast majority of Spotify users are only making playlists for themselves (one user), or maybe
-                        sharing them with just friends of close loved ones. A cross-section of those users would make
+                        sharing them with just friends or close loved ones. A cross-section of those users would make
                         our already right-skewed (as seen below) data even more skewed.</p>
                     <p>
                         Click <a href="https://github.com/ac209-project/ac209-project/tree/master/getplaylist"
@@ -269,12 +269,12 @@
                         Below you can see a illustrative distribution of these five artist categories grouped by
                         playlist as they relate to number of playlist followers and specific track popularity (as
                         determined by Spotify). We see
-                        that, unsurprisingly, not only do most playlists incorporate popular artists (superstar: blue
+                        that, unsurprisingly, not only do most playlists incorporate popular artists (superstar:blue
                         and star:red), but a
                         lot of them have the superstar artists’ best songs (the mostly blue right side), as well as a
                         smattering of one-hit-wonders (green in the middle) and a dense area of moderately popular songs
                         throughout (between 30 and 70 popularity). This relationship and playlist architecture should
-                        be intuitive. You can also note, interestingly, that only on-hit-wonders (green) get perfect
+                        be intuitive. You can also note, interestingly, that only one-hit-wonders (green) get perfect
                         100s for
                         track popularity.
                     </p>
@@ -325,7 +325,7 @@
                         of their first responses would probably be "Depends on the genre." This is a natural
                         categorization we do with music on a daily basis. It is typically how we choose what we are
                         going to listen to when we go to the gym, start our daily commute, or go for a hike in the
-                        woods, so of course the predominate genres that make up a playlist will have some impact on the
+                        woods, so of course the predominant genres that make up a playlist will have some impact on the
                         relative success of that playlist against all others, as well as those geared toward the same
                         genre.
                     </p>
@@ -379,7 +379,7 @@
                         official
                         Spotify account. We would like to be able to account for this bias.</p>
                     <p>
-                        As you can see, there are not a huge numb
+                        As you can see, there are not a huge number.
                     </p>
                 </div>
                 <div class="col-md-4 mx-auto"><img src="img/eda11.png" class="img"/></div>
@@ -435,7 +435,7 @@
                         As we move into modeling and attempting to predict playlist success based on number of
                         followers, we again use the playlists (and related tracks) that have at least one follower. The
                         rational being that we do not want to use data that could skew the popularity metrics for tracks
-                        if it is unikely that those users have any followers that could potentially follow their
+                        if it is unlikely that those users have any followers that could potentially follow their
                         playlist. Essentially, we do not think those users have enough presence on Spotify for the
                         number of followers to be a meaningful feedback metric for playlist success. This left us with
                         a DataFrame consisting of 210,798 observations (tracks) across 49 measures, but since we are
@@ -454,7 +454,7 @@
                         DataFrame with ~3500 playlists across 480 columns.
                     </p>
                     <p>
-                        We split the the the data with 75% in the training set and 25% in test, standardized the
+                        We split the data with 75% in the training set and 25% in test, standardized the
                         numerical columns, then took an iterative
                         approach to modeling, using 5-fold cross-validation throughout, and moved through eight
                         different regression techniques: ridge, lasso, elastic net, k-NN, random forest,
@@ -478,14 +478,14 @@
                     <p>
                         Click <a href="https://github.com/ac209-project/ac209-project/tree/master/w2v" target="_blank">here</a>
                         to
-                        explore the w2v model training and implentation specific to our project.
+                        explore the w2v model training and implementation specific to our project.
                     </p>
                     <p>
-                        <b>W2V Techique:</b><br>
+                        <b>W2V Technique:</b><br>
                         By using word-to-vec we seek to cluster the playlist names into meaningful categories based on
                         the normalized sum of the vectors of known words in the playlist. This will aggregate the vector
                         information from each word in the playlist description, with all unknown words set to the zero
-                        vector. We normalize the vectors in one feature (we have a normalizzed and a not normalized
+                        vector. We normalize the vectors in one feature (we have a normalized and a not normalized
                         version of this feature) once we aggregate them to stop playlists with just many words from
                         being higher in magnitude than playlists with just a few words.
                     </p>
@@ -668,7 +668,6 @@
                     <ul>
                         <li>The followers of the playlist owner are highly predictive of playlist followers.</li>
                         <li>Having a playlist description makes followers more likely to follow.</li>
-                        <li>Having a playlist description makes followers more likely to follow.</li>
                     </ul>
                     One hit wonders and superstars are the most important class of bands in a playlist.
                     Next, we try fitting all of our models again on the first 50 important features to see if
@@ -810,9 +809,9 @@
                 <div class="col-md-7">
                     <p>
                         <b>Generating Playlists:</b><br>
-                        Aside from modeling playlist success we also developed a model to generate a of a user-defined
-                        length and user-specified genre within the top 15 genres: alternative, christmas, country,
-                        dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
+                        Aside from modeling playlist success we also developed a model to generate playlist a of a
+												user-defined length and user-specified genre within the top 15 genres: alternative, christmas,
+												country, dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
                     </p>
                     <p>
                         The model works by using our predictive model to predict a score for a playlist, and then
@@ -820,7 +819,7 @@
                         id's, summing up the playlist scores. Once we are here, we have the data we need.
                     </p>
                     <p>
-                        Now, when we run the generative model, we get just tracks that are realted to the specified
+                        Now, when we run the generative model, we get just tracks that are related to the specified
                         genre, and treat that as a distribution to sample from. We then normalize the predicted "scores"
                         from our model and scale them so they are valid probabilities.
                     </p>
@@ -848,7 +847,7 @@
             <div class="row">
                 <div class="col col-md-12">
                     <p><b>Results:</b><br>
-                        Overall the best perfoming models for predicting Spotify playlist success are random forest and
+                        Overall the best performing models for predicting Spotify playlist success are random forest and
                         XGBoost. When incorporating our 209-level w2v feature we see the average test score improve by
                         2.36%.
                     </p>
@@ -864,7 +863,7 @@
                     </p>
                     <p>
                         We also made a novel generative model to produce playlist with specific user-specified genres
-                        that could have pratical value if adapted into a web or mobile application.
+                        that could have practical value if adapted into a web or mobile application.
                     </p>
                     <p>
                         <b>Future Work:</b><br>
@@ -908,7 +907,7 @@
                         <li>This project's <a href="https://github.com/ac209-project/ac209-project" target="_blank">GitHub
                             repository</a>.
                         </li>
-                        <li>Course project guidlines <a href="https://github.com/cs109/a-2017/tree/master/Projects"
+                        <li>Course project guidelines <a href="https://github.com/cs109/a-2017/tree/master/Projects"
                                                         target="_blank">GitHub
                             repository</a></li>
                         <li>Website framework provided by <a
