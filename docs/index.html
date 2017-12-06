@@ -456,8 +456,8 @@
                     <p>
                         We split the the the data with 75% in the training set and 25% in test, standardized the
                         numerical columns, then took an iterative
-                        approach to modeling, using 5-fold cross-validation throughout, and moved through nine
-                        different regression techniques: linear, ridge, lasso, elastic net, k-NN, random forest,
+                        approach to modeling, using 5-fold cross-validation throughout, and moved through eight
+                        different regression techniques: ridge, lasso, elastic net, k-NN, random forest,
                         AdaBoost, XGBoost, and SVM.
                     </p>
                 </div>
@@ -555,11 +555,6 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Linear Regression</td>
-                            <td>0.120596102678</td>
-                            <td>-8.25071756605e+18</td>
-                        </tr>
-                        <tr>
                             <td>Ridge Regression</td>
                             <td>0.084026380104</td>
                             <td>0.0411555898746</td>
@@ -601,12 +596,6 @@
                         <th>Test Score</th>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>Linear Regression</td>
-                            <td>-9.661837490455958e+20, 1.3658652789203555e+21</td>
-                            <td>0.132484290729</td>
-                            <td>-7.77393283572e+18</td>
-                        </tr>
                         <tr>
                             <td>Ridge Regression</td>
                             <td>-0.030256576859918376, 0.11125313901459834</td>
@@ -706,12 +695,6 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Linear Regression</td>
-                            <td>-0.10404422368737314, 0.19349222672167976</td>
-                            <td>0.102807293108</td>
-                            <td>0.0224559417845</td>
-                        </tr>
-                        <tr>
                             <td>Ridge Regression</td>
                             <td>-0.0012099350604610388, 0.06014401823558278</td>
                             <td>0.0506409957292</td>
@@ -784,7 +767,7 @@
                     </p>
                     <p>
                         As seen to the right, the average improvement in score for each model with the w2v feature is
-                        <b>2.36%</b>
+                        <b>2.36%</b>.
                     </p>
                 </div>
                 <div class="col-md-6">
