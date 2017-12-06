@@ -230,28 +230,28 @@
                         </tr>
                         </thead>
                         <tbody class="bands">
-                        <tr style="background-color: #0022f5">
+                        <tr style="background-color: rgb(72,120,207)">
                             <td>Superstar</td>
                             <td>>= 50</td>
                             <td>>= 10</td>
                         </tr>
-                        <tr style="background-color: #ed3323">
+                        <tr style="background-color: rgb(214,95,95)">
                             <td>Star</td>
                             <td>>= 20 and < 50</td>
                             <td>>= 10</td>
                         </tr>
                         </tr>
-                        <tr style="background-color: #357d22">
+                        <tr style="background-color: rgb(106,204,101)">
                             <td>One-hit-wonder</td>
                             <td>>= 40</td>
                             <td>< 10</td>
                         </tr>
-                        <tr style="background-color: #761a7c">
+                        <tr style="background-color: rgb(180,124,199)">
                             <td>Garage Band</td>
                             <td>< 40</td>
                             <td>< 10</td>
                         </tr>
-                        <tr style="background-color: #fffd54">
+                        <tr style="background-color: rgb(202,185,125)">
                             <td>Trash Factory</td>
                             <td>>= 0 and < 20</td>
                             <td>>= 10</td>
@@ -379,7 +379,8 @@
                         official
                         Spotify account. We would like to be able to account for this bias.</p>
                     <p>
-                        As you can see, there are not a huge number.
+                        As you can see, there are not a huge number of celebrities in our data, but their social status
+                        inevitably has an impact on playlist popularity.
                     </p>
                 </div>
                 <div class="col-md-4 mx-auto"><img src="img/eda11.png" class="img"/></div>
@@ -450,8 +451,9 @@
                     </p>
                     <p>
                         <b>One-hot-encoding and train/test split:</b><br>
-                        Since we have a number of categorical measures, one-hot-encoding was applied and resulted in a
-                        DataFrame with ~3500 playlists across 480 columns.
+                        Since we have a number of categorical measures, one-hot-encoding was applied to those features.
+                        We also grouped tracks by playlist, reducing our observations from about 210,000 to a
+                        DataFrame with ~3500 playlists across 480 features.
                     </p>
                     <p>
                         We split the data with 75% in the training set and 25% in test, standardized the
@@ -810,8 +812,8 @@
                     <p>
                         <b>Generating Playlists:</b><br>
                         Aside from modeling playlist success we also developed a model to generate playlist a of a
-												user-defined length and user-specified genre within the top 15 genres: alternative, christmas,
-												country, dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
+                        user-defined length and user-specified genre within the top 15 genres: alternative, christmas,
+                        country, dance, deep, hip hop, metal, house, indie, jazz, latin, pop, rap, rock, and soul.
                     </p>
                     <p>
                         The model works by using our predictive model to predict a score for a playlist, and then
@@ -908,7 +910,7 @@
                             repository</a>.
                         </li>
                         <li>Course project guidelines <a href="https://github.com/cs109/a-2017/tree/master/Projects"
-                                                        target="_blank">GitHub
+                                                         target="_blank">GitHub
                             repository</a></li>
                         <li>Website framework provided by <a
                                 href="https://github.com/BlackrockDigital/startbootstrap-simple-sidebar"
