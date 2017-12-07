@@ -584,13 +584,13 @@
                         <tbody>
                         <tr>
                             <td>Ridge Regression</td>
-                            <td>-0.0303, 0.1113</td>
-                            <td>0.0854</td>
-                            <td>0.0414</td>
+                            <td>-0.0001, 0.0606</td>
+                            <td>0.0513</td>
+                            <td>0.0353</td>
                         </tr>
                         <tr>
                             <td>Lasso Regression</td>
-                            <td>-0.0303, 0.1113</td>
+                            <td>-0.0302, 0.1113</td>
                             <td>0.0854</td>
                             <td>0.0414</td>
                         </tr>
@@ -602,25 +602,25 @@
                         </tr>
                         <tr>
                             <td>k-NN Regression</td>
-                            <td>0.0135, 0.0145</td>
+                            <td>0.0133, 0.0144</td>
                             <td>0.0923</td>
                             <td>0.0448</td>
                         </tr>
                         <tr>
                             <td>Random Forest Regression</td>
-                            <td>0.0650, 0.0399</td>
-                            <td>0.8788</td>
-                            <td>0.1028</td>
+                            <td>0.0635, 0.0404</td>
+                            <td>0.8786</td>
+                            <td>0.1047</td>
                         </tr>
                         <tr>
                             <td>AdaBoost Regression</td>
-                            <td>-0.0662, 0.1487</td>
-                            <td>0.4718</td>
-                            <td>0.0671</td>
+                            <td>-0.0269, 0.0441</td>
+                            <td>0.7277</td>
+                            <td>0.0897</td>
                         </tr>
                         <tr>
                             <td>XGBoost Regression</td>
-                            <td>-0.0631, 0.2526</td>
+                            <td>-0.0631, 0.2525</td>
                             <td>0.4715</td>
                             <td>0.1106</td>
                         </tr>
@@ -681,7 +681,7 @@
                         <tbody>
                         <tr>
                             <td>Ridge Regression</td>
-                            <td>-0.0012, 0.0601</td>
+                            <td>-0.0013, 0.0603</td>
                             <td>0.0506</td>
                             <td>0.0350</td>
                         </tr>
@@ -699,33 +699,33 @@
                         </tr>
                         <tr>
                             <td>k-NN Regression</td>
-                            <td>0.0237, 0.0053</td>
-                            <td>0.0939</td>
-                            <td>0.0471</td>
+                            <td>0.0213, 0.0011</td>
+                            <td>0.0959</td>
+                            <td>0.0485</td>
                         </tr>
                         <tr>
                             <td>Random Forest Regression</td>
-                            <td>-0.0128, 0.1736</td>
-                            <td>0.8744</td>
-                            <td>0.1085</td>
+                            <td>-0.0257, 0.1805</td>
+                            <td>0.8755</td>
+                            <td>0.1292</td>
                         </tr>
                         <tr>
                             <td>AdaBoost Regression</td>
-                            <td>0.0685, 0.0199</td>
-                            <td>0.8154</td>
-                            <td>0.1046</td>
+                            <td>0.0555, 0.0143</td>
+                            <td>0.6542</td>
+                            <td>0.0671</td>
                         </tr>
                         <tr>
                             <td>XGBoost Regression</td>
-                            <td>-0.0683, 0.2453</td>
-                            <td>0.4601</td>
-                            <td>0.1230</td>
+                            <td>-0.0661, 0.2469</td>
+                            <td>0.4604</td>
+                            <td>0.0988</td>
                         </tr>
                         <tr>
                             <td>SVM Regression</td>
-                            <td>0.04435, 0.0319</td>
+                            <td>0.0445, 0.0323</td>
                             <td>0.0871</td>
-                            <td>0.0504</td>
+                            <td>0.0502</td>
                         </tr>
                         </tbody>
                     </table>
@@ -752,8 +752,8 @@
                         <tbody>
                         <tr>
                             <td>Ridge Regression</td>
-                            <td>0.0798</td>
-                            <td>0.0390</td>
+                            <td>0.0485</td>
+                            <td>0.0335</td>
                         </tr>
                         <tr>
                             <td>Lasso Regression</td>
@@ -781,8 +781,8 @@
                         <tbody>
                         <tr>
                             <td>Ridge Regression</td>
-                            <td>0.0813</td>
-                            <td>0.0392</td>
+                            <td>0.0488</td>
+                            <td>0.0335</td>
                         </tr>
                         <tr>
                             <td>Lasso Regression</td>
@@ -798,8 +798,8 @@
                     </table>
                 </div>
             </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
                     <p>
                         The additional clustering from our w2v feature does not add
                         much to the model as a whole. This is likely for two reasons:
@@ -817,14 +817,27 @@
                     </p>
                     <p>
                         As seen to the right, the average improvement in score for each model with the w2v feature is
-                        <b>2.36%</b>.
+                        <b>2.147%</b>.
                     </p>
 
                 </div>
             </div>
             <hr>
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-12">
+                    <h1>Spotify's "Playlist Success" Next Top Model is...(drumroll)</h1>
+                    <h1 style="color:red;">
+                        Random Forest without Word-to-vec!
+                    </h1>
+                    <p>
+                        Please hold your applause until the end, and see the "Results, Conclusions, and Future Work
+                        section below for analysis.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
                     <p>
                         <b>Generating Playlists:</b><br>
                         Aside from modeling playlist success we also developed a model to generate a playlist of a
@@ -850,7 +863,7 @@
                         Note: Each song can possibly be found in multiple genres.
                     </p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <img src="img/playlist.png" class="img">
                     <div class="caption">Sample 20 song "Latin" playlist</div>
                 </div>
@@ -871,14 +884,16 @@
                     </p>
                     <p>
                         The best performing model for predicting Spotify playlist success was random forest regression,
-                        which achieved an <i>R</i><sup>2</sup> on the test set of 10.9%. We considered sqrt(<i>n</i>)
+                        which achieved an <i>R</i><sup>2</sup> on the test set of 10.5%. We considered sqrt(<i>n</i>)
                         features when looking for the best split at each tree, where <i>n</i> was the total number of
                         predictors we used in fitting the model. Using cross-validation, we determined that the optimal
                         number of trees for the forest was 500. We were able to leave the maximum depth of the trees
                         unbounded without shouldering prohibitive computational costs. The second-best performing model
                         was the “Extreme Gradient Boosting” (XGBoost) algorithm with an <i>R</i><sup>2</sup> on the test
-                        set of 10.3%. Using cross-validation to tune the hyperparameters, we set the model’s maximum
-                        depth to 3 and number of estimators to 25.
+                        set of 11.1%. Using cross-validation to tune the hyperparameters, we set the model’s maximum
+                        depth to 3 and number of estimators to 25. We chose the Random Forest over the XGBoost model
+                        because it had a higher mean CV score. This implies the model in general was more consistent in
+                        its performance on the validation set, and hopefully more generalizable.
                     </p>
                     <p>
                         <b>Conclusions:</b><br>
@@ -895,7 +910,7 @@
                         With the word-to-vec (“w2v”) feature we used as our 209-level feature, we can conclude that our
                         hypothesis was somewhat true in that there is minor improvement in the predictive power of
                         relatively simpler models (Ridge, Lasso) when they incorporate the feature than when they don’t.
-                        When incorporating our 209-level w2v feature we see the average test set score improve by 2.36%
+                        When incorporating our 209-level w2v feature we see the average test set score improve by 2.147%
                         in these models. We expected that a playlist’s name would be a decent proxy for the playlist’s
                         contents, and the results of incorporating our w2v feature shows signs this hypothesis could be
                         true. One hypothesis as to why there isn’t any meaningful improvement in the more complex models
@@ -1151,34 +1166,34 @@
 
 <!--Comparisson Table-->
 <!--<table class="table table-striped table-project">-->
-    <!--<thead>-->
-    <!--<th>Model</th>-->
-    <!--<th>Train Score<br>with W2V</th>-->
-    <!--<th>Train Score<br>without W2V</th>-->
-    <!--<th>Test Score<br>with W2V</th>-->
-    <!--<th>Test Score<br>without W2V</th>-->
-    <!--</thead>-->
-    <!--<tbody>-->
-    <!--<tr>-->
-        <!--<td>Ridge Regression</td>-->
-        <!--<td>0.0813</td>-->
-        <!--<td>0.0798</td>-->
-        <!--<td>0.0392</td>-->
-        <!--<td>0.0390</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-        <!--<td>Lasso Regression</td>-->
-        <!--<td>0.0813</td>-->
-        <!--<td>0.0798</td>-->
-        <!--<td>0.0392</td>-->
-        <!--<td>0.0390</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-        <!--<td>Elastic Net Regression</td>-->
-        <!--<td>0.0729</td>-->
-        <!--<td>0.0811</td>-->
-        <!--<td>0.0413</td>-->
-        <!--<td>0.0390</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
+<!--<thead>-->
+<!--<th>Model</th>-->
+<!--<th>Train Score<br>with W2V</th>-->
+<!--<th>Train Score<br>without W2V</th>-->
+<!--<th>Test Score<br>with W2V</th>-->
+<!--<th>Test Score<br>without W2V</th>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>Ridge Regression</td>-->
+<!--<td>0.0813</td>-->
+<!--<td>0.0798</td>-->
+<!--<td>0.0392</td>-->
+<!--<td>0.0390</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Lasso Regression</td>-->
+<!--<td>0.0813</td>-->
+<!--<td>0.0798</td>-->
+<!--<td>0.0392</td>-->
+<!--<td>0.0390</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>Elastic Net Regression</td>-->
+<!--<td>0.0729</td>-->
+<!--<td>0.0811</td>-->
+<!--<td>0.0413</td>-->
+<!--<td>0.0390</td>-->
+<!--</tr>-->
+<!--</tbody>-->
 <!--</table>-->
