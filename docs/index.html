@@ -213,9 +213,14 @@
                         combinations of their mean popularity (as determined by Spotify's popularity metric) and total
                         number of artist tracks as seen in the following table.<br>
 
-The motivation for the class boundary decisions was to keep the class numbers down to reasonably small levels, but still explain the variance in artist performance.  The 10-track boundary was selected due to the shape of the data - it was designed to catch the slight nonlinearity in artist success rates as they produce fewer songs.  Then, the popularity boundaries were set to be reasonably symmetrical around the normal curve while ensuring that each class had a significant number of observations present.<br>
+                        The motivation for the class boundary decisions was to keep the class numbers down to reasonably
+                        small levels, but still explain the variance in artist performance. The 10-track boundary was
+                        selected due to the shape of the data - it was designed to catch the slight nonlinearity in
+                        artist success rates as they produce fewer songs. Then, the popularity boundaries were set to be
+                        reasonably symmetrical around the normal curve while ensuring that each class had a significant
+                        number of observations present.<br>
 
-These categories should be
+                        These categories should be
                         self-descriptive, but the two plots below do a fantastic job of illustrating each in terms of
                         their thresholds and relationships. The artist popularity metric ties in with our expectations
                         because we see people like Post Malone, Camila Cabello, and Ed Sheeran in our superstar
@@ -231,7 +236,7 @@ These categories should be
                             <th>Artist Category</th>
                             <th>Artist Mean Track Popularity</th>
                             <th>Artist Total Tracks</th>
-					<th>Number of Tracks in Sample Produced by class</th>
+                            <th>Number of Tracks in Sample Produced by class</th>
                         </tr>
                         </thead>
                         <tbody class="bands">
@@ -239,32 +244,32 @@ These categories should be
                             <td>Superstar</td>
                             <td>>= 50</td>
                             <td>>= 10</td>
-					<td>60k</td>
+                            <td>60k</td>
                         </tr>
                         <tr style="background-color: rgb(214,95,95)">
                             <td>Star</td>
                             <td>>= 20 and < 50</td>
                             <td>>= 10</td>
-					<td>62k</td>
+                            <td>62k</td>
                         </tr>
                         </tr>
                         <tr style="background-color: rgb(106,204,101)">
                             <td>One-hit-wonder</td>
                             <td>>= 40</td>
                             <td>< 10</td>
-					<td>27k</td>
+                            <td>27k</td>
                         </tr>
                         <tr style="background-color: rgb(180,124,199)">
                             <td>Garage Band</td>
                             <td>< 40</td>
                             <td>< 10</td>
-					<td>45k</td>
+                            <td>45k</td>
                         </tr>
                         <tr style="background-color: rgb(202,185,125)">
                             <td>Trash Factory</td>
                             <td>>= 0 and < 20</td>
                             <td>>= 10</td>
-					<td>14k</td>
+                            <td>14k</td>
                         </tbody>
                     </table>
                 </div>
@@ -384,10 +389,12 @@ These categories should be
                 <div class="col-md-8">
                     <p>
                         <b>Celebrity Playlist Owners:</b><br>
-                        Lastly, we explored whether the owner of the playlist is an official spotify account. The motivation for
+                        Lastly, we explored whether the owner of the playlist is an official spotify account. The
+                        motivation for
                         this is that some of the most popular playlists we have seen have been from a celebrity's
                         official
-                        Spotify account, and that generally celebrity accounts (such the Official Justin Bieber account) tend to produce more followers. We would like to be able to account for this bias.</p>
+                        Spotify account, and that generally celebrity accounts (such the Official Justin Bieber account)
+                        tend to produce more followers. We would like to be able to account for this bias.</p>
                     <p>
                         As you can see, there are not a huge number of celebrities in our data, but their social status
                         inevitably has an impact on playlist popularity.
@@ -680,7 +687,7 @@ These categories should be
                     <ul>
                         <li>The followers of the playlist owner are highly predictive of playlist followers.</li>
                         <li>Having a playlist description makes followers more likely to follow.</li>
-                    <li>One hit wonders and superstars are the most important class of bands in a playlist.</li>
+                        <li>One hit wonders and superstars are the most important class of bands in a playlist.</li>
                     </ul>
                     Next, we try fitting all of our models again on the first 50 important features to see if
                     the model performs better on the significantly reduced feature set.
@@ -859,30 +866,81 @@ These categories should be
             <div class="row">
                 <div class="col col-md-12">
                     <p><b>Results:</b><br>
-										The models we evaluated generally performed better on the test dataset when using the full set of 480 predictors, so the following discussion is comparing the models resulting from fitting on this full set of predictors.
-										</p>
-										<p>
-										The best performing model for predicting Spotify playlist success was random forest regression, which achieved an <i>R</i><sup>2</sup> on the test set of 10.9%. We considered sqrt(<i>n</i>) features when looking for the best split at each tree, where <i>n</i> was the total number of predictors we used in fitting the model. Using cross-validation, we determined that the optimal number of trees for the forest was 500. We were able to leave the maximum depth of the trees unbounded without shouldering prohibitive computational costs. The second-best performing model was the “Extreme Gradient Boosting” (XGBoost) algorithm with an <i>R</i><sup>2</sup> on the test set of 10.3%. Using cross-validation to tune the hyperparameters, we set the model’s maximum depth to 3 and number of estimators to 25.
-										</p>
+                        The models we evaluated generally performed better on the test dataset when using the full set
+                        of 480 predictors, so the following discussion is comparing the models resulting from fitting on
+                        this full set of predictors.
+                    </p>
+                    <p>
+                        The best performing model for predicting Spotify playlist success was random forest regression,
+                        which achieved an <i>R</i><sup>2</sup> on the test set of 10.9%. We considered sqrt(<i>n</i>)
+                        features when looking for the best split at each tree, where <i>n</i> was the total number of
+                        predictors we used in fitting the model. Using cross-validation, we determined that the optimal
+                        number of trees for the forest was 500. We were able to leave the maximum depth of the trees
+                        unbounded without shouldering prohibitive computational costs. The second-best performing model
+                        was the “Extreme Gradient Boosting” (XGBoost) algorithm with an <i>R</i><sup>2</sup> on the test
+                        set of 10.3%. Using cross-validation to tune the hyperparameters, we set the model’s maximum
+                        depth to 3 and number of estimators to 25.
+                    </p>
                     <p>
                         <b>Conclusions:</b><br>
-												For a research domain as complex as an individual’s music preferences and the influence of the broader music industry on track popularity, our results were strong. Through the <i>R</i><sup>2</sup> results, we can conclude that our best performing model managed to account for more than 10% of the variation in the number of playlist followers (about the mean). Random Forest and XGBoost are foundational tools in the machine learning context, generally regarded as relatively strong performers in problems where there are many predictors, of which many are considered significant. In the context of the high level of complexity in this problem, it is not surprising that these models performed the best.
+                        For a research domain as complex as an individual’s music preferences and the influence of the
+                        broader music industry on track popularity, our results were strong. Through the
+                        <i>R</i><sup>2</sup> results, we can conclude that our best performing model managed to account
+                        for more than 10% of the variation in the number of playlist followers (about the mean). Random
+                        Forest and XGBoost are foundational tools in the machine learning context, generally regarded as
+                        relatively strong performers in problems where there are many predictors, of which many are
+                        considered significant. In the context of the high level of complexity in this problem, it is
+                        not surprising that these models performed the best.
                     </p>
                     <p>
-											With the word-to-vec (“w2v”) feature we used as our 209-level feature, we can conclude that our hypothesis was somewhat true in that there is minor improvement in the predictive power of relatively simpler models (Ridge, Lasso) when they incorporate the feature than when they don’t. When incorporating our 209-level w2v feature we see the average test set score improve by 2.36% in these models. We expected that a playlist’s name would be a decent proxy for the playlist’s contents, and the results of incorporating our w2v feature shows signs this hypothesis could be true. One hypothesis as to why there isn’t any meaningful improvement in the more complex models (Random Forest, XGBoost) is that through their ensemble and bagging algorithms, all the information contained in our word-to-vec feature is captured by some combination of the other predictors. For example, the w2v representation may be strongly related to the distribution of genres (i.e., the type of music in a playlist), which is what our hypothesis about the playlist names was based on.
+                        With the word-to-vec (“w2v”) feature we used as our 209-level feature, we can conclude that our
+                        hypothesis was somewhat true in that there is minor improvement in the predictive power of
+                        relatively simpler models (Ridge, Lasso) when they incorporate the feature than when they don’t.
+                        When incorporating our 209-level w2v feature we see the average test set score improve by 2.36%
+                        in these models. We expected that a playlist’s name would be a decent proxy for the playlist’s
+                        contents, and the results of incorporating our w2v feature shows signs this hypothesis could be
+                        true. One hypothesis as to why there isn’t any meaningful improvement in the more complex models
+                        (Random Forest, XGBoost) is that through their ensemble and bagging algorithms, all the
+                        information contained in our word-to-vec feature is captured by some combination of the other
+                        predictors. For example, the w2v representation may be strongly related to the distribution of
+                        genres (i.e., the type of music in a playlist), which is what our hypothesis about the playlist
+                        names was based on.
                     </p>
-										<p>
-                        This is a difficult question to investigate, and it is one compounded by the weak interpretability of Random Forest and XGBoost models. Yet, what we sacrificed in interpretability, we compensated for with improved predictive power. Since the main goal of the project was to build the most effective model at predicting playlist success rather than making inferences on what are the primary drivers, we are fine to accept the added complexity and lower interpretability of these models compared to the others we evaluated.
+                    <p>
+                        This is a difficult question to investigate, and it is one compounded by the weak
+                        interpretability of Random Forest and XGBoost models. Yet, what we sacrificed in
+                        interpretability, we compensated for with improved predictive power. Since the main goal of the
+                        project was to build the most effective model at predicting playlist success rather than making
+                        inferences on what are the primary drivers, we are fine to accept the added complexity and lower
+                        interpretability of these models compared to the others we evaluated.
                     </p>
                     <p>
                         <b>Future Work:</b><br>
-                        To improve the w2v feature and give it a more “fair” examination, we could look to train the w2v transform on a corpus more reflective of the semantics in Spotify’s playlist names. Out of convenience and computational constraints, we used the Wikipedia corpus. However, as noted in the w2v section, only about 84% of the playlist names have at least one meaningful word (not a stop word by NLTK standards) that has a vector representation in our model. To improve this and consequently better explain the sample set of playlist names, we could look to see whether a more music-specific or more casual internet chat area (e.g., Twitter or Reddit) dataset is available with which to train the w2v transform.
+                        To improve the w2v feature and give it a more “fair” examination, we could look to train the w2v
+                        transform on a corpus more reflective of the semantics in Spotify’s playlist names. Out of
+                        convenience and computational constraints, we used the Wikipedia corpus. However, as noted in
+                        the w2v section, only about 84% of the playlist names have at least one meaningful word (not a
+                        stop word by NLTK standards) that has a vector representation in our model. To improve this and
+                        consequently better explain the sample set of playlist names, we could look to see whether a
+                        more music-specific or more casual internet chat area (e.g., Twitter or Reddit) dataset is
+                        available with which to train the w2v transform.
                     </p>
                     <p>
-                        The playlist generation model works great in notebook form. If given more time, and requisite expertise, another feature of this project we would have liked to incorporate is a kind of "webapp" where the reader could choose one of our predefined genres from a dropdown menu to generate a playlist. Again as it stands, using the final project notebook works quite well.
+                        The playlist generation model works great in notebook form. If given more time, and requisite
+                        expertise, another feature of this project we would have liked to incorporate is a kind of
+                        "webapp" where the reader could choose one of our predefined genres from a dropdown menu to
+                        generate a playlist. Again as it stands, using the final project notebook works quite well.
                     </p>
-										<p>
-                        Lastly, the model would likely benefit from incorporating other datasets pertaining to music, artists and genres. Currently, our model is fit on predominantly Spotify-sourced data. One challenge in this regard is that many other available datasets (such as the Million Song Dataset) are skewed towards older (what some may consider more “classic”) tracks, whereas Spotify’s playlists contain many recent tracks. In fact, Spotify prides itself on its ability to serve as a source for aspiring artists to be heard. Therefore, we weren’t able to include information from the Million Song Dataset because limiting our domain to songs where there was overlap between Spotify and the Million Song Dataset would have significantly shrunk our playlist domain.
+                    <p>
+                        Lastly, the model would likely benefit from incorporating other datasets pertaining to music,
+                        artists and genres. Currently, our model is fit on predominantly Spotify-sourced data. One
+                        challenge in this regard is that many other available datasets (such as the Million Song
+                        Dataset) are skewed towards older (what some may consider more “classic”) tracks, whereas
+                        Spotify’s playlists contain many recent tracks. In fact, Spotify prides itself on its ability to
+                        serve as a source for aspiring artists to be heard. Therefore, we weren’t able to include
+                        information from the Million Song Dataset because limiting our domain to songs where there was
+                        overlap between Spotify and the Million Song Dataset would have significantly shrunk our
+                        playlist domain.
                     </p>
                     <p style="font-style: italic">
                         Show and interpret your results. Summarize your
