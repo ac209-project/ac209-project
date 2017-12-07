@@ -167,14 +167,15 @@
                     </table>
                     <p>
                         The files were combined and manipulated into a single DataFrame via the playlist ID, username,
-                        and artist name attributes. While cleaning, we decided to eliminate any playlist with fewer than
-                        one follower (the owner).
+                        and artist name attributes. While cleaning, we decided to eliminate any playlist with one or
+                        fewer followers (the owner).
                     </p>
                     <p>
                         We explore the data (and our engineered features) at both the track and the playlist level. As
                         you can see above, we have about 9.7 playlists per user when we include all users. When we
                         drop playlists with below 1 follower, we have about 4.4 playlists per user. Likewise, we start
-                        with ~368k tracks and after we drop the playlists with fewer than 1 follower we only have ~211k
+                        with ~368k tracks and after we drop the playlists with if they have one or fewer followers we
+                        only have ~211k
                         tracks remaining.
                     </p>
                     <p>
@@ -451,7 +452,7 @@
                 <div class="col col-md-12">
                     <p><b>Baseline Modeling:</b><br>
                         As we move into modeling and attempting to predict playlist success based on number of
-                        followers, we again use the playlists (and related tracks) that have at least one follower. The
+                        followers, we again use the playlists (and related tracks) that have more than one follower. The
                         rational being that we do not want to use data that could skew the popularity metrics for tracks
                         if it is unlikely that those users have any followers that could potentially follow their
                         playlist. Essentially, we do not think those users have enough presence on Spotify for the
@@ -464,11 +465,13 @@
                     <p>
                         <b>Imputation:</b><br>
                         We also changed our datetime format columns to just include the year, and we median impute for
-                        the (few) missing values in other columns.
+                        the (few) missing values in other columns. We used the median since there were few values to
+                        impute and the distributions are skewed as seen in the first followers plot above, hence mean
+                        imputation would be susceptible to outliers.
                     </p>
                     <p>
-                        <b>One-hot-encoding and train/test split:</b><br>
-                        Since we have a number of categorical measures, one-hot-encoding was applied to those features.
+                        <b>One hot encoding and train/test split:</b><br>
+                        Since we have a number of categorical measures, one hot encoding was applied to those features.
                         We also grouped tracks by playlist, reducing our observations from about 210,000 to a
                         DataFrame with ~3500 playlists across 480 features.
                     </p>
@@ -522,7 +525,7 @@
                         a reasonable amount of time to train. After training the model, the "sentences" formed
                         by the playlist names were added to the vocabulary of the model. Without proper
                         context the model will not denote a vector transform for a word, so there are still several
-                        words that do not have a related vector representation.
+                        words (about 25%) that do not have a related vector representation.
                     </p>
                     <p>
                         About 84% of the playlist names have at least one meaningful word (not a stop word by NLTK
@@ -540,7 +543,8 @@
                         think this is due to the smaller training set, and the makeup of the training set. The training
                         set is made up of wikipedia documents which, though they contain a lot of words, probably do not
                         have a lot of the same contexts or slang that we will see here. If we could train with a corpus
-                        from Twitter or Reddit we might have better context for the slang and pithy statements we often
+                        from Twitter or Reddit we might have had better context for the slang and pithy statements we
+                        often
                         see in playlist names.
                     </p>
                     <div><img src="img/word_groupings.png" class="img"></div>
@@ -677,7 +681,7 @@
                     </p>
                     <p>
                         We can see above that the best performing model on a cross-validated training set is our random
-                        forest with 300 estimators. We will use that as our baseline model - but we note that some
+                        forest with 500 estimators. We will use that as our baseline model - but we note that some
                         over-fitting occurs on the training set. We believe this is due to the high number of features
                         (some of which are codependent). So next, we try to reduce the feature set overall and see if
                         this leads to an increase in model performance.
@@ -779,7 +783,7 @@
                     </ol>
                     Essentially, any influence from the name of the playlist may be close to conditionally independent
                     of the response given one (or a few) of the other variables. For either of these two reasons, the
-                    209 w2v feature does not increase our model score. To test this hypothesis, we look at a quick
+                    209-level w2v feature does not increase our model score. To test this hypothesis, we look at a quick
                     difference in the straightforward regression models and take the average of the improvement on
                     test accuracy with the feature vs without.
                     </p>
