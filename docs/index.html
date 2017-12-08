@@ -893,7 +893,7 @@
                         Random Forest without Word-2-Vec!
                     </h1>
                     <p>
-                        Please hold your applause until the end, and see the "Results, Conclusions, and Future Work
+                        Please hold your applause until the end, and see the "Results, Conclusions, and Future Work"
                         section below for analysis.
                     </p>
                 </div>
@@ -941,11 +941,11 @@
             <div class="row">
                 <div class="col col-md-12">
                     <p><b>Results:</b><br>
-                        The top models we looked at were Random Forest without our One Hot Encoded w2v feature, XGBoost
-                        with all the predictors, and SVM Regression with all the predictors.
+                        The top models we looked at were random forest without our one hot encoded w2v feature, XGBoost
+                        with all the predictors, and SVM regression with all the predictors.
                     </p>
                     <p>
-                        The best performing model for predicting Spotify playlist success was Random Forest regression,
+                        The best performing model for predicting Spotify playlist success was random forest regression,
                         which achieved an <i>R</i><sup>2</sup> on the test set of 14.4%. We considered sqrt(<i>n</i>)
                         features when looking for the best split at each tree, where <i>n</i> was the total number of
                         predictors we used in fitting the model. Using cross-validation, we determined that the optimal
@@ -959,7 +959,7 @@
                         our top three not due to its high <i>R</i><sup>2</sup>, but due to its consistency. Its
                         <i>R</i><sup>2</sup> was only 6.3% on the test set, but the mean CV score was very close to
                         this value and the std of CV scores was also low.  In addition, the training performance was
-                        no outrageously larger than the test performance, indicating the model is generalizing well
+                        not outrageously larger than the test performance, indicating the model is generalizing well
                         from train to test.
                     </p>
                     <p>
@@ -982,7 +982,7 @@
                         name would be a decent proxy for the playlist’s
                         contents, and the results of incorporating our w2v feature shows signs this hypothesis could be
                         true. One hypothesis as to why there isn’t any meaningful improvement in the more complex models
-                        (Random Forest, XGBoost) is that through their ensemble and bagging algorithms, all the
+                        (random forest, XGBoost) is that through their ensemble and bagging algorithms, all the
                         information contained in our word-to-vec feature is captured by some combination of the other
                         predictors. For example, the w2v representation may be strongly related to the distribution of
                         genres (i.e., the type of music in a playlist), which is what our hypothesis about the playlist
@@ -990,7 +990,7 @@
                     </p>
                     <p>
                         This is a difficult question to investigate, and it is one compounded by the weak
-                        interpretability of Random Forest and XGBoost models. Yet, what we sacrificed in
+                        interpretability of random forest and XGBoost models. Yet, what we sacrificed in
                         interpretability, we compensated for with improved predictive power. Since the main goal of the
                         project was to build the most effective model at predicting playlist success rather than making
                         inferences on what are the primary drivers, we are fine to accept the added complexity and lower
