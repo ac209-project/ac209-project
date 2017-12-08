@@ -864,7 +864,7 @@
                 <div class="col-md-12">
                     <p>
                         The additional clustering from our w2v feature does not add
-                        much to the model as a whole. This is likely for two reasons:
+                        much to the model as a whole when all predictors are considered. This is likely for two reasons:
                     <ol>
                         <li>The w2v model could just be too noisy to actually add value to the model.</li>
                         <li>The playlist name might not be that important in general when you have information about the
@@ -874,12 +874,13 @@
                     Essentially, any influence from the name of the playlist may be close to conditionally independent
                     of the response given one (or a few) of the other variables. For either of these two reasons, the
                     209-level w2v feature does not increase our model score. To test this hypothesis, we look at a quick
-                    difference in the straightforward regression models and take the average of the improvement on
-                    test accuracy with the feature vs without.
+                    difference in the straightforward regression models when we remove the aggregated track-level genre information
+                    and take the average of the improvement on test accuracy with the feature vs without.
                     </p>
                     <p>
                         As seen to the right, the average improvement in score for each model with the w2v feature is
-                        <b>2.147%</b>.
+                        <b>2.147%</b>.  This implies that the reason our w2v feature does not add predictive power could be due
+                        to confounding variables already in the model.
                     </p>
 
                 </div>
@@ -889,7 +890,7 @@
                 <div class="col-md-12">
                     <h1>Spotify's "Playlist Success" Next Top Model is...(drumroll)</h1>
                     <h1 style="color:red;">
-                        Random Forest without Word-to-vec!
+                        Random Forest without Word-2-Vec!
                     </h1>
                     <p>
                         Please hold your applause until the end, and see the "Results, Conclusions, and Future Work
@@ -940,13 +941,12 @@
             <div class="row">
                 <div class="col col-md-12">
                     <p><b>Results:</b><br>
-                        The models we evaluated generally performed better on the test dataset when using the full set
-                        of 480 predictors, so the following discussion is comparing the models resulting from fitting on
-                        this full set of predictors.
+                        The top models we looked at were Random Forest without our One Hot Encoded w2v feature, XGBoost
+                        with all the predictors, and SVM Regression with all the predictors.
                     </p>
                     <p>
-                        The best performing model for predicting Spotify playlist success was random forest regression,
-                        which achieved an <i>R</i><sup>2</sup> on the test set of 10.5%. We considered sqrt(<i>n</i>)
+                        The best performing model for predicting Spotify playlist success was Random Forest regression,
+                        which achieved an <i>R</i><sup>2</sup> on the test set of 14.4%. We considered sqrt(<i>n</i>)
                         features when looking for the best split at each tree, where <i>n</i> was the total number of
                         predictors we used in fitting the model. Using cross-validation, we determined that the optimal
                         number of trees for the forest was 500. We were able to leave the maximum depth of the trees
@@ -955,14 +955,19 @@
                         set of 11.1%. Using cross-validation to tune the hyperparameters, we set the model’s maximum
                         depth to 3 and number of estimators to 25. We chose the Random Forest over the XGBoost model
                         because it had a higher mean CV score. This implies the model in general was more consistent in
-                        its performance on the validation set, and hopefully more generalizable.
+                        its performance on the validation set, and hopefully more generalizable.  SVM Regression is in
+                        our top three not due to its high <i>R</i><sup>2</sup>, but due to its consistency. Its
+                        <i>R</i><sup>2</sup> was only 6.3% on the test set, but the mean CV score was very close to
+                        this value and the std of CV scores was also low.  In addition, the training performance was
+                        no outrageously larger than the test performance, indicating the model is generalizing well
+                        from train to test.
                     </p>
                     <p>
                         <b>Conclusions:</b><br>
                         For a research domain as complex as an individual’s music preferences and the influence of the
                         broader music industry on track popularity, our results were strong. Through the
                         <i>R</i><sup>2</sup> results, we can conclude that our best performing model managed to account
-                        for more than 10% of the variation in the number of playlist followers (about the mean). Random
+                        for more than 14% of the variation in the number of playlist followers (about the mean). Random
                         Forest and XGBoost are foundational tools in the machine learning context, generally regarded as
                         relatively strong performers in problems where there are many predictors, of which many are
                         considered significant. In the context of the high level of complexity in this problem, it is
@@ -973,7 +978,8 @@
                         hypothesis was somewhat true in that there is minor improvement in the predictive power of
                         relatively simpler models (Ridge, Lasso) when they incorporate the feature than when they don’t.
                         When incorporating our 209-level w2v feature we see the average test set score improve by 2.147%
-                        in these models. We expected that a playlist’s name would be a decent proxy for the playlist’s
+                        in these models, when we control for the confounding variables. We expected that a playlist’s
+                        name would be a decent proxy for the playlist’s
                         contents, and the results of incorporating our w2v feature shows signs this hypothesis could be
                         true. One hypothesis as to why there isn’t any meaningful improvement in the more complex models
                         (Random Forest, XGBoost) is that through their ensemble and bagging algorithms, all the
