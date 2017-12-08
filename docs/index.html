@@ -657,12 +657,12 @@
                         <li>One hit wonders and superstars are the most important class of bands in a playlist.</li>
                     </ul>
                     Next, we try fitting all of our models again on the first 50 important features to see if
-                    the model performs better on the significantly reduced feature set.
+                    the model performs better on the significantly reduced feature set.  This was done algorithmically by taking the models with the greatest feature_importance in our selected random forest classifier using the inbuilt feature_importance parameter.  
                     </p>
                     <p>
-                        We can see below that the model performance on a cross-validated training set is generally worse
-                        with the reduced feature set. So we will keep our baseline model and our original random forest
-                        regressor when we add in the w2v feature.
+                        Note that certain features here do have elements of multicollinearity - for example, we have created features user_f_mean, user_f_min, and user_f_max, which correspond to the average, smallest, and largest subscriber numbers of all of the user's playlists.  As a next step, we had contemplated removing certain highly correlated features.  However, as we can see below, model performance on a cross-validated training set is generally worse
+                        with a reduced feature set (vs. our full feature set). <br><br>So we will keep our baseline model and our original random forest
+                        regressor when we add in the w2v feature, without adjusting for multi-collinear features.  Our rationale here is that while min/max/mean features are partially correlated, each does add unique predictive information.  And empirical results show that our full set achieves superior R2 values, so we full comfortable proceeding with the random forest model on a full feature set.
                     </p>
                 </div>
             </div>
